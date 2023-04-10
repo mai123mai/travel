@@ -1,6 +1,6 @@
 #coding=utf-8
 from wordcloud import STOPWORDS
-from travel.util.utils import *
+from util.utils import *
 import os
 import jieba
 from PIL import Image

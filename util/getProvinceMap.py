@@ -1,6 +1,6 @@
 import random
 from numpy import mean
-from travel.util.utils import *
+from util.utils import *
 import pandas as pd
 
 import requests

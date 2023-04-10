@@ -1,15 +1,15 @@
 from flask import request, render_template, session, redirect, Blueprint
 
-from travel.redis_cache import cache
-from travel.util.getCommentData import *
-from travel.util.getCommentEmotionData import get_comment_score_data
-from travel.util.getDegreeData import *
-from travel.util.getChinaData import *
-from travel.util.getMapData import *
-from travel.util.getProvinceMap import *
-from travel.util.getSeviceData import *
-from travel.util.getPriceData import *
-from travel.util.getStarData import *
+from redis_cache import cache
+from util.getCommentData import *
+from util.getCommentEmotionData import get_comment_score_data
+from util.getDegreeData import *
+from util.getChinaData import *
+from util.getMapData import *
+from util.getProvinceMap import *
+from util.getSeviceData import *
+from util.getPriceData import *
+from util.getStarData import *
 import base64
 
 dataAnaly = Blueprint('dataAnaly', __name__)

@@ -1,6 +1,6 @@
 # encoding=utf-8
-from travel.util.utils import *
-from travel.util.query import *
+from util.utils import *
+from util.query import *
 
 
 def delMovieByMovieName(movieName):

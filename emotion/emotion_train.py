@@ -1,5 +1,4 @@
 # coding=utf-8
-import random
 
 import pandas as pd
 import numpy as np
@@ -10,7 +9,11 @@ from matplotlib import pyplot as plt
 from sqlalchemy import create_engine
 from sqlalchemy import text
 import os
+
+from sqlalchemy.orm import sessionmaker
 from wordcloud import WordCloud
+
+from util.query import querys
 
 current_path = os.path.dirname(os.path.abspath(__file__))
 
@@ -230,27 +233,24 @@ def create_neg_img(negdata, sid):
     plt.close()
 
 
-def start_emotion_train(search_name):
-    sql = f'select sid from travel WHERE title like "%{search_name}%"'
-    sid_pd = pd.read_sql(text(sql), con=con)
-    if not sid_pd.empty:
-        sid = sid_pd['sid'].tolist()[0]
-        score_src = current_path + f"/datas/score_data/{sid}.csv"
-        posImg_src = current_path + f"/datas/pos_img/{sid}.png"
-        negImg_src = current_path + f"/datas/neg_img/{sid}.png"
-        if os.path.exists(current_path + f'/datas/neg_img/{sid}.png') and os.path.exists(
-                current_path + f'/datas/pos_img/{sid}.png'):
-            return posImg_src, negImg_src, score_src
-        else:
-            sql_1 = f'select comment_cotent,comment_stat,comment_time from comments WHERE sid = {sid};'
-            reviews = pd.read_sql(text(sql_1), con=con)
-            posdata, negdata = emotion_posess(reviews, sid)
-            create_pos_img(posdata, sid)
-            create_neg_img(negdata, sid)
-            return posImg_src, negImg_src, score_src
+def start_emotion_train(sid):
+    score_src = current_path + f"/datas/score_data/{sid}.csv"
+    posImg_src = current_path + f"/datas/pos_img/{sid}.png"
+    negImg_src = current_path + f"/datas/neg_img/{sid}.png"
+    if os.path.exists(current_path + f'/datas/neg_img/{sid}.png') and os.path.exists(
+            current_path + f'/datas/pos_img/{sid}.png'):
+        return posImg_src, negImg_src, score_src
+    else:
+        sql_1 = f'select comment_cotent,comment_stat,comment_time from comments WHERE sid = {sid};'
+        reviews = pd.read_sql(text(sql_1), con=con)
+        posdata, negdata = emotion_posess(reviews, sid)
+        create_pos_img(posdata, sid)
+        create_neg_img(negdata, sid)
+        return posImg_src, negImg_src, score_src
 
 
 if __name__ == '__main__':
-    start_emotion_train("紫微洞")
+    sid = 1394
+    print(start_emotion_train(sid))
     # get_pos_and_neg_data()
     # print(current_path)

@@ -1,17 +1,17 @@
-from travel.emotion.emotion_train import *
-import jieba
-from PIL import Image
-import numpy as np
-from matplotlib import pyplot as plt
-from wordcloud import WordCloud, STOPWORDS
+from emotion.emotion_train import *
+
 import os
 
-# df_comment = pd.read_sql(text('select * from comments'), con=con)
 path = os.path.dirname(os.path.dirname(__file__))
 
 
 def get_comment_score_data(searchName):
-    posImg_src, negImg_src, score_src = start_emotion_train(searchName)
+    sql = f'select sid from travel WHERE title like "%{searchName}%" limit 5000'
+    sid_pd = pd.read_sql(text(sql), con=con)
+    if sid_pd.empty:
+        return [], '', ''
+    sid = sid_pd['sid'].tolist()[0]
+    posImg_src, negImg_src, score_src = start_emotion_train(sid)
     emotional_score = pd.read_csv(score_src)
     score_time_list = emotional_score[['content_time', 'amend_weight']].values.tolist()
     typesObj = {}
@@ -29,5 +29,5 @@ def get_comment_score_data(searchName):
 
 
 if __name__ == '__main__':
-    # print(get_comment_score_data('紫微洞'))
-    print(path)
+    print(get_comment_score_data('紫微洞'))
+

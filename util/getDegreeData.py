@@ -1,4 +1,4 @@
-from travel.util.utils import *
+from util.utils import *
 
 
 def get_commtent_level(searchName):

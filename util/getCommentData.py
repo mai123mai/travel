@@ -1,4 +1,4 @@
-from travel.util.utils import *
+from util.utils import *
 import pandas as pd
 from sqlalchemy import create_engine
 from sqlalchemy import text

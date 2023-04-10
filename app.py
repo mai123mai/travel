@@ -1,16 +1,10 @@
 # coding=utf-8
-import json
-
-from flask import Flask, request, render_template, session, redirect, jsonify
-from flask_sqlalchemy import Pagination
-
-from travel.module.dataShow import dataShow
-from travel.module.user import user
-from travel.module.dataAnaly import dataAnaly
-from travel.emotion.emotion_train import *
-from travel.redis_cache import cache
-from travel.util.getTableData import getTableDataBYTablePage
-from travel.util.query import querys
+from flask import Flask, request, render_template, session, redirect
+from module.dataShow import dataShow
+from module.user import user
+from module.dataAnaly import dataAnaly
+from emotion.emotion_train import *
+from redis_cache import cache
 
 app = Flask(__name__)
 cache.init_app(app)
@@ -60,4 +54,4 @@ def cors(environ):
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8888)
+    app.run(debug=True, port=5555)

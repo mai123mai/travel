@@ -1,6 +1,6 @@
 from numpy import mean
 
-from travel.util.utils import *
+from util.utils import *
 from sqlalchemy import create_engine
 from sqlalchemy import text
 

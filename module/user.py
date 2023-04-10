@@ -1,7 +1,7 @@
 from flask import request, render_template, session, redirect, Blueprint
 
-from travel.redis_cache import cache
-from travel.util import query
+from redis_cache import cache
+from util import query
 
 user = Blueprint('user', __name__)
 

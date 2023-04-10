@@ -1,6 +1,6 @@
 import json
 
-from travel.util.utils import get_traffic_df
+from util.utils import get_traffic_df
 
 # from travel.util.query import *
 

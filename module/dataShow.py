@@ -1,16 +1,13 @@
-import json
 from flask import request, render_template, session, redirect, Blueprint, jsonify
+from util.getHomeData import *
+from util.getChinaData import *
+from util.getDataShow import *
+from util.getProvinceData import *
+from util.getProvinceMap import *
+from util.getTableData import *
+from util.getSearchData import *
 
-from travel.redis_cache import cache
-from travel.util.getHomeData import *
-from travel.util.getChinaData import *
-from travel.util.getDataShow import *
-from travel.util.getProvinceData import *
-from travel.util.getProvinceMap import *
-from travel.util.getTableData import *
-from travel.util.getSearchData import *
-from travel.util.getStarData import *
-from travel.util.getTrafficData import *
+from util.getTrafficData import *
 
 dataShow = Blueprint('dataShow', __name__)
 

@@ -1,7 +1,7 @@
 import random
 
-from travel.util.getProvinceMap import get_city_heat_sort
-from travel.util.utils import *
+from util.getProvinceMap import get_city_heat_sort
+from util.utils import *
 from numpy import mean
 
 

@@ -1,5 +1,5 @@
-from travel.util.getProvinceMap import get_province_map, get_city_name
-from travel.util.utils import *
+from util.getProvinceMap import get_province_map, get_city_name
+from util.utils import *
 from numpy import mean
 
 
