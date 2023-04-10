@@ -1,0 +1,1251 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Data Analy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Data Analy" name="description">
+    <link href="../static/css/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../static/css/preloader.min.css" type="text/css">
+    <link href="../static/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css">
+    <link href="../static/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
+
+    <!-- DataTables -->
+    <link href="../static/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+
+</head>
+<style>
+    .table td {
+        text-align: center;
+    }
+
+</style>
+<body>
+
+<!-- <body data-layout="horizontal"> -->
+
+<!-- Begin page -->
+<div id="layout-wrapper">
+
+
+    <header id="page-topbar">
+        <div class="navbar-header">
+            <div class="d-flex">
+                <!-- LOGO -->
+                <div class="navbar-brand-box">
+                    <a href="" class="logo logo-dark">
+                            <span class="logo-sm">
+                                        <img src="../static/picture/logo-sm.svg" alt="" height="24">
+                                    </span>
+                        <span class="logo-lg">
+                                        <img src="../static/picture/logo-sm.svg" alt="" height="24"> <span
+                                class="logo-txt">Data Analy</span>
+                                    </span>
+                    </a>
+
+                    <a href="" class="logo logo-light">
+                                    <span class="logo-sm">
+                                        <img src="../static/picture/logo-sm.svg" alt="" height="24">
+                                    </span>
+                        <span class="logo-lg">
+                                        <img src="../static/picture/logo-sm.svg" alt="" height="24"> <span
+                                class="logo-txt">Data Analy</span>
+                                    </span>
+                    </a>
+                </div>
+
+                <button type="button" class="btn btn-sm px-3 font-size-16 header-item" id="vertical-menu-btn">
+                    <i class="fa fa-fw fa-bars"></i>
+                </button>
+
+                <!-- App Search-->
+                <form class="app-search d-none d-lg-block">
+                    <div class="position-relative">
+                        <input type="text" class="form-control" placeholder="Search...">
+                        <button class="btn btn-primary" type="button"><i class="bx bx-search-alt align-middle"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="d-flex">
+
+                <div class="dropdown d-inline-block d-lg-none ms-2">
+                    <button type="button" class="btn header-item" id="page-header-search-dropdown"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i data-feather="search" class="icon-lg"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                         aria-labelledby="page-header-search-dropdown">
+
+                        <form class="p-3">
+                            <div class="form-group m-0">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search ..."
+                                           aria-label="Search Result">
+
+                                    <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="dropdown d-none d-sm-inline-block">
+                    <button type="button" class="btn header-item" id="mode-setting-btn">
+                        <i data-feather="moon" class="icon-lg layout-mode-dark"></i>
+                        <i data-feather="sun" class="icon-lg layout-mode-light"></i>
+                    </button>
+                </div>
+
+                <div class="dropdown d-inline-block">
+                    <button type="button" class="btn header-item right-bar-toggle me-2">
+                        <i data-feather="settings" class="icon-lg"></i>
+                    </button>
+                </div>
+
+                <div class="dropdown d-inline-block">
+                    <button type="button" class="btn header-item topbar-light bg-light-subtle border-start border-end"
+                            id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                        <img class="rounded-circle header-profile-user" src="../static/picture/avatar-1.jpg"
+                             alt="Header Avatar">
+                        <span class="d-none d-xl-inline-block ms-1 fw-medium">{{ name }}</span>
+                        <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <!-- item-->
+                        <a class="dropdown-item" href="/lock_screen"><i
+                                class="mdi mdi-lock font-size-16 align-middle me-1"></i> 锁屏 </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/loginOut"><i
+                                class="mdi mdi-logout font-size-16 align-middle me-1"></i> 退出 </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="vertical-menu">
+
+        <div data-simplebar="" class="h-100">
+
+            <!--- Sidemenu -->
+            <div id="sidebar-menu">
+                <!-- Left Menu Start -->
+                <ul class="metismenu list-unstyled" id="side-menu">
+                    <li class="menu-title" data-key="t-menu">Menu</li>
+
+                    <li>
+                        <a href="/home">
+                            <i data-feather="home"></i>
+                            <span data-key="t-dashboard">Home</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/data_show/all">
+                            <i data-feather="grid"></i>
+                            <span data-key="t-calendar">数据大屏</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/table/0" class="has-arrow">
+                            <i data-feather="users"></i>
+                            <span data-key="t-authentication">数据展示</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/traffic/all" class="has-arrow">
+                            <i data-feather="file-text"></i>
+                            <span data-key="t-horizontal">城市实时交通</span>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="/search/1" class="has-arrow">
+                            <i data-feather="file-text"></i>
+                            <span data-key="t-horizontal">搜索</span>
+                        </a>
+
+                    </li>
+
+                    <li>
+                        <a href="javascript: void(0);" class="has-arrow">
+                            <i data-feather="gift"></i>
+                            <span data-key="t-ui-elements">数据分析</span>
+                        </a>
+                        <ul class="sub-menu" aria-expanded="false">
+                            <li><a href="/price_t/四川" data-key="t-lightbox">价格分析表</a></li>
+                            <li><a href="/star_t/all" data-key="t-range-slider">星级分析表</a></li>
+                            <li><a href="/heat_t/all" data-key="t-range-slider">热度分析表</a></li>
+                            <li><a href="/map_t/all" data-key="t-sweet-alert">地点分析表</a></li>
+                            <li><a href="/degree_t/all" data-key="t-rating">满意度分析表</a></li>
+                            <li><a href="/service/all" data-key="t-range-slider">景区特色与服务评价分析</a></li>
+                            <li><a href="/comment_t/all" data-key="t-lightbox">时间与评论分析</a></li>
+                            <li><a href="/comment_emotion/all" data-key="t-range-slider">评论内容与情感分析</a></li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+
+
+            </div>
+            <!-- Sidebar -->
+        </div>
+    </div>
+    <div class="main-content">
+
+        <div class="page-content">
+            <div class="container-fluid">
+
+                <!-- category    -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                            <h4 class="mb-sm-0 font-size-18">城市实时交通</h4>
+                            <div class="showTime" style="color: blue;"></div>
+                            <script>
+                                var t = null;
+                                t = setTimeout(time, 1000); //開始运行
+                                function time() {
+                                    clearTimeout(t); //清除定时器
+                                    dt = new Date();
+                                    var y = dt.getFullYear();
+                                    var mt = dt.getMonth() + 1;
+                                    var day = dt.getDate();
+                                    var h = dt.getHours(); //获取时
+                                    var m = dt.getMinutes(); //获取分
+                                    var s = dt.getSeconds(); //获取秒
+                                    document.querySelector(".showTime").innerHTML =
+                                        "当前时间：" +
+                                        y +
+                                        "年" +
+                                        mt +
+                                        "月" +
+                                        day +
+                                        "-" +
+                                        h +
+                                        "时" +
+                                        m +
+                                        "分" +
+                                        s +
+                                        "秒";
+                                    t = setTimeout(time, 1000); //设定定时器，循环运行
+                                }
+                            </script>
+                            <div class="page-title-right">
+                                <ol class="breadcrumb m-0">
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
+                                    <li class="breadcrumb-item active">traffic</li>
+                                </ol>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- <echart>-->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <form method="POST" action="/traffic/all">
+                                <div class="input-group" style="width: 40%">
+                                    <input type="text" id="input2-group2" name="searchName"
+                                           placeholder="请输入地区(省份)的关键字" class="form-control">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-primary">搜索</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-12">
+                        <!-- card -->
+                        <div class="card">
+                            <!-- card body -->
+                            <div class="card-header">
+                                <h4 class="card-title mb-0">交通健康情况分析</h4>
+                            </div>
+                            <div class="card-body">
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-bs-toggle="tab" href="#type_1" role="tab">
+                                            <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+                                            <span class="d-none d-sm-block">拥堵延时指数</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#type_2" role="tab">
+                                            <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+                                            <span class="d-none d-sm-block">高延时运行时间占比(%)</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#type_3" role="tab">
+                                            <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                                            <span class="d-none d-sm-block">拥堵路段里程比(%)</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#type_4" role="tab">
+                                            <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
+                                            <span class="d-none d-sm-block">平均车速(km/h)</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!-- Tab panes -->
+                                <div class="tab-content p-3 text-muted">
+                                    <div class="tab-pane active" id="type_1" role="tabpanel">
+                                        <div class="mb-0" id="echart1" style="width:1000px;height: 300px"></div>
+                                    </div>
+                                    <div class="tab-pane" id="type_2" role="tabpanel">
+                                        <div class="mb-0" id="echart2" style="width:1000px;height: 300px"></div>
+                                    </div>
+                                    <div class="tab-pane" id="type_3" role="tabpanel">
+                                        <div id="echart3" style="width:1000px;height: 300px"></div>
+                                    </div>
+                                    <div class="tab-pane" id="type_4" role="tabpanel">
+                                        <div id="echart4" style="width:1000px;height: 300px"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-pills nav-justified" role="tablist">
+                                    <li class="nav-item waves-effect waves-light">
+                                        <a class="nav-link active" data-bs-toggle="tab" href="#home-1" role="tab">
+                                            <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+                                            <span class="d-none d-sm-block">区域拥堵排名</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item waves-effect waves-light">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#profile-1" role="tab">
+                                            <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+                                            <span class="d-none d-sm-block">商圈拥堵排名</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item waves-effect waves-light">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#messages-1" role="tab">
+                                            <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                                            <span class="d-none d-sm-block">行政区划排名</span>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <!-- Tab panes -->
+                                <div class="tab-content p-3 text-muted">
+                                    <div class="tab-pane active" id="home-1" role="tabpanel">
+                                        <div class="col-xl-12">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="table-responsive" style="text-align: center;">
+                                                        <table class="table mb-0">
+                                                            <thead class="table-light">
+                                                            <tr>
+                                                                <th>排名</th>
+                                                                <th>区域</th>
+                                                                <th>拥堵指数</th>
+                                                                <th>旅行速度</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            {% for item in item_obj1 %}
+                                                            <tr>
+                                                                <th scope="row">{{item[1]}}</th>
+                                                                <td>{{item[2]}}</td>
+                                                                <td>{{item[3]}}</td>
+                                                                <td>{{item[4]}}</td>
+                                                            </tr>
+                                                            {% endfor %}
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <!-- end card body -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="profile-1" role="tabpanel">
+                                        <div class="col-xl-12">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="table-responsive" style="text-align: center;">
+                                                        <table class="table mb-0">
+                                                            <thead class="table-light">
+                                                            <tr>
+                                                                <th>排名</th>
+                                                                <th>区域</th>
+                                                                <th>拥堵指数</th>
+                                                                <th>旅行速度</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            {% for item in item_obj2 %}
+                                                            <tr>
+                                                                <th scope="row">{{item[1]}}</th>
+                                                                <td>{{item[2]}}</td>
+                                                                <td>{{item[3]}}</td>
+                                                                <td>{{item[4]}}</td>
+                                                            </tr>
+                                                            {% endfor %}
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <!-- end card body -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="messages-1" role="tabpanel">
+                                        <div class="col-xl-12">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="table-responsive" style="text-align: center;">
+                                                        <table class="table mb-0">
+                                                            <thead class="table-light">
+                                                            <tr>
+                                                                <th>排名</th>
+                                                                <th>区域</th>
+                                                                <th>拥堵指数</th>
+                                                                <th>旅行速度</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            {% for item in item_obj3 %}
+                                                            <tr>
+                                                                <th scope="row">{{item[1]}}</th>
+                                                                <td>{{item[2]}}</td>
+                                                                <td>{{item[3]}}</td>
+                                                                <td>{{item[4]}}</td>
+                                                            </tr>
+                                                            {% endfor %}
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <!-- end card body -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div><!-- end card-body -->
+                        </div><!-- end card -->
+                    </div><!-- end col -->
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-pills nav-justified" role="tablist">
+                                    <li class="nav-item waves-effect waves-light">
+                                        <a class="nav-link active" data-bs-toggle="tab" href="#home-2" role="tab">
+                                            <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+                                            <span class="d-none d-sm-block">全部道路</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item waves-effect waves-light">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#profile-2" role="tab">
+                                            <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+                                            <span class="d-none d-sm-block">快速/高速道路</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item waves-effect waves-light">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#messages-2" role="tab">
+                                            <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                                            <span class="d-none d-sm-block">普通道路</span>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <!-- Tab panes -->
+                                <div class="tab-content p-3 text-muted">
+                                    <div class="tab-pane active" id="home-2" role="tabpanel">
+                                        <div class="col-xl-12">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="table-responsive" style="text-align: center;">
+                                                        <table class="table mb-0">
+                                                            <thead class="table-light">
+                                                            <tr>
+                                                                <th>排名</th>
+                                                                <th>道路名称</th>
+                                                                <th>拥堵延时指数</th>
+                                                                <th>速度</th>
+                                                                <th>旅行时间</th>
+                                                                <th>延迟时间</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            {% for item in roadrank_obj[0] %}
+                                                            <tr>
+                                                                <th scope="row">{{item[0]}}</th>
+                                                                <td>{{item[1]}}<br>{{item[2]}}</td>
+                                                                <td>{{item[3]}}</td>
+                                                                <td>{{item[4]}}</td>
+                                                                <td>{{item[5]}}</td>
+                                                                <td>{{item[6]}}</td>
+                                                            </tr>
+                                                            {% endfor %}
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <!-- end card body -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="profile-2" role="tabpanel">
+                                        <div class="col-xl-12">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="table-responsive" style="text-align: center;">
+                                                        <table class="table mb-0">
+                                                            <thead class="table-light">
+                                                            <tr>
+                                                                <th>排名</th>
+                                                                <th>道路名称</th>
+                                                                <th>拥堵延时指数</th>
+                                                                <th>速度</th>
+                                                                <th>旅行时间</th>
+                                                                <th>延迟时间</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            {% for item in roadrank_obj[1] %}
+                                                            <tr>
+                                                                <th scope="row">{{item[0]}}</th>
+                                                                <td>{{item[1]}}<br>{{item[2]}}</td>
+                                                                <td>{{item[3]}}</td>
+                                                                <td>{{item[4]}}</td>
+                                                                <td>{{item[5]}}</td>
+                                                                <td>{{item[6]}}</td>
+                                                            </tr>
+                                                            {% endfor %}
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <!-- end card body -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="messages-2" role="tabpanel">
+                                        <div class="col-xl-12">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="table-responsive" style="text-align: center;">
+                                                        <table class="table mb-0">
+                                                            <thead class="table-light">
+                                                            <tr>
+                                                                <th>排名</th>
+                                                                <th>道路名称</th>
+                                                                <th>拥堵延时指数</th>
+                                                                <th>速度</th>
+                                                                <th>旅行时间</th>
+                                                                <th>延迟时间</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            {% for item in roadrank_obj[2] %}
+                                                            <tr>
+                                                                <th scope="row">{{item[0]}}</th>
+                                                                <td>{{item[1]}}<br>{{item[2]}}</td>
+                                                                <td>{{item[3]}}</td>
+                                                                <td>{{item[4]}}</td>
+                                                                <td>{{item[5]}}</td>
+                                                                <td>{{item[6]}}</td>
+                                                            </tr>
+                                                            {% endfor %}
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <!-- end card body -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div><!-- end card-body -->
+                        </div><!-- end card -->
+                    </div><!-- end col -->
+                </div>
+
+                <!-- End Page-content -->
+
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <script> document.write(new Date().getFullYear())</script>
+                                &copy; Tourism Data Analysis
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="text-sm-end d-none d-sm-block">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <!-- end main content-->
+        </div>
+    </div>
+    <!-- END layout-wrapper -->
+
+
+</div>
+
+<!-- /Right-bar -->
+<!-- Right Sidebar -->
+<div class="right-bar">
+    <div data-simplebar="" class="h-100">
+        <div class="rightbar-title d-flex align-items-center p-3">
+
+            <h5 class="m-0 me-2">主体编辑器</h5>
+
+            <a href="javascript:void(0);" class="right-bar-toggle ms-auto">
+                <i class="mdi mdi-close noti-icon"></i>
+            </a>
+        </div>
+        <hr class="m-0">
+
+        <div class="p-4">
+
+            <!--                        <h6 class="mb-3" style="display: none">布局</h6>-->
+            <div class="form-check form-check-inline" style="display: none">
+                <input class="form-check-input" type="radio" name="layout" id="layout-vertical"
+                       value="vertical">
+                <label class="form-check-label" for="layout-vertical">Vertical</label>
+            </div>
+            <div class="form-check form-check-inline" style="display: none">
+                <input class="form-check-input" type="radio" name="layout" id="layout-horizontal"
+                       value="horizontal">
+                <label class="form-check-label" for="layout-horizontal">Horizontal</label>
+            </div>
+
+            <h6 class="mt-4 mb-3 pt-2">布局模式</h6>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="layout-mode" id="layout-mode-light"
+                       value="light">
+                <label class="form-check-label" for="layout-mode-light">Light</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="layout-mode" id="layout-mode-dark"
+                       value="dark">
+                <label class="form-check-label" for="layout-mode-dark">Dark</label>
+            </div>
+
+            <h6 class="mt-4 mb-3 pt-2">布局分配</h6>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="layout-width" id="layout-width-fuild"
+                       value="fuild"
+                       onchange="document.body.setAttribute('data-layout-size', 'fluid')">
+                <label class="form-check-label" for="layout-width-fuild">Fluid</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="layout-width" id="layout-width-boxed"
+                       value="boxed"
+                       onchange="document.body.setAttribute('data-layout-size', 'boxed')">
+                <label class="form-check-label" for="layout-width-boxed">Boxed</label>
+            </div>
+
+            <h6 class="mt-4 mb-3 pt-2">布局位置</h6>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="layout-position" id="layout-position-fixed"
+                       value="fixed" onchange="document.body.setAttribute('data-layout-scrollable', 'false')">
+                <label class="form-check-label" for="layout-position-fixed">Fixed</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="layout-position"
+                       id="layout-position-scrollable"
+                       value="scrollable"
+                       onchange="document.body.setAttribute('data-layout-scrollable', 'true')">
+                <label class="form-check-label" for="layout-position-scrollable">Scrollable</label>
+            </div>
+
+            <h6 class="mt-4 mb-3 pt-2">顶部导航栏颜色</h6>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="topbar-color" id="topbar-color-light"
+                       value="light"
+                       onchange="document.body.setAttribute('data-topbar', 'light')">
+                <label class="form-check-label" for="topbar-color-light">Light</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="topbar-color" id="topbar-color-dark"
+                       value="dark"
+                       onchange="document.body.setAttribute('data-topbar', 'dark')">
+                <label class="form-check-label" for="topbar-color-dark">Dark</label>
+            </div>
+
+            <h6 class="mt-4 mb-3 pt-2 sidebar-setting">侧边栏的大小</h6>
+
+            <div class="form-check sidebar-setting">
+                <input class="form-check-input" type="radio" name="sidebar-size" id="sidebar-size-default"
+                       value="default" onchange="document.body.setAttribute('data-sidebar-size', 'lg')">
+                <label class="form-check-label" for="sidebar-size-default">Default</label>
+            </div>
+            <div class="form-check sidebar-setting">
+                <input class="form-check-input" type="radio" name="sidebar-size" id="sidebar-size-compact"
+                       value="compact" onchange="document.body.setAttribute('data-sidebar-size', 'md')">
+                <label class="form-check-label" for="sidebar-size-compact">Compact</label>
+            </div>
+            <div class="form-check sidebar-setting">
+                <input class="form-check-input" type="radio" name="sidebar-size" id="sidebar-size-small"
+                       value="small"
+                       onchange="document.body.setAttribute('data-sidebar-size', 'sm')">
+                <label class="form-check-label" for="sidebar-size-small">Small (Icon View)</label>
+            </div>
+
+            <h6 class="mt-4 mb-3 pt-2 sidebar-setting">右边导航栏颜色</h6>
+
+            <div class="form-check sidebar-setting">
+                <input class="form-check-input" type="radio" name="sidebar-color" id="sidebar-color-light"
+                       value="light"
+                       onchange="document.body.setAttribute('data-sidebar', 'light')">
+                <label class="form-check-label" for="sidebar-color-light">Light</label>
+            </div>
+            <div class="form-check sidebar-setting">
+                <input class="form-check-input" type="radio" name="sidebar-color" id="sidebar-color-dark"
+                       value="dark"
+                       onchange="document.body.setAttribute('data-sidebar', 'dark')">
+                <label class="form-check-label" for="sidebar-color-dark">Dark</label>
+            </div>
+            <div class="form-check sidebar-setting">
+                <input class="form-check-input" type="radio" name="sidebar-color" id="sidebar-color-brand"
+                       value="brand"
+                       onchange="document.body.setAttribute('data-sidebar', 'brand')">
+                <label class="form-check-label" for="sidebar-color-brand">Brand</label>
+            </div>
+
+
+            <h6 class="mt-4 mb-3 pt-2" style="display: none">Direction</h6>
+
+            <div class="form-check form-check-inline" style="display: none">
+                <input class="form-check-input" type="radio" name="layout-direction" id="layout-direction-ltr"
+                       value="ltr" style="display: none">
+                <label class="form-check-label" for="layout-direction-ltr">LTR</label>
+            </div>
+            <div class="form-check form-check-inline" style="display: none">
+                <input class="form-check-input" type="radio" name="layout-direction" id="layout-direction-rtl"
+                       value="rtl">
+                <label class="form-check-label" for="layout-direction-rtl">RTL</label>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- Settings -->
+
+
+</div> <!-- end slimscroll-menu-->
+<!-- Right bar overlay-->
+<div class="rightbar-overlay"></div>
+
+<!-- JAVASCRIPT -->
+<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/bootstrap.bundle.min.js"></script>
+<script src="../static/js/metisMenu.min.js"></script>
+<script src="../static/js/simplebar.min.js"></script>
+<script src="../static/js/waves.min.js"></script>
+<script src="../static/js/feather.min.js"></script>
+<!-- pace js -->
+<script src="../static/js/pace.min.js"></script>
+<!-- apexcharts -->
+
+<script src="../static/js/echarts.min.js"></script>
+<!-- Plugins js-->
+
+<script src="../static/js/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="../static/js/jquery-jvectormap-world-mill-en.js"></script>
+
+<!-- Datatable init js -->
+<script src="../static/js/datatables.init.js"></script>
+<!-- Required datatable js -->
+<script src="../static/js/jquery.dataTables.min.js"></script>
+<script src="../static/js/dataTables.bootstrap4.min.js"></script>
+<script src="../static/js/dataTables.buttons.min.js"></script>
+<script src="../static/js/buttons.bootstrap4.min.js"></script>
+
+<script src="../static/js/app.js"></script>
+
+
+<!--echarts-->
+
+
+<script>
+    $(function china_chart1() {
+        var myChart = echarts.init(document.getElementById("echart1"));
+
+        row_chart1 = "{{ row_chart1|safe }}";
+        let xData = eval(`( ${row_chart1} )`);
+        col_chart1 = "{{ col_chart1|safe }}";
+        let yData = eval(`( ${col_chart1} )`);
+
+
+        var colors = ['#00FFFF', '#02FF67', '#675bba', '#990099',];
+
+        option = {
+            backgroundColor: 'rgba(247,247,247,0.74)',
+
+            grid: {
+                top: '35px',
+                right: '3%',
+                left: '3%',
+                bottom: '5%',
+                containLabel: true
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    lineStyle: {
+                        color: '#990099',
+                    },
+                },
+            },
+
+            xAxis: [{
+                type: 'category',
+                name: '',
+                axisLine: {
+                    lineStyle: {
+                        color: '#858d98'
+                    },
+                },
+                splitLine: {
+                    show: false,
+                },
+                axisTick: {
+                    show: false,
+                },
+                splitArea: {
+                    show: false,
+                },
+                axisLabel: {
+                    fontSize: 12,
+                    interval: 'auto'
+                },
+                data: xData
+            }],
+            yAxis: [
+                {
+                    type: "value",
+                    splitLine: {
+                        lineStyle: {
+                            color: "rgba(133, 141, 152, 0.2)",
+                            // type: 'dashed', // dotted 虚线
+                        },
+                    },
+                    axisLine: {
+                        show: false,
+                        color: '#858d98'
+                    },
+                    axisTick: {
+                        show: false,
+                    },
+                    axisLabel: {
+                        fontSize: 12,
+                        interval: 'auto',
+                    },
+                    splitArea: {
+                        show: false,
+                    },
+                }
+            ],
+            series: [
+                {
+                    name: '拥堵延时指数',
+                    type: 'line',
+                    // smooth: true, //是否平滑
+                    showAllSymbol: true,
+                    symbol: 'circle',
+                    symbolSize: 5,
+                    lineStyle: {
+                        normal: {
+                            color: "#990099",
+                        },
+                    },
+                    itemStyle: {
+                        // color: "#fff",
+                        borderColor: "#990099",
+                        borderWidth: 3,
+                    },
+
+                    data: yData
+                }
+            ]
+        };
+
+        myChart.setOption(option);
+        // 监听浏览器缩放，图表对象调用缩放resize函数
+        window.addEventListener("resize", function () {
+            myChart.resize();
+        });
+    })
+</script>
+
+<script>
+    $(function china_chart2() {
+        var myChart = echarts.init(document.getElementById("echart2"));
+
+        row_chart1 = "{{ row_chart2|safe }}";
+        let xData = eval(`( ${row_chart1} )`);
+        col_chart1 = "{{ col_chart2|safe }}";
+        let yData = eval(`( ${col_chart1} )`);
+
+
+        var colors = ['#00FFFF', '#02FF67', '#675bba', '#990099',];
+
+        option = {
+            backgroundColor: 'rgba(247,247,247,0.74)',
+
+            grid: {
+                top: '35px',
+                right: '3%',
+                left: '3%',
+                bottom: '5%',
+                containLabel: true
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    lineStyle: {
+                        color: '#990099',
+                    },
+                },
+            },
+
+            xAxis: [{
+                type: 'category',
+                name: '',
+                axisLine: {
+                    lineStyle: {
+                        color: '#858d98'
+                    },
+                },
+                splitLine: {
+                    show: false,
+                },
+                axisTick: {
+                    show: false,
+                },
+                splitArea: {
+                    show: false,
+                },
+                axisLabel: {
+                    fontSize: 12,
+                    interval: 'auto'
+                },
+                data: xData
+            }],
+            yAxis: [
+                {
+                    type: "value",
+                    splitLine: {
+                        lineStyle: {
+                            color: "rgba(133, 141, 152, 0.2)",
+                            // type: 'dashed', // dotted 虚线
+                        },
+                    },
+                    axisLine: {
+                        show: false,
+                        color: '#858d98'
+                    },
+                    axisTick: {
+                        show: false,
+                    },
+                    axisLabel: {
+                        fontSize: 12,
+                        interval: 'auto',
+                    },
+                    splitArea: {
+                        show: false,
+                    },
+                }
+            ],
+            series: [
+                {
+                    name: '拥堵延时指数',
+                    type: 'line',
+                    // smooth: true, //是否平滑
+                    showAllSymbol: true,
+                    symbol: 'circle',
+                    symbolSize: 5,
+                    lineStyle: {
+                        normal: {
+                            color: "#990099",
+                        },
+                    },
+                    itemStyle: {
+                        // color: "#fff",
+                        borderColor: "#990099",
+                        borderWidth: 3,
+                    },
+
+                    data: yData
+                }
+            ]
+        };
+
+        myChart.setOption(option);
+        // 监听浏览器缩放，图表对象调用缩放resize函数
+        window.addEventListener("resize", function () {
+            myChart.resize();
+        });
+    })
+</script>
+
+<script>
+    $(function china_chart3() {
+        var myChart = echarts.init(document.getElementById("echart3"));
+
+        row_chart1 = "{{ row_chart3|safe }}";
+        let xData = eval(`( ${row_chart1} )`);
+        col_chart1 = "{{ col_chart3|safe }}";
+        let yData = eval(`( ${col_chart1} )`);
+
+
+        var colors = ['#00FFFF', '#02FF67', '#675bba', '#990099',];
+
+        option = {
+            backgroundColor: 'rgba(247,247,247,0.74)',
+
+            grid: {
+                top: '35px',
+                right: '3%',
+                left: '3%',
+                bottom: '5%',
+                containLabel: true
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    lineStyle: {
+                        color: '#990099',
+                    },
+                },
+            },
+
+            xAxis: [{
+                type: 'category',
+                name: '',
+                axisLine: {
+                    lineStyle: {
+                        color: '#858d98'
+                    },
+                },
+                splitLine: {
+                    show: false,
+                },
+                axisTick: {
+                    show: false,
+                },
+                splitArea: {
+                    show: false,
+                },
+                axisLabel: {
+                    fontSize: 12,
+                    interval: 'auto'
+                },
+                data: xData
+            }],
+            yAxis: [
+                {
+                    type: "value",
+                    splitLine: {
+                        lineStyle: {
+                            color: "rgba(133, 141, 152, 0.2)",
+                            // type: 'dashed', // dotted 虚线
+                        },
+                    },
+                    axisLine: {
+                        show: false,
+                        color: '#858d98'
+                    },
+                    axisTick: {
+                        show: false,
+                    },
+                    axisLabel: {
+                        fontSize: 12,
+                        interval: 'auto',
+                    },
+                    splitArea: {
+                        show: false,
+                    },
+                }
+            ],
+            series: [
+                {
+                    name: '拥堵延时指数',
+                    type: 'line',
+                    // smooth: true, //是否平滑
+                    showAllSymbol: true,
+                    symbol: 'circle',
+                    symbolSize: 5,
+                    lineStyle: {
+                        normal: {
+                            color: "#990099",
+                        },
+                    },
+                    itemStyle: {
+                        // color: "#fff",
+                        borderColor: "#990099",
+                        borderWidth: 3,
+                    },
+
+                    data: yData
+                }
+            ]
+        };
+
+        myChart.setOption(option);
+        // 监听浏览器缩放，图表对象调用缩放resize函数
+        window.addEventListener("resize", function () {
+            myChart.resize();
+        });
+    })
+</script>
+
+<script>
+    $(function china_chart4() {
+        var myChart = echarts.init(document.getElementById("echart4"));
+
+        row_chart1 = "{{ row_chart4|safe }}";
+        let xData = eval(`( ${row_chart1} )`);
+        col_chart1 = "{{ col_chart4|safe }}";
+        let yData = eval(`( ${col_chart1} )`);
+
+
+        var colors = ['#00FFFF', '#02FF67', '#675bba', '#990099',];
+
+        option = {
+            backgroundColor: 'rgba(247,247,247,0.74)',
+
+            grid: {
+                top: '35px',
+                right: '3%',
+                left: '3%',
+                bottom: '5%',
+                containLabel: true
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    lineStyle: {
+                        color: '#990099',
+                    },
+                },
+            },
+
+            xAxis: [{
+                type: 'category',
+                name: '',
+                axisLine: {
+                    lineStyle: {
+                        color: '#858d98'
+                    },
+                },
+                splitLine: {
+                    show: false,
+                },
+                axisTick: {
+                    show: false,
+                },
+                splitArea: {
+                    show: false,
+                },
+                axisLabel: {
+                    fontSize: 12,
+                    interval: 'auto'
+                },
+                data: xData
+            }],
+            yAxis: [
+                {
+                    type: "value",
+                    splitLine: {
+                        lineStyle: {
+                            color: "rgba(133, 141, 152, 0.2)",
+                            // type: 'dashed', // dotted 虚线
+                        },
+                    },
+                    axisLine: {
+                        show: false,
+                        color: '#858d98'
+                    },
+                    axisTick: {
+                        show: false,
+                    },
+                    axisLabel: {
+                        fontSize: 12,
+                        interval: 'auto',
+                    },
+                    splitArea: {
+                        show: false,
+                    },
+                }
+            ],
+            series: [
+                {
+                    name: '拥堵延时指数',
+                    type: 'line',
+                    // smooth: true, //是否平滑
+                    showAllSymbol: true,
+                    symbol: 'circle',
+                    symbolSize: 5,
+                    lineStyle: {
+                        normal: {
+                            color: "#990099",
+                        },
+                    },
+                    itemStyle: {
+                        // color: "#fff",
+                        borderColor: "#990099",
+                        borderWidth: 3,
+                    },
+
+                    data: yData
+                }
+            ]
+        };
+
+        myChart.setOption(option);
+        // 监听浏览器缩放，图表对象调用缩放resize函数
+        window.addEventListener("resize", function () {
+            myChart.resize();
+        });
+    })
+</script>
+
+
+</body>
+
+</html>

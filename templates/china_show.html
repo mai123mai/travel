@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>数据可视化</title>
+    <link rel="stylesheet" href="../static/css/index.css"/>
+<!--    <link rel="stylesheet" href="../static/css/themify-icons.css">-->
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+<body>
+<!-- 头部的盒子 -->
+
+
+<header>
+
+    <div class="exit">
+        <a class="menu-icon ti-arrow-left" href="/data_show/all">返回</a>
+    </div>
+    <h1>数据可视化-ECharts</h1>
+    <div class="showTime"></div>
+    <script>
+        var t = null;
+        t = setTimeout(time, 1000); //開始运行
+        function time() {
+            clearTimeout(t); //清除定时器
+            dt = new Date();
+            var y = dt.getFullYear();
+            var mt = dt.getMonth() + 1;
+            var day = dt.getDate();
+            var h = dt.getHours(); //获取时
+            var m = dt.getMinutes(); //获取分
+            var s = dt.getSeconds(); //获取秒
+            document.querySelector(".showTime").innerHTML =
+                "当前时间：" +
+                y +
+                "年" +
+                mt +
+                "月" +
+                day +
+                "-" +
+                h +
+                "时" +
+                m +
+                "分" +
+                s +
+                "秒";
+            t = setTimeout(time, 1000); //设定定时器，循环运行
+        }
+    </script>
+</header>
+
+<!-- 页面主体部分 -->
+<section class="mainbox">
+    <div class="column">
+        <div class="panel bar">
+            <h2>景点价格分析</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel line">
+            <h2>
+                景区类型分析
+            </h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel pie">
+            <h2>景点热度分析</h2>
+            <div class="chart">图表</div>
+            <div class="panel-footer"></div>
+        </div>
+    </div>
+
+    <div class="column">
+        <!-- no模块制作 -->
+        <div class="no">
+            <div class="no-hd">
+                <ul>
+                    <li style="font-size: 0.55rem">{{ type|safe }}</li>
+                    <li>{{ count|safe }}</li>
+                </ul>
+            </div>
+            <div class="no-bd">
+                <ul>
+                    <li>区域</li>
+                    <li>景区数量</li>
+                </ul>
+            </div>
+        </div>
+        <!-- 地图模块 -->
+        <div class="map">
+            <div class="map1"></div>
+            <div class="map2"></div>
+            <div class="map3"></div>
+            <div class="chart"></div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="panel bar2">
+            <h2>景区数量分析</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel line2">
+            <h2>最热景点</h2>
+            <div class="chart">图表</div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel pie2">
+            <h2>景区满意度分析</h2>
+            <div class="chart">图表</div>
+            <div class="panel-footer"></div>
+        </div>
+
+    </div>
+</section>
+<script src="../static/js/flexible.js"></script>
+<script src="../static/js/echarts.min.js"></script>
+<!-- 先引入jquery -->
+<script src="../static/js/jquery.min.js"></script>
+<!-- 必须先引入china.js 这个文件 因为中国地图需要 -->
+<script src="../static/js/china.js"></script>
+
+
+<script>
+    $(function china_map() {
+        var myChart = echarts.init(document.querySelector(".map .chart"));
+        var dataList = "{{ datas|safe }}";
+        window.dataList = eval(`( ${dataList} )`);
+        var count = "{{ count|safe }}";
+        var dataCount = eval(`( ${count} )`);
+
+        option = {
+            tooltip: {
+                triggerOn: "click",
+                formatter: function (e, t, n) {
+                    return '.5' == e.value ? e.name + "：景区数量" : e.seriesName + "<br />" + e.name + "：" + e.value
+                }
+            },
+            toolbox: {
+                show: true,
+                orient: 'vertical',
+                left: 'right',
+                top: 'center',
+                feature: {
+                    dataView: {readOnly: false},
+                    restore: {},
+                    saveAsImage: {}
+                }
+            }, // 提供下载工具
+
+            visualMap: [
+                {
+                    min: 0,
+                    max: 800,
+                    left: 26,
+                    bottom: 40,
+                    showLabel: !0,
+                    text: ["高", "低"],
+                    inRange: {
+                        color: ['#0033FF', '#FFFF00', '#FF3333'],
+                    },
+
+                    show: true
+                }
+            ],
+            geo: {
+                map: "china",
+                roam: !1,
+                scaleLimit: {
+                    min: 1,
+                    max: 2
+                },
+                zoom: 1.23,
+                top: 120,
+                label: {
+                    normal: {
+                        show: !0,
+                        fontSize: "12",
+                        color: "rgba(0,0,0,0.7)"
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        // 地图省份的背景颜色
+                        areaColor: "rgba(20, 41, 87,0.4)",
+                        borderColor: "#195BB9",
+                        borderWidth: 1
+                    },
+                    emphasis: {
+                        areaColor: "#2B91B7",
+                        shadowOffsetX: 0,
+                        shadowOffsetY: 0,
+                        borderWidth: 0
+                    }
+                }
+            },
+            series: [{
+                name: "景区数量",
+                type: "map",
+                geoIndex: 0,
+                data: window.dataList
+            }]
+        };
+
+
+        myChart.setOption(option);
+        // 监听浏览器缩放，图表对象调用缩放resize函数
+        window.addEventListener("resize", function () {
+            myChart.resize();
+        });
+    })
+</script>
+
+<script>
+    $(function china_chart1() {
+        var myChart = echarts.init(document.querySelector(".bar .chart"));
+        var row_chart1 = "{{ row_chart1|safe }}";
+        var chart1_row_data = eval(`( ${row_chart1} )`);
+        var col_chart1 = "{{ col_chart1|safe }}";
+        var chart1_col_data = eval(`( ${col_chart1} )`);
+
+        var colors = ['#00FFFF', '#02FF67', '#675bba'];
+
+
+        option = {
+            color: ["#2f89cf"],
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'shadow'
+                }
+            },
+            grid: {
+                top: '30px',
+                right: '5%',
+                left: '3%',
+                bottom: '3%',
+                containLabel: true
+            },
+
+            xAxis: [{
+                type: 'category',
+                axisLabel: {
+                    color: '#6a9cd5'
+                },
+                axisLine: {
+                    show: true,
+                    lineStyle: {
+                        color: '#0a3e98'
+                    }
+                },
+                axisTick: {
+                    show: false,
+                },
+                splitLine: {
+                    show: false,
+                    lineStyle: {
+                        color: '#195384',
+                        type: "dotted",
+                    }
+                },
+                data: chart1_row_data
+            }],
+            yAxis: {
+                type: 'value',
+                name: "金额",
+                min: 0,
+                position: 'left',
+                nameTextStyle: {
+                    color: "#6a9cd5",
+                    fontSize: 11,
+                },
+                axisLine: {
+                    lineStyle: {
+                        color: '#0a3e98'
+                    }
+                },
+                axisTick: {
+                    show: false,
+                },
+                splitLine: {
+                    show: true,
+                    lineStyle: {
+                        color: '#0a3e98',
+                        type: "dotted",
+                    }
+                },
+                axisLabel: {
+                    formatter: '{value}',
+                    textStyle: {
+                        color: "#6a9cd5",
+                    }
+                },
+            },
+            dataZoom: [
+                {
+                    show: true,
+                    type: 'inside',
+                    realtime: true,
+                    start: 0,
+                    end: 50
+                }
+            ],
+            series: [
+                {
+                    name: '均价',
+                    type: 'bar',
+                    barWidth: 15, //柱子宽度
+                    barGap: 0.3, //柱子之间间距
+                    itemStyle: {
+                        // normal: {
+                        //     color: '#00FFFF',
+                        //     opacity: 1,
+                        // },
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                offset: 0,
+                                color: '#02A3F1'
+                            }, {
+                                offset: 1,
+                                color: '#1358E3'
+                            }]),
+                            opacity: 1,
+                        }
+                    },
+                    label: {
+                        normal: {
+                            show: true,
+                            position: "top",
+                            formatter: "{c}",
+                            color: '#00C0FF'
+                        }
+                    },
+                    data: chart1_col_data,
+                }
+            ]
+        };
+
+
+        myChart.setOption(option);
+        // 监听浏览器缩放，图表对象调用缩放resize函数
+        window.addEventListener("resize", function () {
+            myChart.resize();
+        });
+    })
+</script>
+
+<script>
+    $(function china_chart2() {
+        var myColor = ["#1089E7", "#F57474", "#56D0E3", "#F8B448", "#8B78F6"];
+        // 1. 实例化对象
+        var myChart = echarts.init(document.querySelector(".bar2 .chart"));
+        // 2. 指定配置和数据
+        var row_chart2 = "{{ row_chart2|safe }}";
+        var chart2_row_data = eval(`( ${row_chart2} )`);
+        var col_chart2 = "{{ col_chart2|safe }}";
+        var chart2_col_data = eval(`( ${col_chart2} )`);
+        var persen_data = "{{ persen|safe }}";
+        var persen = eval(`( ${persen_data} )`);
+        var full_list_ = "{{ full_list|safe }}";
+        var full_list = eval(`( ${full_list_} )`);
+
+        var option = {
+            grid: {
+                top: "10%",
+                left: "13%",
+                bottom: "3%"
+                // containLabel: true
+            },
+            // 不显示x轴的相关信息
+            xAxis: {
+                show: false,
+                axisLabel: {
+                    color: '#6a9cd5'
+                },
+            },
+            yAxis: [
+                {
+                    type: "category",
+                    inverse: true,
+                    data: chart2_col_data,
+                    // 不显示y轴的线
+                    axisLine: {
+                        show: false
+                    },
+                    // 不显示刻度
+                    axisTick: {
+                        show: false
+                    },
+                    // 把刻度标签里面的文字颜色设置为白色
+                    axisLabel: {
+                        color: '#6a9cd5'
+                    },
+                },
+                {
+                    data: chart2_row_data,
+                    inverse: true,
+                    // 不显示y轴的线
+                    axisLine: {
+                        show: false
+                    },
+                    // 不显示刻度
+                    axisTick: {
+                        show: false
+                    },
+                    // 把刻度标签里面的文字颜色设置为白色
+                    axisLabel: {
+                        color: '#6a9cd5'
+                    },
+                }
+            ],
+            series: [
+                {
+                    name: "条",
+                    type: "bar",
+                    data: persen,
+                    yAxisIndex: 0,
+                    // 修改第一组柱子的圆角
+                    itemStyle: {
+                        barBorderRadius: 20,
+                        // 此时的color 可以修改柱子的颜色
+                        color: function (params) {
+                            // params 传进来的是柱子对象
+                            // console.log(params);
+                            // dataIndex 是当前柱子的索引号
+                            return myColor[params.dataIndex];
+                        }
+                    },
+                    // 柱子之间的距离
+                    barCategoryGap: 50,
+                    //柱子的宽度
+                    barWidth: 10,
+                    // 显示柱子内的文字
+                    label: {
+                        show: false,
+                        position: "inside",
+                        // {c} 会自动的解析为 数据  data里面的数据
+                        formatter: "{c}%"
+                    }
+                },
+                {
+                    name: "框",
+                    type: "bar",
+                    barCategoryGap: 50,
+                    barWidth: 15,
+                    yAxisIndex: 1,
+                    data: full_list,
+                    itemStyle: {
+                        color: "none",
+                        borderColor: "#00c1de",
+                        borderWidth: 3,
+                        barBorderRadius: 15
+                    }
+                }
+            ]
+        };
+
+        // 3. 把配置给实例对象
+        myChart.setOption(option);
+        // 4. 让图表跟随屏幕自动的去适应
+        window.addEventListener("resize", function () {
+            myChart.resize();
+        });
+    });
+</script>
+
+<script>
+    $(function china_chart3() {
+        var myChart = echarts.init(document.querySelector(".line .chart"));
+        var scenic_stat_obj = "{{ scenic_stat_obj|safe }}";
+        var pieData = eval(`( ${scenic_stat_obj} )`);
+        var all_cnt_data = "{{ all_cnt|safe }}";
+        var all_cnt = eval(`( ${all_cnt_data} )`);
+
+        var colors = [
+            'rgba(6, 254, 188, 1)',
+            'rgba(6, 254, 188, 0.1)',
+            'rgba(255, 164, 3, 1)',
+            'rgba(255, 164, 3, 0.1)',
+            'rgba(15,11,235,0.58)',
+            'rgba(96,100,235,0.51)',
+        ];
+        var titleArr = [],
+            seriesArr = [];
+
+        pieData.forEach(function (item, index) {
+            titleArr.push({
+                text: item.name,
+                left: index * 33 + 14 + '%',
+                top: '75%',
+                textAlign: 'center',
+                textStyle: {
+                    fontWeight: 'normal',
+                    fontSize: '13',
+                    color: '#1484d5',
+                    textAlign: 'center',
+                },
+            });
+            seriesArr.push(
+                {
+                    type: 'pie',
+                    name: '外层细圆环',
+                    radius: ['45%', '47%'],
+                    center: [index * 33 + 14 + '%', '45%'],
+                    hoverAnimation: false,
+                    clockWise: false,
+                    itemStyle: {
+                        normal: {
+                            color: 'rgba(187,191,172,0.7)',
+                        },
+                    },
+                    label: {
+                        show: false,
+                    },
+                    data: [100],
+                },
+            );
+        });
+
+        seriesArr.push(
+            {
+                name: '',
+                type: 'pie',
+                clockWise: false,
+                radius: ['35%', '45%'],
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            {offset: 0, color: colors[0]},
+                            {offset: 1, color: colors[1]},
+                        ]),
+                        label: {
+                            show: false,
+                        },
+                        labelLine: {
+                            show: false,
+                        },
+                    },
+                },
+                hoverAnimation: false,
+                center: [0 * 33 + 14 + '%', '45%'],
+                data: [
+                    {
+                        value: pieData[0].value,
+                        name: '5A景区',
+                        label: {
+                            normal: {
+                                formatter: function (params) {
+                                    val = (params.value)/all_cnt*100
+                                    return val.toFixed(1) + '%';
+                                },
+                                position: 'center',
+                                show: true,
+                                textStyle: {
+                                    fontSize: '15',
+                                    // fontWeight: 'bold',
+                                    color: '#1cc7ff',
+                                },
+                            },
+                        },
+                    },
+                    {
+                        value: all_cnt - pieData[0].value,
+                        name: '其他',
+                        itemStyle: {
+                            normal: {
+                                color: 'rgba(255,255,255,0.2)',
+                            },
+                            emphasis: {
+                                color: 'rgba(0,0,0,0)',
+                            },
+                        },
+                    }
+                ],
+            },
+            {
+                name: '',
+                type: 'pie',
+                clockWise: false,
+                radius: ['35%', '45%'],
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            {offset: 0, color: colors[2]},
+                            {offset: 1, color: colors[3]},
+                        ]),
+                        label: {
+                            show: false,
+                        },
+                        labelLine: {
+                            show: false,
+                        },
+                    },
+                },
+                hoverAnimation: false,
+                center: [1 * 33 + 14 + '%', '45%'],
+                data: [
+                    {
+                        value: pieData[1].value,
+                        name: '4A景区',
+                        label: {
+                            normal: {
+                                formatter: function (params) {
+                                    return parseInt((params.value)/all_cnt*100) + '%';
+                                },
+                                position: 'center',
+                                show: true,
+                                textStyle: {
+                                    fontSize: '15',
+                                    // fontWeight: 'bold',
+                                    color: '#1cc7ff',
+                                },
+                            },
+                        },
+                    },
+                    {
+                        value: all_cnt - pieData[1].value,
+                        name: '其他',
+                        itemStyle: {
+                            normal: {
+                                color: 'rgba(255,255,255,0.2)',
+                            },
+                            emphasis: {
+                                color: 'rgba(0,0,0,0)',
+                            },
+                        },
+                    },
+                ],
+            },
+            {
+                name: '',
+                type: 'pie',
+                clockWise: false,
+                radius: ['35%', '45%'],
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            {offset: 0, color: colors[4]},
+                            {offset: 1, color: colors[5]},
+                        ]),
+                        label: {
+                            show: false,
+                        },
+                        labelLine: {
+                            show: false,
+                        },
+                    },
+                },
+                hoverAnimation: false,
+                center: [2 * 33 + 14 + '%', '45%'],
+                data: [
+                    {
+                        value: pieData[2].value,
+                        name: '3A景区',
+                        label: {
+                            normal: {
+                                formatter: function (params) {
+                                    return parseInt((params.value)/all_cnt*100) + '%';
+                                },
+                                position: 'center',
+                                show: true,
+                                textStyle: {
+                                    fontSize: '15',
+                                    // fontWeight: 'bold',
+                                    color: '#1cc7ff',
+                                },
+                            },
+                        },
+                    },
+                    {
+                        value: all_cnt - pieData[2].value,
+                        name: '其他',
+                        itemStyle: {
+                            normal: {
+                                color: 'rgba(255,255,255,0.2)',
+                            },
+                            emphasis: {
+                                color: 'rgba(0,0,0,0)',
+                            },
+                        },
+                    },
+                ],
+            },
+        );
+
+        option = {
+            color: ["#2f89cf"],
+            tooltip: {
+                show: true,
+                trigger: 'item',
+                axisPointer: {
+                    type: 'shadow'
+                },
+            },
+            grid: {
+                top: '30px',
+                right: '10%',
+                left: '10%',
+                bottom: '28%',
+                containLabel: true
+            },
+            // backgroundColor: 'black',
+            title: titleArr,
+            series: seriesArr,
+        };
+
+        // 3. 把配置给实例对象
+        myChart.setOption(option);
+        // 4. 让图表跟随屏幕自动的去适应
+        window.addEventListener("resize", function () {
+            myChart.resize();
+        });
+    });
+
+</script>
+
+<script>
+    $(function china_chart4() {
+        var myChart = echarts.init(document.querySelector(".line2 .chart"));
+        var top6_data = "{{ top6_data|safe }}";
+        var datas = eval(`( ${top6_data} )`);
+        option = {
+            // color: ["#CCF2FF","#CCF2FF", "#A4E1FF", "#53B7F4", "#694EEB", "#9B1AD9"],
+            color: ["#9B1AD9", "#694EEB", '#5755eb', "#53B7F4", "#A4E1FF", "#CCF2FF"],
+            tooltip: {
+                trigger: 'item',
+                // formatter: "{a} <br/>{b} : {c}"
+            },
+            calculable: true,
+            series: [{
+                name: '',
+                type: 'funnel',
+                left: 25,
+                right: 25,
+                top: 15,
+                bottom: 7,
+                // min: 0,
+                maxSize: '100%',
+                sort: 'descending', // ascending 此属性设置正倒方向
+                gap: 2,
+                label: {
+                    show: true,
+                    position: 'inside',
+                    fontSize: 12,
+                    fontWeight: 'bold',
+                    color: '#6a9cd5',
+                    emphasis: {
+                        position: 'inside',
+                        formatter: '{b}:{c}',
+                        fontSize: 14,
+                        color: '#32F8A4'
+                    },
+                },
+                labelLine: {
+                    length: 10,
+                    lineStyle: {
+                        width: 1,
+                        type: 'solid'
+                    }
+                },
+                itemStyle: {
+                    borderColor: '#fff',
+                    borderWidth: 1
+                },
+
+                data: datas,
+            }]
+        };
+        // 3. 把配置给实例对象
+        myChart.setOption(option);
+        // 4. 让图表跟随屏幕自动的去适应
+        window.addEventListener("resize", function () {
+            myChart.resize();
+        });
+    });
+</script>
+
+<script>
+    $(function china_chart5() {
+        var myChart = echarts.init(document.querySelector(".pie .chart"));
+        var heat_province_row_ = "{{ heat_province_row|safe }}";
+        var heat_province_row = eval(`( ${heat_province_row_} )`);
+        var hear_max_ = "{{ hear_max|safe }}";
+        var hear_max = eval(`( ${hear_max_} )`);
+        var heat_province_col_ = "{{ heat_province_col|safe }}";
+        var heat_province_col = eval(`( ${heat_province_col_} )`);
+
+        heat_province_row =
+
+
+            option = {
+                color: ["#2f89cf"],
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        lineStyle: {
+                            color: {
+                                type: 'linear',
+                                x: 0,
+                                y: 0,
+                                x2: 0,
+                                y2: 1,
+                                colorStops: [{
+                                    offset: 0,
+                                    color: 'rgba(0, 255, 233,0)'
+                                }, {
+                                    offset: 0.5,
+                                    color: 'rgba(255, 255, 255,1)',
+                                }, {
+                                    offset: 1,
+                                    color: 'rgba(0, 255, 233,0)'
+                                }],
+                                global: false
+                            }
+                        },
+                    },
+                },
+                grid: {
+                    top: "5%",
+                    left: "2%",
+                    right: '2%',
+                    bottom: "0%",
+                    containLabel: true
+                },
+                xAxis: [{
+                    type: 'category',
+                    axisLine: {
+                        show: false,
+                        color: '#233e64'
+                    },
+                    axisLabel: {
+                        color: '#6a9cd5',
+                        width: 20,
+                        bottom: 0,
+                        rotate: 30 // 倾斜30度
+                    },
+                    splitLine: {
+                        show: false
+                    },
+                    boundaryGap: false,
+                    data: heat_province_row,
+                }],
+                yAxis: [{
+                    type: 'value',
+                    max: hear_max,
+                    splitNumber: 7,
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
+                            color: '#233e64'
+                        }
+                    },
+                    axisLine: {show: false,},
+                    axisLabel: {
+                        margin: 10,
+                        textStyle: {
+                            color: '#6a9cd5',
+
+                        },
+                    },
+                    axisTick: {show: false,},
+                }],
+                series: [{
+                    name: '流量',
+                    type: 'line',
+                    smooth: true, //是否平滑曲线显示
+                    // symbol:'circle',  // 默认是空心圆（中间是白色的），改成实心圆
+                    symbolSize: 4,
+                    lineStyle: {
+                        normal: {
+                            color: "#2fe1ff"   // 线条颜色
+                        }
+                    },
+                    areaStyle: {
+                        //区域填充样式
+                        normal: {
+                            //线性渐变，前4个参数分别是x0,y0,x2,y2(范围0~1);相当于图形包围盒中的百分比。如果最后一个参数是‘true’，则该四个值是绝对像素位置。
+                            color: new echarts.graphic.LinearGradient(
+                                0,
+                                0,
+                                0,
+                                1,
+                                [
+                                    {offset: 0, color: "rgba(61,234,255, 1)"},
+                                    {offset: 1, color: "rgba(61,234,255, 0)"},
+                                ],
+                                false
+                            ),
+                        },
+                    },
+                    data: heat_province_col
+                }]
+            };
+        // 3. 把配置给实例对象
+        myChart.setOption(option);
+        // 4. 让图表跟随屏幕自动的去适应
+        window.addEventListener("resize", function () {
+            myChart.resize();
+        });
+    });
+</script>
+<script>
+    $(function china_chart6() {
+        var myChart = echarts.init(document.querySelector(".pie2 .chart"));
+        var degree_obj_ = "{{ degree_obj|safe }}";
+        var degree_obj = eval(`( ${degree_obj_} )`);
+
+        var option = {
+            color: [
+                "#006cff",
+                "#60cda0",
+                "#ed8884",
+                "#ff9f7f",
+                "#0096ff",
+                "#9fe6b8",
+                "#32c5e9",
+                "#1d9dff"
+            ],
+            tooltip: {
+                trigger: "item",
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
+            },
+            // legend: {
+            //     bottom: "0%",
+            //     itemWidth: 10,
+            //     itemHeight: 10,
+            //     textStyle: {
+            //         color: "rgba(255,255,255,.5)",
+            //         fontSize: "12"
+            //     }
+            // },
+            series: [
+                {
+                    name: "地区分布",
+                    type: "pie",
+                    radius: ["10%", "70%"],
+                    center: ["50%", "50%"],
+                    roseType: "radius",
+                    // 图形的文字标签
+                    label: {
+                        fontSize: 10
+                    },
+                    // 链接图形和文字的线条
+                    labelLine: {
+                        // length 链接图形的线条
+                        length: 6,
+                        // length2 链接文字的线条
+                        length2: 8
+                    },
+                    data: degree_obj,
+                }
+            ]
+        };
+        // 3. 把配置给实例对象
+        myChart.setOption(option);
+        // 4. 让图表跟随屏幕自动的去适应
+        window.addEventListener("resize", function () {
+            myChart.resize();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>

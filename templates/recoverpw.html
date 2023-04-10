@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Recover Password | Minia - Minimal Admin & Dashboard Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="Themesbrand" name="author">
+    <!-- App favicon -->
+
+
+    <!-- preloader css -->
+    <link rel="stylesheet" href="../static/css/preloader.min.css" type="text/css">
+
+    <!-- Bootstrap Css -->
+    <link href="../static/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css">
+    <!-- Icons Css -->
+    <link href="../static/css/icons.min.css" rel="stylesheet" type="text/css">
+    <!-- App Css-->
+    <link href="../static/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+<!-- <body data-layout="horizontal"> -->
+<div class="auth-page">
+    <div class="container-fluid p-0">
+        <div class="row g-0">
+            <div class="col-xxl-3 col-lg-4 col-md-5">
+                <div class="auth-full-page-content d-flex p-sm-5 p-4">
+                    <div class="w-100">
+                        <div class="d-flex flex-column h-100">
+                            <div class="mb-4 mb-md-5 text-center">
+                                <a href="index.html" class="d-block auth-logo">
+                                    <img src="../static/picture/logo-sm.svg" alt="" height="28"> <span class="logo-txt">Data Analy</span>
+                                </a>
+                            </div>
+                            <div class="auth-content my-auto">
+                                <div class="text-center">
+                                    <h5 class="mb-0">重置密码</h5>
+                                </div>
+                                <div class="alert alert-success text-center my-4" role="alert">
+                                    Enter your Email and password will be sent to you!
+                                </div>
+                                <form class="mt-4" method="POST" action="/forget">
+                                    <div class="mb-3">
+                                        <label class="form-label">邮箱</label>
+                                        <input type="email" name="email" class="form-control" id="email"
+                                               placeholder="请输入邮箱">
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="d-flex align-items-start">
+                                            <div class="flex-grow-1">
+                                                <label class="form-label">密码</label>
+                                            </div>
+                                        </div>
+                                        <div class="input-group auth-pass-inputgroup">
+                                            <input type="password" name="password" class="form-control"
+                                                   placeholder="请输入密码"
+                                                   aria-label="Password" aria-describedby="password-addon">
+                                            <button class="btn btn-light shadow-none ms-0" type="button"
+                                                    id="password"><i class="mdi mdi-eye-outline"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="d-flex align-items-start">
+                                            <div class="flex-grow-1">
+                                                <label class="form-label">密码</label>
+                                            </div>
+                                        </div>
+                                        <div class="input-group auth-pass-inputgroup">
+                                            <input type="password" name="passwordChecked" class="form-control"
+                                                   placeholder="再次输入密码"
+                                                   aria-label="Password" aria-describedby="password-addon">
+                                            <button class="btn btn-light shadow-none ms-0" type="button"
+                                                    id="password-addon"><i class="mdi mdi-eye-outline"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 mt-4">
+                                        <button class="btn btn-primary w-100 waves-effect waves-light" type="submit">
+                                            重置
+                                        </button>
+                                    </div>
+                                </form>
+
+                                <div class="mt-5 text-center">
+                                    <p class="text-muted mb-0">记住了?
+                                        <a href="/login" class="text-primary fw-semibold"> 登录 </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mt-4 mt-md-5 text-center">
+                                <p class="mb-0">©
+                                    <script>document.write(new Date().getFullYear())</script>
+                                    Author . Maizhihuan
+                                    <i class="mdi mdi-heart text-danger"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end auth full page content -->
+            </div>
+            <!-- end col -->
+            <div class="col-xxl-9 col-lg-8 col-md-7">
+                <div class="auth-bg pt-md-5 p-4 d-flex">
+                    <div class="bg-overlay bg-primary"></div>
+                    <ul class="bg-bubbles">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <!-- end bubble effect -->
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-xl-7">
+                            <div class="p-0 p-sm-4 px-xl-0">
+                                <div id="reviewcarouselIndicators" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-indicators carousel-indicators-rounded justify-content-start ms-0 mb-0">
+                                        <button type="button" data-bs-target="#reviewcarouselIndicators"
+                                                data-bs-slide-to="0" class="active" aria-current="true"
+                                                aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#reviewcarouselIndicators"
+                                                data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#reviewcarouselIndicators"
+                                                data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    </div>
+                                    <!-- end carouselIndicators -->
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <div class="testi-contain text-white">
+                                                <i class="bx bxs-quote-alt-left text-success display-6"></i>
+
+                                                <h4 class="mt-4 fw-medium lh-base text-white">“一个真正的旅行家必是一个流浪者，经历者流浪者的快乐、诱惑和探险意志。
+                                                    旅行必须流浪式，否则便不成其为旅行.”
+                                                </h4>
+                                                <div class="mt-4 pt-3 pb-5">
+                                                    <div class="d-flex align-items-start">
+                                                        <div class="flex-shrink-0">
+                                                            <img src="../static/picture/lin.jpg"
+                                                                 class="avatar-md img-fluid rounded-circle" alt="...">
+                                                        </div>
+                                                        <div class="flex-grow-1 ms-3 mb-4">
+                                                            <p></p>
+                                                            <h5 class="font-size-15 text-white">林语堂</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="carousel-item">
+                                            <div class="testi-contain text-white">
+                                                <i class="bx bxs-quote-alt-left text-success display-6"></i>
+
+                                                <h4 class="mt-4 fw-medium lh-base text-white">“人之所以爱旅行，不是为了抵达目的地，
+                                                    而是为了享受旅途中的种种乐趣.”</h4>
+                                                <div class="mt-4 pt-3 pb-5">
+                                                    <div class="d-flex align-items-start">
+                                                        <div class="flex-shrink-0">
+                                                            <img src="../static/picture/gede.jpg"
+                                                                 class="avatar-md img-fluid rounded-circle" alt="...">
+                                                        </div>
+                                                        <div class="flex-grow-1 ms-3 mb-4">
+                                                            <p></p>
+                                                            <h5 class="font-size-15 text-white">歌德
+                                                            </h5>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="carousel-item">
+                                            <div class="testi-contain text-white">
+                                                <i class="bx bxs-quote-alt-left text-success display-6"></i>
+
+                                                <h4 class="mt-4 fw-medium lh-base text-white">“我是在旅行吗？也许是的。
+                                                    没有行囊，没有目的，我孤独的走在路上，看不见我将要去的地方，
+                                                    记不得我已经去过的地方。我就想是一只草原中被牧童遗忘的羊，
+                                                    只能昏昏沉沉地沿着青草和泥土的气息前进.”</h4>
+                                                <div class="mt-4 pt-3 pb-5">
+                                                    <div class="d-flex align-items-start">
+                                                        <img src="../static/picture/github.png"
+                                                             class="avatar-md img-fluid rounded-circle" alt="...">
+                                                        <div class="flex-1 ms-3 mb-4">
+                                                            <p></p>
+                                                            <h5 class="font-size-15 text-white">佚名</h5>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end carousel-inner -->
+                                </div>
+                                <!-- end review carousel -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end col -->
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container fluid -->
+</div>
+
+
+<!-- JAVASCRIPT -->
+<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/bootstrap.bundle.min.js"></script>
+<script src="../static/js/metisMenu.min.js"></script>
+<script src="../static/js/simplebar.min.js"></script>
+<script src="../static/js/waves.min.js"></script>
+<script src="../static/js/feather.min.js"></script>
+<!-- pace js -->
+<script src="../static/js/pace.min.js"></script>
+
+</body>
+
+</html>

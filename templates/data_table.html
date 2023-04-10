@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分页展示</title>
+    <!-- 引入 Bootstrap 的 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- 引入 Bootstrap Table 的 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap-table/1.16.0/bootstrap-table.min.css">
+    <!-- 引入 Bootstrap 的 JavaScript 文件和 jQuery -->
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-table/1.16.0/bootstrap-table.min.js"></script>
+
+</head>
+
+<body>
+<div style="width: 80%;margin: 0 auto">
+    <table id="table" class="table table-striped table-bordered"
+
+    ></table>
+</div>
+
+
+
+</body>
+
+
+
+
+
+<script>
+    $(function () {
+        $('#table').bootstrapTable({
+            url: '/jsondata',  // 请求数据源的路由
+            method: 'GET',     //请求方式（*）
+            dataType: "json",
+            pagination: true, //前端处理分页
+            sortable: true,
+            sortOrder: "asc",                   //排序方式
+            singleSelect: false,//是否只能单选
+            search: false, //显示搜索框，此搜索是客户端搜索，不会进服务端，所以，个人感觉意义不大
+            toolbar: '#toolbar', //工具按钮用哪个容器
+            striped: true, //是否显示行间隔色
+            cache: false, //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）
+            pageNumber: 1, //初始化加载第10页，默认第一页
+            pageSize: 10, //每页的记录行数（*）
+            pageList: [10], //可供选择的每页的行数（*）
+            strictSearch: true,//设置为 true启用 全匹配搜索，false为模糊搜索
+            showColumns: false, //显示内容列下拉框
+            showRefresh: true, //显示刷新按钮
+            showHeader: true,
+            detailView: false,
+            minimumCountColumns: 2, //当列数小于此值时，将隐藏内容列下拉框
+            clickToSelect: true, //设置true， 将在点击某行时，自动勾选rediobox 和 checkbox
+            {#        height: 500, //表格高度，如果没有设置height属性，表格自动根据记录条数决定表格高度#}
+            uniqueId: "id", //每一行的唯一标识，一般为主键列
+            showToggle: true, //是否显示详细视图和列表视图的切换按钮
+            cardView: false, //是否显示详细视图
+            sidePagination: "server", //分页方式：client客户端分页，server服务端分页（*）
+            columns: [
+            {
+                field: 'id',
+                title: 'ID'
+            }, {
+                field: 'sid',
+                title: '时间'
+            }, {
+                field: 'title',
+                title: '参数名'
+            }, {
+                field: 'detail_link',
+                title: '实际值'
+            },
+            {
+                field: 'main_img',
+                title: '预测范围'
+            },
+            {
+                field: 'address',
+                title: '是否告警'
+            },
+        ],
+        });
+    });
+
+
+</script>
+</html>

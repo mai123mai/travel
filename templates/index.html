@@ -1,0 +1,1510 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Data Analy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Data Analy" name="description">
+    <link href="../static/css/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../static/css/preloader.min.css" type="text/css">
+    <link href="../static/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css">
+    <link href="../static/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
+
+    <!-- DataTables -->
+    <link href="../static/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+
+</head>
+<style>
+    .table td {
+        text-align: center;
+    }
+
+</style>
+<body>
+
+<!-- <body data-layout="horizontal"> -->
+
+<!-- Begin page -->
+<div id="layout-wrapper">
+
+
+    <header id="page-topbar">
+        <div class="navbar-header">
+            <div class="d-flex">
+                <!-- LOGO -->
+                <div class="navbar-brand-box">
+                    <a href="" class="logo logo-dark">
+                            <span class="logo-sm">
+                                        <img src="../static/picture/logo-sm.svg" alt="" height="24">
+                                    </span>
+                        <span class="logo-lg">
+                                        <img src="../static/picture/logo-sm.svg" alt="" height="24"> <span
+                                class="logo-txt">Data Analy</span>
+                                    </span>
+                    </a>
+
+                    <a href="" class="logo logo-light">
+                                    <span class="logo-sm">
+                                        <img src="../static/picture/logo-sm.svg" alt="" height="24">
+                                    </span>
+                        <span class="logo-lg">
+                                        <img src="../static/picture/logo-sm.svg" alt="" height="24"> <span
+                                class="logo-txt">Data Analy</span>
+                                    </span>
+                    </a>
+                </div>
+
+                <button type="button" class="btn btn-sm px-3 font-size-16 header-item" id="vertical-menu-btn">
+                    <i class="fa fa-fw fa-bars"></i>
+                </button>
+
+
+            </div>
+
+            <div class="d-flex">
+
+                <div class="dropdown d-inline-block d-lg-none ms-2">
+                    <button type="button" class="btn header-item" id="page-header-search-dropdown"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i data-feather="search" class="icon-lg"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                         aria-labelledby="page-header-search-dropdown">
+
+                        <form class="p-3">
+                            <div class="form-group m-0">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search ..."
+                                           aria-label="Search Result">
+
+                                    <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="dropdown d-none d-sm-inline-block">
+                    <button type="button" class="btn header-item" id="mode-setting-btn">
+                        <i data-feather="moon" class="icon-lg layout-mode-dark"></i>
+                        <i data-feather="sun" class="icon-lg layout-mode-light"></i>
+                    </button>
+                </div>
+
+                <div class="dropdown d-inline-block">
+                    <button type="button" class="btn header-item right-bar-toggle me-2">
+                        <i data-feather="settings" class="icon-lg"></i>
+                    </button>
+                </div>
+
+                <div class="dropdown d-inline-block">
+                    <button type="button" class="btn header-item topbar-light bg-light-subtle border-start border-end"
+                            id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                        <img class="rounded-circle header-profile-user" src="../static/picture/avatar-1.jpg"
+                             alt="Header Avatar">
+                        <span class="d-none d-xl-inline-block ms-1 fw-medium">{{ name }}</span>
+                        <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <!-- item-->
+                        <a class="dropdown-item" href="/lock_screen"><i
+                                class="mdi mdi-lock font-size-16 align-middle me-1"></i> 锁屏 </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/loginOut"><i
+                                class="mdi mdi-logout font-size-16 align-middle me-1"></i> 退出 </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="vertical-menu">
+
+        <div data-simplebar="" class="h-100">
+
+            <!--- Sidemenu -->
+            <div id="sidebar-menu">
+                <!-- Left Menu Start -->
+                <ul class="metismenu list-unstyled" id="side-menu">
+                    <li class="menu-title" data-key="t-menu">Menu</li>
+
+                    <li>
+                        <a href="/home">
+                            <i data-feather="home"></i>
+                            <span data-key="t-dashboard">Home</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/data_show/all">
+                            <i data-feather="grid"></i>
+                            <span data-key="t-calendar">数据大屏</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/table/0" class="has-arrow">
+                            <i data-feather="users"></i>
+                            <span data-key="t-authentication">数据展示</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/traffic/all" class="has-arrow">
+                            <i data-feather="file-text"></i>
+                            <span data-key="t-horizontal">城市实时交通</span>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="/search/1" class="has-arrow">
+                            <i data-feather="file-text"></i>
+                            <span data-key="t-horizontal">搜索</span>
+                        </a>
+
+                    </li>
+
+                    <li>
+                        <a href="javascript: void(0);" class="has-arrow">
+                            <i data-feather="gift"></i>
+                            <span data-key="t-ui-elements">数据分析</span>
+                        </a>
+                        <ul class="sub-menu" aria-expanded="false">
+                            <li><a href="/price_t/四川" data-key="t-lightbox">价格分析表</a></li>
+                            <li><a href="/star_t/all" data-key="t-range-slider">星级分析表</a></li>
+                            <li><a href="/heat_t/all" data-key="t-range-slider">热度分析表</a></li>
+                            <li><a href="/map_t/all" data-key="t-sweet-alert">地点分析表</a></li>
+                            <li><a href="/degree_t/all" data-key="t-rating">满意度分析表</a></li>
+                            <li><a href="/service/all" data-key="t-range-slider">景区特色与服务评价分析</a></li>
+                            <li><a href="/comment_t/all" data-key="t-lightbox">时间与评论分析</a></li>
+                            <li><a href="/comment_emotion/all" data-key="t-range-slider">评论内容与情感分析</a></li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+
+
+            </div>
+            <!-- Sidebar -->
+        </div>
+    </div>
+
+
+    <div class="main-content">
+
+        <div class="page-content">
+            <div class="container-fluid">
+
+                <!-- category    -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                            <h4 class="mb-sm-0 font-size-18">首页</h4>
+                            <div class="page-title-right">
+                                <ol class="breadcrumb m-0">
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
+                                    <li class="breadcrumb-item active">Index</li>
+                                </ol>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-xl-3 col-md-6">
+                        <!-- card -->
+                        <div class="card card-h-100">
+                            <!-- card body -->
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-6">
+                                        <span class="text-muted mb-3 lh-1 d-block text-truncate">国内旅游人数</span>
+                                        <h4 class="mb-3">
+                                            <span class="counter-value" data-target="3246">0</span>
+
+                                        </h4>
+
+                                    </div>
+                                    <div class="col-6">
+                                        <div id="mini-chart1" data-colors='["#5156be"]' class="apex-charts mb-2"></div>
+                                    </div>
+                                </div>
+                                <div class="text-nowrap">
+                                    <span class="badge badge-soft-success text-success">(百万人次)</span>
+                                    <span class="ms-1 text-muted font-size-13">截止于2022年</span>
+                                </div>
+                            </div><!-- end card body -->
+                        </div><!-- end card -->
+                    </div><!-- end col -->
+
+                    <div class="col-xl-3 col-md-6">
+                        <!-- card -->
+                        <div class="card card-h-100">
+                            <!-- card body -->
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-6">
+                                        <span class="text-muted mb-3 lh-1 d-block text-truncate">国内旅游总花费</span>
+                                        <h4 class="mb-3">
+                                            <span class="counter-value" data-target="29190.7">0</span>
+                                        </h4>
+
+                                    </div>
+                                    <div class="col-6">
+                                        <div id="mini-chart2" data-colors='["#5156be"]' class="apex-charts mb-2"></div>
+                                    </div>
+                                </div>
+                                <div class="text-nowrap">
+                                    <span class="badge badge-soft-success text-success">(亿元)</span>
+                                    <span class="ms-1 text-muted font-size-13">截止于2022年</span>
+                                </div>
+                            </div><!-- end card body -->
+                        </div><!-- end card -->
+                    </div><!-- end col-->
+
+                    <div class="col-xl-3 col-md-6">
+                        <!-- card -->
+                        <div class="card card-h-100">
+                            <!-- card body -->
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-6" style="width: 57%">
+                                        <span class="text-muted mb-3 lh-1 d-block text-truncate">国内旅游人均花费</span>
+                                        <h4 class="mb-3">
+                                            <span class="counter-value" data-target="42432">0</span>
+                                        </h4>
+                                    </div>
+                                    <div class="col-6" style="width: 43%">
+                                        <div id="mini-chart3" data-colors='["#5156be"]' class="apex-charts mb-2"></div>
+                                    </div>
+                                </div>
+                                <div class="text-nowrap">
+                                    <span class="badge badge-soft-success text-success">(元)</span>
+                                    <span class="ms-1 text-muted font-size-13">截止于2022年</span>
+                                </div>
+                            </div><!-- end card body -->
+                        </div><!-- end card -->
+                    </div><!-- end col -->
+
+                    <div class="col-xl-3 col-md-6">
+                        <!-- card -->
+                        <div class="card card-h-100">
+                            <!-- card body -->
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-6">
+                                        <span class="text-muted mb-3 lh-1 d-block text-truncate">入境游客</span>
+                                        <h4 class="mb-3">
+                                            <span class="counter-value" data-target="12.57">0</span>
+                                        </h4>
+                                    </div>
+                                    <div class="col-6">
+                                        <div id="mini-chart4" data-colors='["#5156be"]' class="apex-charts mb-2"></div>
+                                    </div>
+                                </div>
+                                <div class="text-nowrap">
+                                    <span class="badge badge-soft-success text-success">(万人次)</span>
+                                    <span class="ms-1 text-muted font-size-13">截止于2022年</span>
+                                </div>
+                            </div><!-- end card body -->
+                        </div><!-- end card -->
+                    </div><!-- end col -->
+                </div>
+
+                <!-- <echart>-->
+                <div class="row">
+                    <div class="col-xl-8">
+                        <!-- card -->
+                        <div class="card">
+                            <!-- card body -->
+                            <div class="card-header">
+                                <h4 class="card-title mb-0">近年来国内游客变化趋势图</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="col-xl-12">
+                                    <div id="echart1" style="position: relative; width:100%;height: 430px">
+                                    </div>
+                                </div>
+                                <!-- end card -->
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end col -->
+                    </div>
+                    <div class="col-xl-4">
+                        <!-- card -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title mb-0">游客来源分布图</h4>
+                            </div>
+                            <!-- card body -->
+                            <div class="card-body">
+                                <div class="col-xl-12">
+                                    <label>
+                                        <select id="idMbzd" class="form-select form-select-sm"
+                                                style="right: 10%;height:30px"
+                                                onchange="on_idmbzd_change()">
+                                            {% for year in years_chart2 %}
+                                            <option value='{{year}}'>{{year}}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </label>
+                                    <!--                                    <a href="javascript:;">{{years[0]}}</a-->
+                                    <!--                                    ><a href="javascript:;">{{years[1]}}</a>-->
+                                    <div id="echart2" style="width:100%;height: 393px"></div>
+                                </div>
+
+                            </div>
+                            <!-- end card body -->
+                        </div>
+                        <!-- end card -->
+                    </div>
+                    <!-- container-fluid -->
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-12">
+                        <!-- card -->
+                        <div class="card">
+                            <!-- card body -->
+                            <div class="card-header">
+                                <h4 class="card-title mb-0">国内旅游总花费分析</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="col-xl-12">
+                                    <div id="echart3" style="position: relative; width:100%;height: 400px">
+                                    </div>
+                                </div>
+                                <!-- end card -->
+                            </div>
+                            <!-- end col -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-12">
+                        <!-- card -->
+                        <div class="card">
+                            <!-- card body -->
+                            <div class="card-header">
+                                <h4 class="card-title mb-0">入境游客分析</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="col-xl-12">
+                                    <div id="echart4" style="position: relative; width:100%;height: 400px">
+                                    </div>
+                                </div>
+                                <!-- end card -->
+                            </div>
+                            <!-- end col -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">数据表</h4>
+                            </div>
+                            <div class="card-body">
+                                <table id="datatable" class="table table-bordered dt-responsive  nowrap w-100">
+                                    <thead>
+                                    <tr>
+                                        <th>year</th>
+                                        <th>{{table_titles[0]}}</th>
+                                        <th>{{table_titles[3]}}</th>
+                                        <th>{{table_titles[6]}}</th>
+                                        <th>{{table_titles[11]}}</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for k,v in table_data.items() %}
+                                    <tr>
+                                        <td>{{k}}</td>
+                                        <td>{{v[0]}}</td>
+                                        <td>{{v[3]}}</td>
+                                        <td>{{v[6]}}</td>
+                                        <td>{{v[11]}}</td>
+                                    </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+                </div>
+
+                <!-- End Page-content -->
+
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <script> document.write(new Date().getFullYear())</script>
+                                &copy; Tourism Data Analysis
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="text-sm-end d-none d-sm-block">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <!-- end main content-->
+        </div>
+    </div>
+    <!-- END layout-wrapper -->
+
+
+</div>
+
+<!-- /Right-bar -->
+<!-- Right Sidebar -->
+<div class="right-bar">
+    <div data-simplebar="" class="h-100">
+        <div class="rightbar-title d-flex align-items-center p-3">
+
+            <h5 class="m-0 me-2">主体编辑器</h5>
+
+            <a href="javascript:void(0);" class="right-bar-toggle ms-auto">
+                <i class="mdi mdi-close noti-icon"></i>
+            </a>
+        </div>
+        <hr class="m-0">
+
+        <div class="p-4">
+
+            <!--                        <h6 class="mb-3" style="display: none">布局</h6>-->
+            <div class="form-check form-check-inline" style="display: none">
+                <input class="form-check-input" type="radio" name="layout" id="layout-vertical"
+                       value="vertical">
+                <label class="form-check-label" for="layout-vertical">Vertical</label>
+            </div>
+            <div class="form-check form-check-inline" style="display: none">
+                <input class="form-check-input" type="radio" name="layout" id="layout-horizontal"
+                       value="horizontal">
+                <label class="form-check-label" for="layout-horizontal">Horizontal</label>
+            </div>
+
+            <h6 class="mt-4 mb-3 pt-2">布局模式</h6>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="layout-mode" id="layout-mode-light"
+                       value="light">
+                <label class="form-check-label" for="layout-mode-light">Light</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="layout-mode" id="layout-mode-dark"
+                       value="dark">
+                <label class="form-check-label" for="layout-mode-dark">Dark</label>
+            </div>
+
+            <h6 class="mt-4 mb-3 pt-2">布局分配</h6>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="layout-width" id="layout-width-fuild"
+                       value="fuild"
+                       onchange="document.body.setAttribute('data-layout-size', 'fluid')">
+                <label class="form-check-label" for="layout-width-fuild">Fluid</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="layout-width" id="layout-width-boxed"
+                       value="boxed"
+                       onchange="document.body.setAttribute('data-layout-size', 'boxed')">
+                <label class="form-check-label" for="layout-width-boxed">Boxed</label>
+            </div>
+
+            <h6 class="mt-4 mb-3 pt-2">布局位置</h6>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="layout-position" id="layout-position-fixed"
+                       value="fixed" onchange="document.body.setAttribute('data-layout-scrollable', 'false')">
+                <label class="form-check-label" for="layout-position-fixed">Fixed</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="layout-position"
+                       id="layout-position-scrollable"
+                       value="scrollable"
+                       onchange="document.body.setAttribute('data-layout-scrollable', 'true')">
+                <label class="form-check-label" for="layout-position-scrollable">Scrollable</label>
+            </div>
+
+            <h6 class="mt-4 mb-3 pt-2">顶部导航栏颜色</h6>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="topbar-color" id="topbar-color-light"
+                       value="light"
+                       onchange="document.body.setAttribute('data-topbar', 'light')">
+                <label class="form-check-label" for="topbar-color-light">Light</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="topbar-color" id="topbar-color-dark"
+                       value="dark"
+                       onchange="document.body.setAttribute('data-topbar', 'dark')">
+                <label class="form-check-label" for="topbar-color-dark">Dark</label>
+            </div>
+
+            <h6 class="mt-4 mb-3 pt-2 sidebar-setting">侧边栏的大小</h6>
+
+            <div class="form-check sidebar-setting">
+                <input class="form-check-input" type="radio" name="sidebar-size" id="sidebar-size-default"
+                       value="default" onchange="document.body.setAttribute('data-sidebar-size', 'lg')">
+                <label class="form-check-label" for="sidebar-size-default">Default</label>
+            </div>
+            <div class="form-check sidebar-setting">
+                <input class="form-check-input" type="radio" name="sidebar-size" id="sidebar-size-compact"
+                       value="compact" onchange="document.body.setAttribute('data-sidebar-size', 'md')">
+                <label class="form-check-label" for="sidebar-size-compact">Compact</label>
+            </div>
+            <div class="form-check sidebar-setting">
+                <input class="form-check-input" type="radio" name="sidebar-size" id="sidebar-size-small"
+                       value="small"
+                       onchange="document.body.setAttribute('data-sidebar-size', 'sm')">
+                <label class="form-check-label" for="sidebar-size-small">Small (Icon View)</label>
+            </div>
+
+            <h6 class="mt-4 mb-3 pt-2 sidebar-setting">右边导航栏颜色</h6>
+
+            <div class="form-check sidebar-setting">
+                <input class="form-check-input" type="radio" name="sidebar-color" id="sidebar-color-light"
+                       value="light"
+                       onchange="document.body.setAttribute('data-sidebar', 'light')">
+                <label class="form-check-label" for="sidebar-color-light">Light</label>
+            </div>
+            <div class="form-check sidebar-setting">
+                <input class="form-check-input" type="radio" name="sidebar-color" id="sidebar-color-dark"
+                       value="dark"
+                       onchange="document.body.setAttribute('data-sidebar', 'dark')">
+                <label class="form-check-label" for="sidebar-color-dark">Dark</label>
+            </div>
+            <div class="form-check sidebar-setting">
+                <input class="form-check-input" type="radio" name="sidebar-color" id="sidebar-color-brand"
+                       value="brand"
+                       onchange="document.body.setAttribute('data-sidebar', 'brand')">
+                <label class="form-check-label" for="sidebar-color-brand">Brand</label>
+            </div>
+
+
+            <h6 class="mt-4 mb-3 pt-2" style="display: none">Direction</h6>
+
+            <div class="form-check form-check-inline" style="display: none">
+                <input class="form-check-input" type="radio" name="layout-direction" id="layout-direction-ltr"
+                       value="ltr" style="display: none">
+                <label class="form-check-label" for="layout-direction-ltr">LTR</label>
+            </div>
+            <div class="form-check form-check-inline" style="display: none">
+                <input class="form-check-input" type="radio" name="layout-direction" id="layout-direction-rtl"
+                       value="rtl">
+                <label class="form-check-label" for="layout-direction-rtl">RTL</label>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- Settings -->
+
+
+</div> <!-- end slimscroll-menu-->
+<!-- Right bar overlay-->
+<div class="rightbar-overlay"></div>
+
+<!-- JAVASCRIPT -->
+<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/bootstrap.bundle.min.js"></script>
+<script src="../static/js/metisMenu.min.js"></script>
+<script src="../static/js/simplebar.min.js"></script>
+<script src="../static/js/waves.min.js"></script>
+<script src="../static/js/feather.min.js"></script>
+<!-- pace js -->
+<script src="../static/js/pace.min.js"></script>
+<!-- apexcharts -->
+<script src="../static/js/apexcharts.min.js"></script>
+<script src="../static/js/echarts.min.js"></script>
+<!-- Plugins js-->
+
+<script src="../static/js/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="../static/js/jquery-jvectormap-world-mill-en.js"></script>
+
+<!-- Datatable init js -->
+<script src="../static/js/datatables.init.js"></script>
+<!-- Required datatable js -->
+<script src="../static/js/jquery.dataTables.min.js"></script>
+<script src="../static/js/dataTables.bootstrap4.min.js"></script>
+<script src="../static/js/dataTables.buttons.min.js"></script>
+<script src="../static/js/buttons.bootstrap4.min.js"></script>
+
+<script src="../static/js/app.js"></script>
+
+
+<!--echarts-->
+<script>
+    function getChartColorsArray(r) {
+        r = $(r).attr("data-colors");
+        return (r = JSON.parse(r)).map(function (r) {
+            r = r.replace(" ", "");
+            if (-1 == r.indexOf("--")) return r;
+            r = getComputedStyle(document.documentElement).getPropertyValue(r);
+            return r || void 0
+        })
+    }
+
+    var minichart1Colors = getChartColorsArray("#mini-chart1"), options = {
+        series: [{data: [2, 10, 18, 22, 36, 15, 47, 75, 65, 19, 14, 2, 47, 42, 15]}],
+        chart: {type: "line", height: 50, sparkline: {enabled: !0}},
+        colors: minichart1Colors,
+        stroke: {curve: "smooth", width: 2},
+        tooltip: {
+            fixed: {enabled: !1}, x: {show: !1}, y: {
+                title: {
+                    formatter: function (r) {
+                        return ""
+                    }
+                }
+            }, marker: {show: !1}
+        }
+    }, chart = new ApexCharts(document.querySelector("#mini-chart1"), options);
+    chart.render();
+    var minichart2Colors = getChartColorsArray("#mini-chart2"), options = {
+        series: [{data: [15, 42, 47, 2, 14, 19, 65, 75, 47, 15, 42, 47, 2, 14, 12]}],
+        chart: {type: "line", height: 50, sparkline: {enabled: !0}},
+        colors: minichart2Colors,
+        stroke: {curve: "smooth", width: 2},
+        tooltip: {
+            fixed: {enabled: !1}, x: {show: !1}, y: {
+                title: {
+                    formatter: function (r) {
+                        return ""
+                    }
+                }
+            }, marker: {show: !1}
+        }
+    };
+    (chart = new ApexCharts(document.querySelector("#mini-chart2"), options)).render();
+    var minichart3Colors = getChartColorsArray("#mini-chart3"), options = {
+        series: [{data: [47, 15, 2, 67, 22, 20, 36, 60, 60, 30, 50, 11, 12, 3, 8]}],
+        chart: {type: "line", height: 50, sparkline: {enabled: !0}},
+        colors: minichart3Colors,
+        stroke: {curve: "smooth", width: 2},
+        tooltip: {
+            fixed: {enabled: !1}, x: {show: !1}, y: {
+                title: {
+                    formatter: function (r) {
+                        return ""
+                    }
+                }
+            }, marker: {show: !1}
+        }
+    };
+    (chart = new ApexCharts(document.querySelector("#mini-chart3"), options)).render();
+    var minichart4Colors = getChartColorsArray("#mini-chart4"), options = {
+        series: [{data: [12, 14, 2, 47, 42, 15, 47, 75, 65, 19, 14, 2, 47, 42, 15]}],
+        chart: {type: "line", height: 50, sparkline: {enabled: !0}},
+        colors: minichart4Colors,
+        stroke: {curve: "smooth", width: 2},
+        tooltip: {
+            fixed: {enabled: !1}, x: {show: !1}, y: {
+                title: {
+                    formatter: function (r) {
+                        return ""
+                    }
+                }
+            }, marker: {show: !1}
+        }
+    };
+    (chart = new ApexCharts(document.querySelector("#mini-chart4"), options)).render();
+</script>
+
+<script>
+    $(function china_chart1() {
+        var myChart = echarts.init(document.getElementById("echart1"));
+
+        dataList = "{{ dataList|safe }}";
+        let result = eval(`( ${dataList} )`);
+        let keys = ['国内游客', '城镇居民游客', '农村居民游客'];
+
+        let xData = result.map((item) => {
+            return item.name
+        });
+        seriesData = [];
+        let color = ['0, 254, 210', '0, 124, 250', '127, 76, 239'];
+        keys.forEach((key, index) => {
+            seriesData.push({
+                // 线
+                name: key,
+                data: result.map((item) => {
+                    return item[key]
+                }),
+                type: 'line',
+                yAxisIndex: 0,
+                symbol: 'none',
+                symbolSize: 3,
+                barWidth: 14,
+                splitNumber: 6,
+                smooth: false,
+                itemStyle: {
+                    color: `rgba(${color[index]},1)`
+                },
+                lineStyle: {
+                    color: `rgba(${color[index]},1)`,
+                    width: 1
+                },
+                areaStyle: {
+                    opacity: 1,
+                    color: {
+                        x: 0,
+                        y: 0,
+                        x2: 0,
+                        y2: 1,
+                        type: 'linear',
+                        global: false,
+                        colorStops: [
+                            {
+                                offset: 0,
+                                color: `rgba(${color[index]},0.3)`
+                            },
+                            {
+                                offset: 0.8,
+                                color: 'rgba(6, 8, 41,.2)'
+                            }
+                        ]
+                    },
+                    shadowColor: 'rgba(0, 0, 0, 0.1)',
+                    shadowBlur: 10
+                }
+            });
+            seriesData.push({
+                name: key,
+                data: [
+                    {
+                        coords: result.map((item) => {
+                            return [item.name, item[key]]
+                        })
+                    }
+                ],
+                type: 'lines',
+                coordinateSystem: 'cartesian2d',
+                zlevel: 1,
+                polyline: true,
+                smooth: true,
+                symbol: 'circle',
+                symbolSize: 5,
+                effect: {
+                    show: true,
+                    trailLength: 0.4,
+                    symbol: 'circle',
+                    period: 8,
+                    symbolSize: 4
+                },
+                lineStyle: {
+                    normal: {
+                        color: `rgba(${color[index]},1)`,
+                        width: 0,
+                        opacity: 0,
+                        curveness: 0
+                    }
+                }
+            })
+        });
+
+        option = {
+            backgroundColor: 'rgba(247,247,247,0.74)',
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'line'
+                },
+                backgroundColor: 'rgba(12, 51, 115,0.8)',
+                borderColor: 'rgba(3, 11, 44, 0.5)',
+                textStyle: {
+                    color: 'rgba(255, 255, 255, 1)'
+                }
+            },
+            grid: {
+                top: '40px',
+                right: '3%',
+                left: '3%',
+                bottom: '3%',
+                containLabel: true
+            },
+            legend: {
+                center: true,
+                top: 10,
+                textStyle: {
+                    color: '#858d98',
+                },
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: xData,
+                axisPointer: {
+                    handle: {
+                        show: false
+                    }
+                },
+                axisLine: {
+                    show: false,
+                    lineStyle: {
+                        color: '#858d98'
+                    }
+                },
+                axisTick: {
+                    show: false
+                },
+                axisLabel: {
+                    fontSize: 12,
+                    interval: 'auto'
+                }
+            },
+            yAxis: {
+                type: 'value',
+                name: '百万人次',
+                // min: 0,
+                // max: 250,
+                // interval: 50,
+                splitLine: {
+                    lineStyle: {
+                        color: "rgba(133, 141, 152, 0.2)",
+                        // type: 'dashed', // dotted 虚线
+                    },
+                },
+                splitArea: {show: false},
+                axisLine: {
+                    show: false,
+                    color: '#858d98'
+                },
+                axisTick: {
+                    show: false,
+                },
+                axisLabel: {
+                    fontSize: 12,
+                    interval: 'auto',
+                },
+            },
+            series: seriesData
+        };
+        myChart.setOption(option);
+        // 监听浏览器缩放，图表对象调用缩放resize函数
+        window.addEventListener("resize", function () {
+            myChart.resize();
+        });
+    })
+
+</script>
+
+<script>
+    function on_idmbzd_change() {
+        var sel_obj = document.getElementById("idMbzd");
+        let index = sel_obj.selectedIndex;
+        var myChart = echarts.init(document.getElementById("echart2"));
+        data_obj = "{{ data_obj|safe }}";
+        let yearData = eval(`( ${data_obj} )`);
+        option1 = {
+            color: ['rgba(81,86,190,1)', 'rgba(119,122,202,1)'],
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)",
+            },
+            grid: {
+                // top: '30px',
+                right: '3%',
+                left: '3%',
+                bottom: '5%',
+                containLabel: true
+            },
+            legend: {
+                orient: 'horizontal',
+                bottom: '5%'
+            },
+            series: [
+                {
+                    name: 'Access From',
+                    type: 'pie',
+                    radius: '70%',
+                    data: yearData[index]['data'],
+                    label: {
+                        normal: {
+                            show: true,
+                            position: "inside",
+                            formatter: "{b}",
+                            textStyle: {
+                                align: "center",
+                                baseline: "middle",
+                                fontSize: 15,
+                                fontWeight: "100",
+                                color: "#fff",
+                            },
+                        },
+                    },
+                }
+            ]
+        };
+        myChart.setOption(option1);
+        // 监听浏览器缩放，图表对象调用缩放resize函数
+        window.addEventListener("resize", function () {
+            myChart.resize();
+        });
+    }
+
+    $(function china_chart2() {
+        var myChart = echarts.init(document.getElementById("echart2"));
+        data_obj = "{{ data_obj|safe }}";
+        let yearData = eval(`( ${data_obj} )`);
+        option = {
+            color: ['rgba(81,86,190,1)', 'rgba(119,122,202,1)'],
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)",
+            },
+            grid: {
+                // top: '30px',
+                right: '3%',
+                left: '3%',
+                bottom: '5%',
+                containLabel: true
+            },
+            legend: {
+                orient: 'horizontal',
+                bottom: '5%'
+            },
+            series: [
+                {
+                    name: 'Access From',
+                    type: 'pie',
+                    radius: '70%',
+                    data: yearData[0]['data'],
+                    label: {
+                        normal: {
+                            show: true,
+                            position: "inside",
+                            formatter: "{b}",
+                            textStyle: {
+                                align: "center",
+                                baseline: "middle",
+                                fontSize: 15,
+                                fontWeight: "100",
+                                color: "#fff",
+                            },
+                        },
+                    },
+                }
+            ]
+        };
+        myChart.setOption(option);
+        // 监听浏览器缩放，图表对象调用缩放resize函数
+        window.addEventListener("resize", function () {
+            myChart.resize();
+        });
+        // 5.点击切换效果
+        // var sel_obj = document.getElementById("idMbzd");
+        // let index = sel_obj.selectedIndex;
+        // console.log(index);
+        // var obj = yearData[index];
+        // option.series[0].data = obj.data;
+        // myChart.setOption(option);
+
+    });
+
+</script>
+
+<script>
+    $(function china_chart3() {
+        var myChart = echarts.init(document.getElementById("echart3"));
+
+        years = "{{ years|safe }}";
+        cnt_pay = "{{ cnt_pay|safe }}";
+        towns_pay = "{{ towns_pay|safe }}";
+        village_pay = "{{ village_pay|safe }}";
+        speed_up = "{{ speed_up|safe }}";
+
+        let xData = eval(`( ${years} )`);
+        let yData1 = eval(`( ${cnt_pay} )`);
+        let yData2 = eval(`( ${towns_pay} )`);
+        let yData3 = eval(`( ${village_pay} )`);
+        let speed_data = eval(`( ${speed_up} )`);
+        speed_data.splice(0, 0, null);
+        console.log(speed_data);
+
+        option = {
+            backgroundColor: 'rgba(247,247,247,0.74)',
+            tooltip: {
+                trigger: "axis",
+                axisPointer: {
+                    type: "shadow",
+                    textStyle: {
+                        color: "#fff",
+                    },
+                },
+            },
+            grid: {
+                top: '35px',
+                right: '3%',
+                left: '3%',
+                bottom: '5%',
+                containLabel: true
+            },
+            legend: {
+                center: true,
+                top: 5,
+                // top: "8%",
+                textStyle: {
+                    color: "#90979c",
+                },
+            },
+
+            calculable: true,
+            xAxis: [
+                {
+                    type: "category",
+                    axisLine: {
+                        lineStyle: {
+                            color: '#858d98'
+                        },
+                    },
+                    splitLine: {
+                        show: false,
+                    },
+                    axisTick: {
+                        show: false,
+                    },
+                    splitArea: {
+                        show: false,
+                    },
+                    axisLabel: {
+                        fontSize: 12,
+                        interval: 'auto'
+                    },
+                    data: xData,
+                },
+            ],
+            yAxis: [
+                {
+                    type: "value",
+                    splitLine: {
+                        lineStyle: {
+                            color: "rgba(133, 141, 152, 0.2)",
+                            // type: 'dashed', // dotted 虚线
+                        },
+                    },
+                    axisLine: {
+                        show: false,
+                        color: '#858d98'
+                    },
+                    axisTick: {
+                        show: false,
+                    },
+                    axisLabel: {
+                        fontSize: 12,
+                        interval: 'auto',
+                    },
+                    splitArea: {
+                        show: false,
+                    },
+                },
+                {
+                    type: "value",
+                    max: 60,
+                    // min:-70,
+                    nameTextStyle: {
+                        color: "#666666"
+                    },
+                    position: "right",
+                    axisLine: {
+                        lineStyle: {
+                            color: '#cdd5e2'
+                        }
+                    },
+                    splitLine: {
+                        show: false,
+                    },
+                    axisLabel: {
+                        show: true,
+                        formatter: "{value} %", //右侧Y轴文字显示
+                        textStyle: {
+                            color: "#666666",
+                            fontSize: 12,
+                        }
+                    }
+                }
+            ],
+
+            series: [
+                {
+                    name: "城镇",
+                    type: "bar",
+                    stack: "总量",
+                    barGap: "10%",
+                    barMaxWidth: 20,
+                    itemStyle: {
+                        normal: {
+                            color: "#039EE6",
+                            label: {
+                                // show: true,
+                                textStyle: {
+                                    color: "#fff",
+                                },
+                                position: "inside",
+                                formatter: function (p) {
+                                    return p.value > 0 ? p.value : "";
+                                },
+                            },
+                        },
+                    },
+                    data: yData2,
+                },
+
+                {
+                    name: "农村",
+                    type: "bar",
+                    stack: "总量",
+                    barMaxWidth: 20,
+                    itemStyle: {
+                        normal: {
+                            color: "rgba(0,191,183,1)",
+                            barBorderRadius: 0,
+                            label: {
+                                // show: true,
+                                position: "inside",
+                                formatter: function (p) {
+                                    return p.value > 0 ? p.value : "";
+                                },
+                            },
+                        },
+                    },
+                    data: yData3
+                },
+                // color: "#6F08D9",
+                {
+                    name: "总数",
+                    type: "line",
+                    zlevel: 11,
+                    // yAxisIndex: 0, //使用的 y 轴的 index，在单个图表实例中存在多个 y轴的时候有用
+                    smooth: true, //平滑曲线显示
+                    symbol: "circle", //标记的图形为实心圆
+                    symbolSize: 6, //标记的大小
+                    itemStyle: {
+                        normal: {
+                            color: '#8c42d9',
+                            borderColor: 'rgba(152,78,255,0.5)',  //圆点透明 边框
+                            borderWidth: 7,
+                            label: {
+                                // show: true, //开启显示
+                                position: 'top', //在上方显示
+                                textStyle: {
+                                    //数值样式
+                                    color: '#915c1e',
+                                    fontSize: 12,
+                                    fontWeight: 400,
+                                },
+                                formatter: function (res) {
+                                    if (res.value) {
+                                        return res.value
+                                    } else {
+                                        return 0
+                                    }
+                                },
+                            },
+                        },
+                    },
+                    lineStyle: {
+                        color: "#9835d9"
+                    },
+                    data: yData1,
+                },
+                {
+                    name: "增速",
+                    type: "line",
+                    zlevel: 11,
+                    yAxisIndex: 1, //使用的 y 轴的 index，在单个图表实例中存在多个 y轴的时候有用
+                    smooth: true, //平滑曲线显示
+                    symbol: "circle", //标记的图形为实心圆
+                    symbolSize: 8, //标记的大小
+                    itemStyle: {
+                        normal: {
+                            color: '#ffa43a',
+                            borderColor: 'rgba(255, 234, 0, 0.5)',  //圆点透明 边框
+                            borderWidth: 7,
+                            label: {
+                                show: true, //开启显示
+                                position: 'top', //在上方显示
+                                textStyle: {
+                                    //数值样式
+                                    color: '#915c1e',
+                                    fontSize: 10,
+                                    fontWeight: 400,
+                                },
+                                formatter: function (res) {
+                                    if (res.value) {
+                                        return res.value + '%'
+                                    } else {
+                                        return 0
+                                    }
+                                },
+                            },
+                        },
+                    },
+                    lineStyle: {
+                        color: "#ffa43a"
+                    },
+                    data: speed_data,
+                }
+            ],
+        };
+
+
+        myChart.setOption(option);
+        // 监听浏览器缩放，图表对象调用缩放resize函数
+        window.addEventListener("resize", function () {
+            myChart.resize();
+        });
+    })
+
+</script>
+
+<script>
+    $(function china_chart4() {
+        var myChart = echarts.init(document.getElementById("echart4"));
+
+        years = "{{ years_chart3|safe }}";
+        entry_visitors = "{{ entry_visitors|safe }}";
+        entry_visitors_foreign = "{{ entry_visitors_foreign|safe }}";
+        entry_visitors_hk_macao = "{{ entry_visitors_hk_macao|safe }}";
+        entry_visitors_taiwan = "{{ entry_visitors_taiwan|safe }}";
+
+        let xData = eval(`( ${years} )`);
+        let yData1 = eval(`( ${entry_visitors} )`);
+        let yData2 = eval(`( ${entry_visitors_foreign} )`);
+        let yData3 = eval(`( ${entry_visitors_hk_macao} )`);
+        let yData4 = eval(`( ${entry_visitors_taiwan} )`);
+
+
+        var colorArr = [
+            {
+                start: "rgba(2, 201, 254,",
+                end: "rgba(17, 107, 243, 0.6)"
+            },
+            {
+                start: "rgba(48, 209, 188,",
+                end: "rgba(29, 152, 127, 0.6)"
+            },
+            {
+                start: "rgba(205, 178, 73,",
+                end: "rgba(160, 121, 60, 0.6)"
+            },
+            {
+                color: "#EC6941"
+            }
+        ];
+
+
+        option = {
+            backgroundColor: 'rgba(247,247,247,0.74)',
+            grid: {
+                // top: '30px',
+                right: '3%',
+                left: '3%',
+                bottom: '5%',
+                containLabel: true
+            },
+            legend: {
+                center: true,
+                top: 5,
+                // top: "8%",
+                textStyle: {
+                    color: "#90979c",
+                },
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'line'
+                },
+                backgroundColor: 'rgba(12, 51, 115,0.8)',
+                borderColor: 'rgba(3, 11, 44, 0.5)',
+                textStyle: {
+                    color: 'rgba(255, 255, 255, 1)'
+                }
+            },
+            xAxis: [
+                {
+                    type: "category",
+                    axisLine: {
+                        lineStyle: {
+                            color: '#858d98'
+                        },
+                    },
+                    splitLine: {
+                        show: false,
+                    },
+                    axisTick: {
+                        show: false,
+                    },
+                    splitArea: {
+                        show: false,
+                    },
+                    axisLabel: {
+                        fontSize: 12,
+                        interval: 'auto'
+                    },
+                    data: xData,
+                },
+            ],
+            yAxis: [{
+                type: "value",
+                splitLine: {
+                    lineStyle: {
+                        color: "rgba(133, 141, 152, 0.2)",
+                        // type: 'dashed', // dotted 虚线
+                    },
+                },
+                axisLine: {
+                    show: false,
+                    color: '#858d98'
+                },
+                axisTick: {
+                    show: false,
+                },
+                axisLabel: {
+                    fontSize: 12,
+                    interval: 'auto',
+                },
+                splitArea: {
+                    show: false,
+                },
+            },
+            ],
+            series: [
+                {
+                    name: "外国",
+                    type: "bar",
+                    // stack: "总量",
+                    barGap: "10%",
+                    barMaxWidth: 20,
+                    itemStyle: {
+                        normal: {
+                            color: "#40E0D0",
+                            label: {
+                                // show: true,
+                                textStyle: {
+                                    color: "#fff",
+                                },
+                                position: "inside",
+                                formatter: function (p) {
+                                    return p.value > 0 ? p.value : "";
+                                },
+                            },
+                        },
+                    },
+                    data: yData2,
+                },
+
+                {
+                    name: "港澳",
+                    type: "bar",
+                    // stack: "总量",
+                    barGap: "10%",
+                    barMaxWidth: 20,
+                    itemStyle: {
+                        normal: {
+                            color: "#87CEEB",
+                            label: {
+                                // show: true,
+                                textStyle: {
+                                    color: "#fff",
+                                },
+                                position: "inside",
+                                formatter: function (p) {
+                                    return p.value > 0 ? p.value : "";
+                                },
+                            },
+                        },
+                    },
+                    data: yData3,
+                },
+                {
+                    name: "台湾",
+                    type: "bar",
+                    // stack: "总量",
+                    barMaxWidth: 20,
+                    itemStyle: {
+                        normal: {
+                            color: "#4169E1",
+                            barBorderRadius: 0,
+                            label: {
+                                // show: true,
+                                position: "inside",
+                                formatter: function (p) {
+                                    return p.value > 0 ? p.value : "";
+                                },
+                            },
+                        },
+                    },
+                    data: yData4
+                },
+                // color: "#6F08D9",
+                {
+                    name: "总数",
+                    type: "line",
+                    zlevel: 11,
+                    // yAxisIndex: 0, //使用的 y 轴的 index，在单个图表实例中存在多个 y轴的时候有用
+                    smooth: true, //平滑曲线显示
+                    symbol: "circle", //标记的图形为实心圆
+                    symbolSize: 6, //标记的大小
+                    itemStyle: {
+                        normal: {
+                            color: '#8c42d9',
+                            borderColor: 'rgba(152,78,255,0.5)',  //圆点透明 边框
+                            borderWidth: 7,
+                            label: {
+                                show: true, //开启显示
+                                position: 'top', //在上方显示
+                                textStyle: {
+                                    //数值样式
+                                    color: 'rgba(150,88,255,0.64)',
+                                    fontSize: 12,
+                                    fontWeight: 300,
+                                },
+                                formatter: function (res) {
+                                    if (res.value) {
+                                        return res.value
+                                    } else {
+                                        return 0
+                                    }
+                                },
+                            },
+                        },
+                    },
+                    lineStyle: {
+                        color: "#9835d9"
+                    },
+                    data: yData1,
+                },
+            ],
+        };
+
+
+        myChart.setOption(option);
+        // 监听浏览器缩放，图表对象调用缩放resize函数
+        window.addEventListener("resize", function () {
+            myChart.resize();
+        });
+    })
+
+</script>
+
+
+</body>
+
+</html>
