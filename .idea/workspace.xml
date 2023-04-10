@@ -36,7 +36,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager">
     <configuration name="travel" type="PythonConfigurationType" factoryName="Python">
@@ -72,7 +72,7 @@
       <updated>1681058009313</updated>
       <workItem from="1681058010677" duration="3776000" />
       <workItem from="1681128370695" duration="40000" />
-      <workItem from="1681128653095" duration="1317000" />
+      <workItem from="1681128653095" duration="1970000" />
     </task>
     <servers />
   </component>
