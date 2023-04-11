@@ -1,11 +1,12 @@
-import os
-
-import pandas as pd
-import numpy as np
-import re
 import itertools
-import matplotlib.pyplot as plt
+import pyLDAvis
 from gensim import corpora, models
+from pyLDAvis import gensim
+
+from emotion.emotion_train import *
+import warnings
+
+warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 '''
 pandas==1.2.4
@@ -118,14 +119,59 @@ def create_model(sid):
     # 用图来看模型,选择主题树
     # draw_model(pos_k,neg_k)
     pos_lda = models.LdaModel(pos_corpus, num_topics=2, id2word=pos_dict)
-    pos_theme = pos_lda.print_topics(num_words=10)
-    print(pos_theme)
-    neg_lda = models.LdaModel(neg_corpus, num_topics=3, id2word=neg_dict)
-    neg_theme = neg_lda.print_topics(num_words=10)
-    print(neg_theme)
-    return pos_theme, neg_theme
+    pos_lda_theme = pos_lda.print_topics(num_words=10)
+    # print(pos_lda_theme)
+    neg_lda = models.LdaModel(neg_corpus, num_topics=2, id2word=neg_dict)
+    neg_lda_theme = neg_lda.print_topics(num_words=10)
+    # print(neg_lda_theme)
+    return [pos_lda, pos_corpus, pos_dict], [neg_lda, neg_corpus, neg_dict]
+
+
+def display_theme(lda):
+    theme = lda.show_topics()
+    # 取出高频词
+    pattern = re.compile(r'[\u4e00-\u9fa5]+')
+    key_words = []
+    index = []
+    for i in range(2):
+        key_words.append(pattern.findall(theme[i][1]))
+        index.append(f'主题{i + 1}')
+    key_words_list = pd.DataFrame(data=key_words, index=index)
+    print(key_words_list)
+    return key_words_list
+
+
+def display_LDA(data_list, sid, flag):
+    if not os.path.exists('LDA_model'):
+        os.mkdir('LDA_model')
+    path = current_path + f'/LDA_model/{sid}_{flag}_LDA.html'
+    lda = data_list[0]
+    data_corpus = data_list[1]
+    data_dict = data_list[2]
+    vis = pyLDAvis.gensim.prepare(lda, data_corpus, data_dict, mds='mmds')
+    pyLDAvis.save_html(vis, path)
+    return path
+
+
+def LDA_start(searchName):
+    sql = f'select sid from travel WHERE title like "%{searchName}%" limit 5000'
+    sid_pd = pd.read_sql(text(sql), con=con)
+    if sid_pd.empty:
+        return '', ''
+    sid = sid_pd['sid'].tolist()[0]
+    pos_path = current_path + f'/LDA_model/{sid}_pos_LDA.html'
+    neg_path = current_path + f'/LDA_model/{sid}_neg_LDA.html'
+    if os.path.exists(pos_path) and os.path.exists(neg_path):
+        return pos_path, neg_path, sid
+    else:
+        pos_list, neg_list = create_model(sid)
+        display_theme(pos_list[0])
+        display_theme(neg_list[0])
+        pos_path = display_LDA(pos_list, sid, 'pos')
+        neg_path = display_LDA(neg_list, sid, 'neg')
+        return pos_path, neg_path, sid
 
 
 if __name__ == '__main__':
     sid = 1394
-    create_model(sid)
+    print(LDA_start(sid))

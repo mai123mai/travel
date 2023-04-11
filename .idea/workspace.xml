@@ -2,30 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f5eaa0a-68a4-4378-9f03-38a73e78e02e" name="默认变更列表" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/travel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/travel.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/LDA_model/1394_neg_LDA.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/LDA_model/1394_pos_LDA.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emotion/emotion_train.py" beforeDir="false" afterPath="$PROJECT_DIR$/emotion/emotion_train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emotion/ida_module.py" beforeDir="false" afterPath="$PROJECT_DIR$/emotion/lda_module.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module/dataAnaly.py" beforeDir="false" afterPath="$PROJECT_DIR$/module/dataAnaly.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/dataShow.py" beforeDir="false" afterPath="$PROJECT_DIR$/module/dataShow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/module/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/getChinaData.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/getChinaData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/getCommentData.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/getCommentData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/getCommentEmotionData.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/getCommentEmotionData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/getDataShow.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/getDataShow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/getDegreeData.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/getDegreeData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/getHomeData.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/getHomeData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/getMapData.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/getMapData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/getPriceData.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/getPriceData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/getProvinceData.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/getProvinceData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/getProvinceMap.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/getProvinceMap.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/getSearchData.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/getSearchData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/getSeviceData.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/getSeviceData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/getStarData.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/getStarData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/getTableData.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/getTableData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/getTrafficData.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/getTrafficData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/comment_emotion.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/comment_emotion.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +50,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -82,7 +65,12 @@
       </console-settings>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ida_module">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\tuling\tl\travel\templates" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.app.py">
     <configuration name="app.py" type="PythonConfigurationType" factoryName="Python">
       <module name="travel" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -150,7 +138,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ida_module" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="lda_module (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="travel" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -163,7 +151,29 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/emotion/ida_module.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/emotion/lda_module.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="lda_module" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="travel" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/emotion" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="E:\tuling\tl\travel\emotion\lda_module.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -194,9 +204,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Flask (app.py)" type="Python.FlaskServer" nameIsGenerated="true">
-      <option name="additionalOptions" value="--port=5555" />
-      <option name="flaskDebug" value="true" />
+    <configuration name="Flask (app.py) (1)" type="Python.FlaskServer" temporary="true" nameIsGenerated="true">
       <module name="travel" />
       <option name="target" value="$PROJECT_DIR$/app.py" />
       <option name="targetType" value="PATH" />
@@ -211,20 +219,40 @@
       <option name="launchJavascriptDebuger" value="false" />
       <method v="2" />
     </configuration>
+    <configuration name="Flask (app.py)" type="Python.FlaskServer" nameIsGenerated="true">
+      <option name="additionalOptions" value="--port=5555" />
+      <option name="flaskDebug" value="true" />
+      <module name="travel" />
+      <option name="target" value="$PROJECT_DIR$/app.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Flask 服务器.Flask (app.py)" />
       <item itemvalue="Python.app.py" />
       <item itemvalue="Python.travel" />
-      <item itemvalue="Python.ida_module" />
       <item itemvalue="Python.emotion_train" />
       <item itemvalue="Python.getCommentEmotionData" />
+      <item itemvalue="Python.lda_module" />
+      <item itemvalue="Python.lda_module (1)" />
+      <item itemvalue="Flask 服务器.Flask (app.py) (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.ida_module" />
-        <item itemvalue="Python.getCommentEmotionData" />
+        <item itemvalue="Flask 服务器.Flask (app.py) (1)" />
+        <item itemvalue="Python.lda_module (1)" />
         <item itemvalue="Python.emotion_train" />
-        <item itemvalue="Flask 服务器.Flask (app.py)" />
+        <item itemvalue="Python.lda_module" />
+        <item itemvalue="Python.getCommentEmotionData" />
       </list>
     </recent_temporary>
   </component>
@@ -240,7 +268,8 @@
       <workItem from="1681128370695" duration="40000" />
       <workItem from="1681128653095" duration="2995000" />
       <workItem from="1681134141533" duration="689000" />
-      <workItem from="1681134837500" duration="7866000" />
+      <workItem from="1681134837500" duration="8482000" />
+      <workItem from="1681218677215" duration="7330000" />
     </task>
     <servers />
   </component>
@@ -253,11 +282,12 @@
     </ignored-roots>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/travel$emotion_train.coverage" NAME="emotion_train 覆盖结果" MODIFIED="1681146136157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/emotion" />
-    <SUITE FILE_PATH="coverage/travel$Flask__app_py___1_.coverage" NAME="Flask (app.py) (1) 覆盖结果" MODIFIED="1681135633602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/travel$lda_module__1_.coverage" NAME="lda_module (1) 覆盖结果" MODIFIED="1681223467956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/emotion" />
+    <SUITE FILE_PATH="coverage/travel$emotion_train.coverage" NAME="emotion_train 覆盖结果" MODIFIED="1681148792722" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/emotion" />
+    <SUITE FILE_PATH="coverage/travel$Flask__app_py___1_.coverage" NAME="Flask (app.py) (1) 覆盖结果" MODIFIED="1681223812581" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/travel$Flask__app_py_.coverage" NAME="Flask (app.py) 覆盖结果" MODIFIED="1681135659237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/travel$app_py.coverage" NAME="app.py 覆盖结果" MODIFIED="1681134435069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/travel$getCommentEmotionData.coverage" NAME="getCommentEmotionData 覆盖结果" MODIFIED="1681146330096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/util" />
+    <SUITE FILE_PATH="coverage/travel$app_py.coverage" NAME="app.py 覆盖结果" MODIFIED="1681224567409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/travel$ida_module.coverage" NAME="ida_module 覆盖结果" MODIFIED="1681148245537" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/emotion" />
   </component>
 </project>

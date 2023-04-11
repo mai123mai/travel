@@ -5,6 +5,11 @@ from module.user import user
 from module.dataAnaly import dataAnaly
 from emotion.emotion_train import *
 from redis_cache import cache
+import warnings
+
+
+warnings.filterwarnings("ignore",category=DeprecationWarning)
+
 
 app = Flask(__name__)
 cache.init_app(app)
@@ -47,7 +52,6 @@ def cors(environ):
     environ.headers['Access-Control-Allow-Method'] = '*'
     environ.headers['Access-Control-Allow-Headers'] = 'x-requested-with,content-type'
     return environ
-
 
 
 

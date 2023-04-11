@@ -1,5 +1,6 @@
-from flask import request, render_template, session, redirect, Blueprint
+from flask import request, render_template, session, redirect, Blueprint, send_file
 
+from emotion.lda_module import LDA_start
 from redis_cache import cache
 from util.getCommentData import *
 from util.getCommentEmotionData import get_comment_score_data
@@ -159,6 +160,13 @@ def comment_emotion(searchName):
     ydata, posImg_src, negImg_src, = get_comment_score_data(searchName)
     posImg_stream = return_img_stream(posImg_src)
     negImg_stream = return_img_stream(negImg_src)
+    pos_path, neg_path,sid = LDA_start(searchName)
     return render_template('comment_emotion.html', email=email, name=name, searchName=searchName,
                            ydata=ydata, posImg_stream=posImg_stream, negImg_stream=negImg_stream,
-                           )
+                           sid=sid)
+
+
+@dataAnaly.route('/LDA_model/<file>', methods=['GET', 'POST'])
+def LDA(file):
+    path = f'emotion/LDA_model/{file}.html'
+    return send_file(path)

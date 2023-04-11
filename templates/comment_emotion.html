@@ -16,11 +16,30 @@
     <link href="../static/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
     <link href="../static/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
 
+
+
 </head>
 <style>
     .table td {
         text-align: center;
     }
+    .left{
+            width: 100px;
+            height: 50px;
+            font-size: 15.4px;
+            justify-content: flex-start;
+            display: flex;
+            align-items: center;
+        }
+        .right{
+            flex:1;
+            font-size: 15.4px;
+            height: 50px;
+            justify-content: flex-end;
+            display: flex;
+            align-items: center;
+        }
+
 
 </style>
 <body>
@@ -270,12 +289,15 @@
 
                 </div>
 
-                 <div class="row">
+                <div class="row">
                     <div class="col-xl-6">
                         <div class="card">
                             <div class="card-body">
                                 <div class="col-xl-12">
-                                    <div class="card-title"><h6>正面情感词云</h6></div>
+                                    <div class="card-title left" ><h6>正面情感词云</h6></div>
+                                    <div>
+                                        <input type="button" onclick='window.open("/LDA_model/{{ sid }}_pos_LDA")' value="LDA分析"/>
+                                    </div>
                                     <img src="data:;base64,{{ posImg_stream }}"
                                          style="text-align: center"/>
                                 </div>
@@ -287,6 +309,9 @@
                             <div class="card-body">
                                 <div class="col-xl-12">
                                     <div class="card-title"><h6>负面情感词云</h6></div>
+                                    <div>
+                                        <input type="button" onclick='window.open("/LDA_model/{{ sid }}_neg_LDA")' value="LDA分析"/>
+                                    </div>
                                     <img src="data:;base64,{{ negImg_stream }}"
                                          style="text-align: center"/>
                                 </div>
@@ -295,9 +320,6 @@
                     </div>
 
                  </div>
-
-
-
 
 
                 <footer class="footer">
