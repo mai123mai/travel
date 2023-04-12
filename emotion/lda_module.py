@@ -1,20 +1,24 @@
 import itertools
-import pyLDAvis
 from gensim import corpora, models
-from pyLDAvis import gensim
+from matplotlib import pyplot as plt
+import pyLDAvis.gensim
+import re
+import pandas as pd
+import numpy as np
+from sqlalchemy import create_engine
+from sqlalchemy import text
+import os
 
-from emotion.emotion_train import *
-import warnings
 
-warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 '''
 pandas==1.2.4
 numpy==1.22.3
-gensim==3.8.3
+gensim==4.2.0  (python==3.10)
 '''
 current_path = os.path.dirname(os.path.abspath(__file__))
-
+engine = create_engine('mysql+pymysql://root:123456@localhost/dbm')
+con = engine.connect()
 
 def cos(vector1, vector2):
     """

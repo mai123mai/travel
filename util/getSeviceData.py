@@ -4,7 +4,6 @@ from util.utils import *
 import os
 import jieba
 from PIL import Image
-import numpy as np
 from matplotlib import pyplot as plt
 from wordcloud import WordCloud
 

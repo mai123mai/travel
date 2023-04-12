@@ -1,8 +1,6 @@
 import random
 from numpy import mean
 from util.utils import *
-import pandas as pd
-
 import requests
 
 

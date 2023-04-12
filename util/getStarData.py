@@ -1,6 +1,5 @@
 from util.getProvinceMap import get_province_map, get_city_name
 from util.utils import *
-from numpy import mean
 
 
 def get_all_province():

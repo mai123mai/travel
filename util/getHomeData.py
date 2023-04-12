@@ -1,5 +1,4 @@
 from util.utils import *
-import numpy as np
 
 
 def get_data_chart1():

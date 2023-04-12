@@ -2,7 +2,7 @@ import json
 
 from util.utils import get_traffic_df
 
-# from travel.util.query import *
+
 
 df_1, df_2, df_3 = get_traffic_df()
 

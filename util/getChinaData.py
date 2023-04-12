@@ -1,11 +1,7 @@
 from numpy import mean
 
 from util.utils import *
-from sqlalchemy import create_engine
-from sqlalchemy import text
 
-engine = create_engine('mysql+pymysql://root:123456@localhost/dbm')
-con = engine.connect()
 
 
 # df = pd.read_sql(text('select * from travel'), con=con)
