@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f5eaa0a-68a4-4378-9f03-38a73e78e02e" name="默认变更列表" comment="">
+    <list default="true" id="5f5eaa0a-68a4-4378-9f03-38a73e78e02e" name="默认变更列表" comment="增加LDA模型">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emotion/lda_module.py" beforeDir="false" afterPath="$PROJECT_DIR$/emotion/lda_module.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/getChinaData.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/getChinaData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/getCommentData.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/getCommentData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/getHomeData.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/getHomeData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/getProvinceMap.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/getProvinceMap.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/getSeviceData.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/getSeviceData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/getStarData.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/getStarData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/getTrafficData.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/getTrafficData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/spider_city_code.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/spider_city_traffic.py" beforeDir="false" afterPath="$PROJECT_DIR$/spider/spider_city_traffic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider_ly/spider_ly/xxx.js" beforeDir="false" afterPath="$PROJECT_DIR$/spider_ly/spider_ly/xxx.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +73,7 @@
       <recent name="E:\tuling\tl\travel" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.app.py">
+  <component name="RunManager" selected="Python.spider_city_traffic">
     <configuration name="222" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="travel" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -169,7 +162,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="lda_module" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="spider_city_traffic" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="travel" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -177,12 +170,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/emotion" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/spider" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="E:\tuling\tl\travel\emotion\lda_module.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spider/spider_city_traffic.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -266,17 +259,17 @@
       <item itemvalue="Python.app.py" />
       <item itemvalue="Python.travel" />
       <item itemvalue="Python.emotion_train" />
-      <item itemvalue="Python.lda_module" />
       <item itemvalue="Python.lda_module (1)" />
       <item itemvalue="Python.222" />
+      <item itemvalue="Python.spider_city_traffic" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.spider_city_traffic" />
         <item itemvalue="Flask 服务器.Flask (app.py) (1)" />
         <item itemvalue="Python.lda_module (1)" />
         <item itemvalue="Python.222" />
         <item itemvalue="Python.emotion_train" />
-        <item itemvalue="Python.lda_module" />
       </list>
     </recent_temporary>
   </component>
@@ -295,7 +288,11 @@
       <workItem from="1681134837500" duration="8482000" />
       <workItem from="1681218677215" duration="7597000" />
       <workItem from="1681301976277" duration="1793000" />
-      <workItem from="1681308416853" duration="5125000" />
+      <workItem from="1681308416853" duration="5413000" />
+      <workItem from="1681566714556" duration="1188000" />
+      <workItem from="1681637922517" duration="1787000" />
+      <workItem from="1681820858758" duration="129000" />
+      <workItem from="1681996381356" duration="1537000" />
     </task>
     <task id="LOCAL-00001" summary="增加LDA模型">
       <created>1681226287409</created>
@@ -319,6 +316,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/travel$lda_module__1_.coverage" NAME="lda_module (1) 覆盖结果" MODIFIED="1681312169372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/emotion" />
+    <SUITE FILE_PATH="coverage/travel$spider_city_traffic.coverage" NAME="spider_city_traffic 覆盖结果" MODIFIED="1681996993336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
     <SUITE FILE_PATH="coverage/travel$emotion_train.coverage" NAME="emotion_train 覆盖结果" MODIFIED="1681148792722" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/emotion" />
     <SUITE FILE_PATH="coverage/travel$Flask__app_py___1_.coverage" NAME="Flask (app.py) (1) 覆盖结果" MODIFIED="1681312400418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/travel$Flask__app_py_.coverage" NAME="Flask (app.py) 覆盖结果" MODIFIED="1681135659237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
