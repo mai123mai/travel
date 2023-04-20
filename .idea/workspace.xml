@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="5f5eaa0a-68a4-4378-9f03-38a73e78e02e" name="默认变更列表" comment="增加LDA模型">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider/spider_city_code.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider/spider_city_traffic.py" beforeDir="false" afterPath="$PROJECT_DIR$/spider/spider_city_traffic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/spider_ly/xxx.js" beforeDir="false" afterPath="$PROJECT_DIR$/spider_ly/spider_ly/xxx.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/file/img-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/file/img-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/file/img-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/file/img-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/file/img-5.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +57,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -67,6 +69,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\tuling\tl\travel" />
       <recent name="E:\tuling\tl\travel\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -292,7 +295,7 @@
       <workItem from="1681566714556" duration="1188000" />
       <workItem from="1681637922517" duration="1787000" />
       <workItem from="1681820858758" duration="129000" />
-      <workItem from="1681996381356" duration="1537000" />
+      <workItem from="1681996381356" duration="3496000" />
     </task>
     <task id="LOCAL-00001" summary="增加LDA模型">
       <created>1681226287409</created>
@@ -316,7 +319,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/travel$lda_module__1_.coverage" NAME="lda_module (1) 覆盖结果" MODIFIED="1681312169372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/emotion" />
-    <SUITE FILE_PATH="coverage/travel$spider_city_traffic.coverage" NAME="spider_city_traffic 覆盖结果" MODIFIED="1681996993336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
+    <SUITE FILE_PATH="coverage/travel$spider_city_traffic.coverage" NAME="spider_city_traffic 覆盖结果" MODIFIED="1681997943749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
     <SUITE FILE_PATH="coverage/travel$emotion_train.coverage" NAME="emotion_train 覆盖结果" MODIFIED="1681148792722" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/emotion" />
     <SUITE FILE_PATH="coverage/travel$Flask__app_py___1_.coverage" NAME="Flask (app.py) (1) 覆盖结果" MODIFIED="1681312400418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/travel$Flask__app_py_.coverage" NAME="Flask (app.py) 覆盖结果" MODIFIED="1681135659237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
