@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5f5eaa0a-68a4-4378-9f03-38a73e78e02e" name="默认变更列表" comment="增加LDA模型">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/img-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/img-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/img-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/img-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/img-5.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +47,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sql" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -69,6 +64,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\tuling\tl\travel\sql" />
       <recent name="E:\tuling\tl\travel" />
       <recent name="E:\tuling\tl\travel\templates" />
     </key>
@@ -295,7 +291,7 @@
       <workItem from="1681566714556" duration="1188000" />
       <workItem from="1681637922517" duration="1787000" />
       <workItem from="1681820858758" duration="129000" />
-      <workItem from="1681996381356" duration="3496000" />
+      <workItem from="1681996381356" duration="3990000" />
     </task>
     <task id="LOCAL-00001" summary="增加LDA模型">
       <created>1681226287409</created>
