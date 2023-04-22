@@ -213,7 +213,7 @@ def get_city_code():
     response = requests.get(url, headers=headers, cookies=cookies)
     if response.status_code == 200:
         fieldnames = ['code', 'name', 'pinyin']
-        if not os.path.exists('./city_code.csv'):
+        if not os.path.exists('city_code.csv'):
             with open('city_code.csv', 'w', newline='', encoding='utf-8') as csvfile:
                 # 构造方法
                 writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
