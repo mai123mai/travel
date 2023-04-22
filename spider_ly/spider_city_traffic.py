@@ -21,7 +21,7 @@ def save_data(table_name, data):
         sql = f'replace into {table_name} values ({params})'
         cursor.execute(sql, tuple(data))
         db.commit()
-        print(data)
+        print('insert success')
     except Exception as e:
         print('erro---->' + str(e))
         db.rollback()
@@ -105,7 +105,7 @@ def get_districtRank_data(pd_codes):
     url = "https://report.amap.com/ajax/districtRank.do"
     for i in pd_codes:
         code = i[0]
-        name = i[1]
+        city_name = i[1]
         for dataType in [1, 3, 4]:
             params = {
                 "linksType": dataType,
@@ -126,7 +126,7 @@ def get_districtRank_data(pd_codes):
             id = str(code) + '_' + str(dataType)
             times = datetime.now().strftime('%Y-%m-%d %H:%M')
             table_name = 'traffic_district_rank'
-            save_data(table_name, [id, times, code, name, dataType, datas])
+            save_data(table_name, [id, times, code, city_name, dataType, datas])
 
 
 def get_roadRank_data(pd_codes):
@@ -155,7 +155,7 @@ def get_roadRank_data(pd_codes):
     url = "https://report.amap.com/ajax/roadRank.do"
     for i in pd_codes:
         code = i[0]
-        name = i[1]
+        city_name = i[1]
         for dataType in [0, 1, 2]:
             params = {
                 "roadType": dataType,
@@ -178,7 +178,65 @@ def get_roadRank_data(pd_codes):
             id = str(code) + '_' + str(dataType)
             times = datetime.now().strftime('%Y-%m-%d %H:%M')
             table_name = 'traffic_roadrank_rank'
-            save_data(table_name, [id, times, code, name, dataType, datas])
+            save_data(table_name, [id, times, code, city_name, dataType, datas])
+
+
+def get_map_data(pd_codes):
+    headers = {
+        "authority": "report.amap.com",
+        "accept": "application/json, text/javascript, */*; q=0.01",
+        "accept-language": "zh-CN,zh;q=0.9",
+        "cache-control": "no-cache",
+        "pragma": "no-cache",
+        "referer": "https://report.amap.com/detail.do?city=110000",
+        "sec-ch-ua": "^\\^.Not/A)Brand^^;v=^\\^99^^, ^\\^Google",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "^\\^Windows^^",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36",
+        "x-requested-with": "XMLHttpRequest"
+    }
+    cookies = {
+        "UM_distinctid": "1872db04825279-0909f1aed02481-26021a51-1fa400-1872db048268e1",
+        "user_unique_id": "a187bf65864ea91c0187a944eda41110",
+        "SESSION": "6f6d7e3a-7a29-4482-965d-b01814729370",
+        "cna": "I7fRGwPZpWMCAXBdjtaRKPpC",
+        "xlly_s": "1",
+        "gray_auth": "2",
+        "passport_login": "NTI0MzUzODE5LGFtYXBfMTM0MTY4NDIzMzdCSXdMRVZjNUEsZWNzczJwYmZrYWkyN3RqdmR1M3Y3YzRzZHhtczdtbGcsMTY4MjE3MjQzMixaVFprWXpZeFlqTmlZV001TkRWaE1tTmlNekV4TkRrM01USTJOVGM0T1RBPQ^%^3D^%^3D",
+        "isg": "BAwM2-wphByJfpBg_1ydlWfb3Wo-RbDvWVS3OmbOLrec8an7jlC1fl4AlflJuehH",
+        "l": "fBTBou7mNYW_LRsKBO5ZKurza77teQOfCsPzaNbMiIEGa6t5OeY2RNC_iGnW5dtjgT5EWetPUcfRbdFwrVz38FkDBeYCfGjVEd9e7e16nezA.",
+        "tfstk": "cfAcB3w0HKWfwch9Vn1jTmj6sRldaCNNxCRWa43w8UWBI-A5usj0UJ55X4jmAmy1.",
+        "CNZZDATA1256662931": "305016805-1680096682-https^%^253A^%^252F^%^252Freport.amap.com^%^252F^%^7C1682172355"
+    }
+    url = "https://report.amap.com/ajax/districtRank.do"
+    for i in pd_codes:
+        cityCode = i[0]
+        name = i[1]
+        params = {
+            "linksType": "1",
+            "cityCode": cityCode
+        }
+        response = requests.get(url, headers=headers, cookies=cookies, params=params)
+
+        data_json = response.json()
+        mapdata = []
+        data_value = []
+        for d in data_json:
+            coords = d.get('coords')[0][0]
+            data = d.get('index')
+            data_value.append(data)
+            for c in coords:
+                data_map = {'lat': c.get('lat'), 'lng': c.get('lon'), 'count': data}
+                mapdata.append(data_map)
+        center = str([mapdata[0].get('lng'), mapdata[0].get('lat')])
+        data = json.dumps(mapdata)
+        max_data = data_value[0]
+        table_name = 'traffic_map'
+        times = datetime.now().strftime('%Y-%m-%d %H:%M')
+        save_data(table_name, [cityCode, times, name, center, max_data, data])
 
 
 def get_city_code():
@@ -238,12 +296,15 @@ def run():
         p1 = multiprocessing.Process(target=get_traffic_index, args=(pd_codes,))
         p2 = multiprocessing.Process(target=get_districtRank_data, args=(pd_codes,))
         p3 = multiprocessing.Process(target=get_roadRank_data, args=(pd_codes,))
+        p4 = multiprocessing.Process(target=get_map_data, args=(pd_codes,))
         p1.start()
         p2.start()
         p3.start()
+        p4.start()
         p1.join()
         p2.join()
         p3.join()
+        p4.join()
         print('Done!')
 
     cursor.close()
@@ -254,5 +315,4 @@ def run():
 
 if __name__ == '__main__':
     run()
-
 

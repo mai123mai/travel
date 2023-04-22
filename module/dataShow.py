@@ -48,17 +48,19 @@ def data_show(type):
         area = '全国'
         china_datas = get_china_data()
         row_chart1, col_chart1 = get_price()
-        row_chart2, col_chart2, full_list, persen = get_provien_scenic()
+        # row_chart2, col_chart2, full_list, persen = get_provien_scenic()
         scenic_stat_obj, all_cnt = get_scenic_stat()
         degree_obj = get_degreeLevel()
         top6_data = get_heat_data()
         heat_province_row, heat_province_col = get_heat_data_by_province()
         hear_max = max(heat_province_col)
+        serviceObjkeys = get_city_service_score('all')
         return render_template('china_show.html', email=email, name=name, datas=china_datas,
                                count=scenic_count, type=area,
                                row_chart1=row_chart1, col_chart1=col_chart1,
-                               row_chart2=row_chart2[:6], col_chart2=col_chart2[:6], full_list=full_list[:6],
-                               persen=persen[:6],
+                               # row_chart2=row_chart2[:6], col_chart2=col_chart2[:6], full_list=full_list[:6],
+                               # persen=persen[:6],
+                               serviceObjkeys=serviceObjkeys,
                                scenic_stat_obj=scenic_stat_obj, all_cnt=all_cnt,
                                degree_obj=degree_obj,
                                top6_data=top6_data,
@@ -121,9 +123,6 @@ def get_tabel_data():
     # 前端根本不需要指定total和rows这俩参数，他们已经封装在了bootstrap table里了
 
 
-
-
-
 @dataShow.route('/video/<int:videoId>')
 def movie(videoId):
     videoUrl = getMovierUrlById(videoId)
@@ -152,16 +151,22 @@ def traffic(city):
         row_data1, col_data1, row_data2, col_data2, row_data3, col_data3, row_data4, col_data4 = get_traffic_index(city)
         item_obj = get_traffic_district_data(city)
         roadrank_obj = get_traffic_roadrank_data(city)
+        mapdata, center = get_map_data(city)
     else:
         city = dict(request.form)['city']
         row_data1, col_data1, row_data2, col_data2, row_data3, col_data3, row_data4, col_data4 = get_traffic_index(city)
         item_obj = get_traffic_district_data(city)
         roadrank_obj = get_traffic_roadrank_data(city)
+        mapdata, center = get_map_data(city)
     return render_template('traffic.html', name=name, email=email,
                            row_chart1=row_data1, col_chart1=col_data1,
                            row_chart2=row_data2, col_chart2=col_data2,
                            row_chart3=row_data3, col_chart3=col_data3,
                            row_chart4=row_data4, col_chart4=col_data4,
                            item_obj1=item_obj[0], item_obj2=item_obj[1], item_obj3=item_obj[2],
-                           roadrank_obj=roadrank_obj,
+                           roadrank_obj=roadrank_obj, mapdata=mapdata, center=center,
                            )
+
+
+if __name__ == '__main__':
+    data_show('all')

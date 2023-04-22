@@ -6,12 +6,11 @@ from module.user import user
 from module.dataAnaly import dataAnaly
 from redis_cache import cache
 
-
 app = Flask(__name__)
 cache.init_app(app)
 app.secret_key = 'This is session_key you know ?'
 
-urls = [user, dataShow,dataAnaly]
+urls = [user, dataShow, dataAnaly]
 for url in urls:
     app.register_blueprint(url)  # 将三个路由均实现蓝图注册到主app应用上
 
@@ -46,7 +45,6 @@ def cors(environ):
     environ.headers['Access-Control-Allow-Method'] = '*'
     environ.headers['Access-Control-Allow-Headers'] = 'x-requested-with,content-type'
     return environ
-
 
 
 if __name__ == '__main__':

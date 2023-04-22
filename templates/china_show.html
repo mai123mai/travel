@@ -22,7 +22,7 @@
     <div class="exit">
         <a class="menu-icon ti-arrow-left" href="/data_show/all">返回</a>
     </div>
-    <h1>数据可视化-ECharts</h1>
+    <h1>国内旅游景点数据分析</h1>
     <div class="showTime"></div>
     <script>
         var t = null;
@@ -104,7 +104,7 @@
 
     <div class="column">
         <div class="panel bar2">
-            <h2>景区数量分析</h2>
+            <h2>景区服务分析</h2>
             <div class="chart"></div>
             <div class="panel-footer"></div>
         </div>
@@ -218,6 +218,77 @@
         });
     })
 </script>
+
+<script>
+    $(function china_chart1() {
+        var myChart = echarts.init(document.querySelector(".bar2 .chart"));
+
+        var serviceObjkeys = "{{ serviceObjkeys|safe }}";
+        var xData = eval(`( ${serviceObjkeys} )`);
+
+        const tooltip = {};
+        const grid = {
+            top: '35px',
+            right: '3%',
+            left: '3%',
+            bottom: '5%',
+            containLabel: true
+        };
+        const color = ["#2f89cf"];
+        const radar = {
+            radius: '76%',
+            center: ['50%', '52%'],
+            startAngle: 0,
+            triggerEvent: true,
+            name: {textStyle: {color: '#6a9cd5', fontSize: '12', padding: [5, 5]}},
+            nameGap: '2',
+            indicator: [
+                {name: '服务态度(10)', max: 10},
+                {name: '产品便捷(10)', max: 10},
+                {name: '性价比(10)', max: 10},
+                {name: '景区体验(10)', max: 10},
+            ],
+            splitArea: {
+                areaStyle: {
+                    color: ['rgba(0,255,255, 0.1)', 'rgba(0,255,255, 0.2)', 'rgba(0,255,255, 0.3)', 'rgba(0,255,255, 0.4)', 'rgba(0,255,255, 0.5)', 'rgba(0,255,255, 0.55)',].reverse(),
+                    shadowColor: 'rgba(0, 0, 0, 1)',
+                    shadowBlur: 30,
+                    shadowOffsetX: 10,
+                    shadowOffsetY: 10
+                }
+            },
+            axisLine: {lineStyle: {color: 'rgba(209,192,173,0.3)'}},
+            splitLine: {
+                lineStyle: {
+                    width: 1,
+                    color: ['rgba(0,206,209, 0.1)', 'rgba(0,206,209, 0.2)', 'rgba(0,206,209, 0.3)', 'rgba(0,206,209, 0.4)', 'rgba(0,206,209, 0.5)', 'rgba(0,206,209, 0.55)'].reverse()
+                }
+            }
+        };
+
+        const series = [{
+            name: '服务评价',
+            type: 'radar',
+            symbol: 'circle',
+            symbolSize: 12,
+            itemStyle: {color: 'rgba(127,255,210,0.4)', borderColor: 'rgba(127,255,210,0.2)', borderWidth: 10,},
+            lineStyle: {color: 'rgba(131,146,255,0.78)', width: 4},
+            label: {show: false,},
+            data: [xData]
+        }];
+
+        option = {grid, tooltip, radar, series, color};
+
+
+        // 3. 把配置给实例对象
+        myChart.setOption(option);
+        // 4. 让图表跟随屏幕自动的去适应
+        window.addEventListener("resize", function () {
+            myChart.resize();
+        });
+    });
+</script>
+
 
 <script>
     $(function china_chart1() {
@@ -353,124 +424,7 @@
     })
 </script>
 
-<script>
-    $(function china_chart2() {
-        var myColor = ["#1089E7", "#F57474", "#56D0E3", "#F8B448", "#8B78F6"];
-        // 1. 实例化对象
-        var myChart = echarts.init(document.querySelector(".bar2 .chart"));
-        // 2. 指定配置和数据
-        var row_chart2 = "{{ row_chart2|safe }}";
-        var chart2_row_data = eval(`( ${row_chart2} )`);
-        var col_chart2 = "{{ col_chart2|safe }}";
-        var chart2_col_data = eval(`( ${col_chart2} )`);
-        var persen_data = "{{ persen|safe }}";
-        var persen = eval(`( ${persen_data} )`);
-        var full_list_ = "{{ full_list|safe }}";
-        var full_list = eval(`( ${full_list_} )`);
 
-        var option = {
-            grid: {
-                top: "10%",
-                left: "13%",
-                bottom: "3%"
-                // containLabel: true
-            },
-            // 不显示x轴的相关信息
-            xAxis: {
-                show: false,
-                axisLabel: {
-                    color: '#6a9cd5'
-                },
-            },
-            yAxis: [
-                {
-                    type: "category",
-                    inverse: true,
-                    data: chart2_col_data,
-                    // 不显示y轴的线
-                    axisLine: {
-                        show: false
-                    },
-                    // 不显示刻度
-                    axisTick: {
-                        show: false
-                    },
-                    // 把刻度标签里面的文字颜色设置为白色
-                    axisLabel: {
-                        color: '#6a9cd5'
-                    },
-                },
-                {
-                    data: chart2_row_data,
-                    inverse: true,
-                    // 不显示y轴的线
-                    axisLine: {
-                        show: false
-                    },
-                    // 不显示刻度
-                    axisTick: {
-                        show: false
-                    },
-                    // 把刻度标签里面的文字颜色设置为白色
-                    axisLabel: {
-                        color: '#6a9cd5'
-                    },
-                }
-            ],
-            series: [
-                {
-                    name: "条",
-                    type: "bar",
-                    data: persen,
-                    yAxisIndex: 0,
-                    // 修改第一组柱子的圆角
-                    itemStyle: {
-                        barBorderRadius: 20,
-                        // 此时的color 可以修改柱子的颜色
-                        color: function (params) {
-                            // params 传进来的是柱子对象
-                            // console.log(params);
-                            // dataIndex 是当前柱子的索引号
-                            return myColor[params.dataIndex];
-                        }
-                    },
-                    // 柱子之间的距离
-                    barCategoryGap: 50,
-                    //柱子的宽度
-                    barWidth: 10,
-                    // 显示柱子内的文字
-                    label: {
-                        show: false,
-                        position: "inside",
-                        // {c} 会自动的解析为 数据  data里面的数据
-                        formatter: "{c}%"
-                    }
-                },
-                {
-                    name: "框",
-                    type: "bar",
-                    barCategoryGap: 50,
-                    barWidth: 15,
-                    yAxisIndex: 1,
-                    data: full_list,
-                    itemStyle: {
-                        color: "none",
-                        borderColor: "#00c1de",
-                        borderWidth: 3,
-                        barBorderRadius: 15
-                    }
-                }
-            ]
-        };
-
-        // 3. 把配置给实例对象
-        myChart.setOption(option);
-        // 4. 让图表跟随屏幕自动的去适应
-        window.addEventListener("resize", function () {
-            myChart.resize();
-        });
-    });
-</script>
 
 <script>
     $(function china_chart3() {

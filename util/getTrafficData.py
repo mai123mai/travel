@@ -1,10 +1,10 @@
 import json
 
+import requests
+
 from util.utils import get_traffic_df
 
-
-
-df_1, df_2, df_3 = get_traffic_df()
+df_1, df_2, df_3,df_4 = get_traffic_df()
 
 
 def get_traffic_index(searchName):
@@ -50,6 +50,17 @@ def get_traffic_roadrank_data(searchName):
     return roadrank_item_obj
 
 
+def get_map_data(searchName):
+    new_df = df_4[df_4['name'].str.contains(searchName)][['data', 'center']]
+    datas = new_df['data'].tolist()[0]
+    center_str = new_df['center'].tolist()[0]
+    mapdata = json.loads(datas)
+    center = json.loads(center_str)
+    return mapdata, center
+
+
 if __name__ == '__main__':
     # print(get_traffic_index('广州'))
-    print(get_traffic_roadrank_data('广州'))
+    # print(get_traffic_district_data('广州'))
+    print(get_map_data('广州'))
+

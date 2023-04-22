@@ -17,7 +17,8 @@ def get_traffic_df():
     df_1 = pd.read_sql(text('select * from traffic_congestion_index'), con=con)
     df_2 = pd.read_sql(text('select * from traffic_district_rank'), con=con)
     df_3 = pd.read_sql(text('select * from traffic_roadrank_rank'), con=con)
-    return df_1,df_2,df_3
+    df_4 = pd.read_sql(text('select * from traffic_map'), con=con)
+    return df_1,df_2,df_3,df_4
 
 def typeList(seq, type, table='movie'):
     sql = f'select * from {table}'

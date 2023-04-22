@@ -20,12 +20,9 @@ def login():  # put application's code here
         return render_template('login.html')
     elif request.method == 'POST':
         request.form = dict(request.form)
-
         # print(request.form)
-
         def filter_fl(item):
             return request.form['email'] in item and request.form['password'] in item
-
         users = query.querys('select * from user', [], 'select')
         filter_users = list(filter(filter_fl, users))
         """设置session的数据 login设置"""
@@ -75,7 +72,7 @@ def register():  # put application's code here
         users = query.querys('select * from user', [], 'select')
         filter_list = list(filter(filter_fl, users))
         if len(filter_list):
-            return render_template('erro.html', message='User not registered', back='/register')
+            return render_template('erro.html', message='User has registered', back='/register')
         else:
             query.querys('insert into user(name,email,password) value(%s,%s,%s)',
                          [request.form.get('name'), request.form.get('email'), request.form.get('password')])
@@ -103,8 +100,12 @@ def forget():  # put application's code here
             filter_list = list(filter(filter_fl, users))
             if len(filter_list):
                 password = request.form['password']
-                email = request.form['email']
-                query.querys('UPDATE `USER` SET password = %s  WHERE email= %s ;', [password, email])
-                return redirect('/login')
+                passwordChecked = request.form['passwordChecked']
+                if password == passwordChecked:
+                    email = request.form['email']
+                    query.querys('UPDATE `USER` SET password = %s  WHERE email= %s ;', [password, email])
+                    return redirect('/login')
+                else:
+                    return render_template('erro.html', message='User not registered', back='/forget')
             else:
-                return render_template('erro.html', message='User not registered', back='/forget')
+                return render_template('erro.html', message='Password inconsistency', back='/forget')
