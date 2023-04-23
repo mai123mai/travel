@@ -78,7 +78,7 @@ class CrawlCommentSpider(RedisSpider):
     def parse(self, response):
         page = response.meta.get('page', 1)
         sid = response.meta.get('sid')
-        totalPage = response.meta.get('totalPage',1)
+        totalPage = response.meta.get('totalPage', 1)
         comment_json = response.json()
         degreeLevel = comment_json.get('degreeLevel')
         totalNum = comment_json.get('totalNum')
@@ -137,7 +137,7 @@ class CrawlCommentSpider(RedisSpider):
             }
             url = "https://www.ly.com/scenery/AjaxHelper/DianPingAjax.aspx" + '?' + urlencode(params)
             yield scrapy.Request(url, headers=self.headers, cookies=self.cookies, callback=self.parse, dont_filter=True,
-                                 meta={"sid": sid, 'page': page,'totalPage':totalPage})
+                                 meta={"sid": sid, 'page': page, 'totalPage': totalPage})
 
 
 if __name__ == '__main__':

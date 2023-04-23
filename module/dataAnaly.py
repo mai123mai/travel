@@ -124,7 +124,7 @@ def comment_t(searchName):
         searchName = sid_top1
     redis_key = 'user:{}:comment_t_data'.format(name)
     ret_data = cache.get(redis_key)
-    cache.expire(redis_key, 60 * 10)
+
     if ret_data:
         ydata = ret_data
     else:

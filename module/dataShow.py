@@ -153,12 +153,12 @@ def traffic(city):
         roadrank_obj = get_traffic_roadrank_data(city)
         mapdata, center = get_map_data(city)
     else:
-        city = dict(request.form)['city']
+        city = dict(request.form)['cityName']
         row_data1, col_data1, row_data2, col_data2, row_data3, col_data3, row_data4, col_data4 = get_traffic_index(city)
         item_obj = get_traffic_district_data(city)
         roadrank_obj = get_traffic_roadrank_data(city)
         mapdata, center = get_map_data(city)
-    return render_template('traffic.html', name=name, email=email,
+    return render_template('traffic.html', name=name, email=email,city=city,
                            row_chart1=row_data1, col_chart1=col_data1,
                            row_chart2=row_data2, col_chart2=col_data2,
                            row_chart3=row_data3, col_chart3=col_data3,

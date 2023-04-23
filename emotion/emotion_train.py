@@ -59,15 +59,17 @@ def emotion_posess(reviews, sid):
 
     content = reviews['comment_cotent']
     # 编译匹配模式
-    # 去掉评论中的数字、字母，以及“京东”“京东商城”“美的”“热水器”“电热水器"
+    # 去掉评论中的数字、字母，以及景区|景点|很|都|去
     pattern = re.compile('[a-zA-Z0-9]|景区|景点|很|都|去')
     # re.sub用于替换字符串中的匹配项
     content = content.apply(lambda x: pattern.sub('', x))
     # print(content)
+
     # 自定义简单的分词函数
     worker = lambda s: [[x.word, x.flag] for x in psg.cut(s)]  # 单词与词性
     seg_word = content.apply(worker)
     # print(seg_word)
+
     # 将词语转化为数据框形式，一列是词，一列是词语所在的句子id，最后一列是词语在该句子中的位置
     # 每一评论中词的个数
     n_word = seg_word.apply(lambda x: len(x))
@@ -103,12 +105,14 @@ def emotion_posess(reviews, sid):
     word = list(set(word) - set(stop))
     # 判断表格中的单词列是否在非停用词列中
     result = result[result['word'].isin(word)]
+
     # 构造各词在评论中的位置列
     n_word = list(result.groupby(by=['index_content'])['index_content'].count())
     index_word = [list(np.arange(0, x)) for x in n_word]
     index_word = sum(index_word, [])
     result['index_word'] = index_word
     result.reset_index(drop=True, inplace=True)
+
     # 提取含名词的评论的句子id
     ind = result[[x == 'n' for x in result['nature']]]['index_content'].unique()
     # 提取评论
@@ -118,10 +122,13 @@ def emotion_posess(reviews, sid):
     # 读入评论词表
     word = result
 
+    # 读取词典
     posneg = pd.read_csv(current_path + "/dictionary.csv")
+
     data_posneg = pd.merge(left=word, right=posneg, on='word', how='left')
     # 先按评论id排序，再按在评论中的位置排序
     data_posneg = data_posneg.sort_values(by=['index_content', 'index_word'])
+
     # 根据情感词前面两个位置的词语是否存在否定词或双层否定词对情感值进行修正
     # 载入否定词表
     notdict = pd.read_csv(current_path + "/语录/not.csv")
@@ -133,6 +140,7 @@ def emotion_posess(reviews, sid):
     only_inclination = data_posneg.dropna()
     # 修改索引
     only_inclination.index = np.arange(0, len(only_inclination))
+
     index = only_inclination['id']
     for i in np.arange(0, len(only_inclination)):
         # 提取第i个情感词所在的评论
@@ -155,6 +163,7 @@ def emotion_posess(reviews, sid):
     # 计算每条评论的情感值
     emotional_value = only_inclination.groupby(['index_content', 'content_time'], as_index=False)['amend_weight'].sum()
     emotional_score = emotional_value
+
     score_time_pd = emotional_score[['content_time', 'amend_weight']]
     score_time_pd.to_csv(current_path + f"/datas/score_data/{sid}.csv", index=False, encoding='utf-8')
 
@@ -168,6 +177,8 @@ def emotion_posess(reviews, sid):
     # emotional_value.loc[emotional_value.amend_weight == 0, 'a_type'] = '中评'
     # 查看情感分析的结果
     result = pd.merge(left=word, right=emotional_value, on='index_content', how='right')
+    # 去重
+    result = result[['index_content', 'content_type', 'a_type']].drop_duplicates()
     # 删除中评
     result = result[result['content_type'] != '中评']
     # 混淆矩阵-交叉表

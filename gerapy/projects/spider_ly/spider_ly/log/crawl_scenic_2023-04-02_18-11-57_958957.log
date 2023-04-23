@@ -1,0 +1,322 @@
+2023-04-02 18:11:58.125 | INFO     | scrapy.utils.log:log_scrapy_info:147 - Scrapy 2.6.3 started (bot: spider_ly)
+2023-04-02 18:11:58.138 | INFO     | scrapy.utils.log:log_scrapy_info:154 - Versions: lxml 4.6.4.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 22.2.0, Python 3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)], pyOpenSSL 22.0.0 (OpenSSL 1.1.1m  14 Dec 2021), cryptography 36.0.1, Platform Windows-10-10.0.19041-SP0
+2023-04-02 18:11:58.143 | INFO     | scrapy.crawler:__init__:60 - Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'BOT_NAME': 'spider_ly',
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 24,
+ 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter',
+ 'LOG_ENABLED': False,
+ 'LOG_FILE': '../log/erro.log',
+ 'LOG_LEVEL': 'ERROR',
+ 'NEWSPIDER_MODULE': 'spider_ly.spiders',
+ 'RETRY_TIMES': 5,
+ 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler',
+ 'SPIDER_MODULES': ['spider_ly.spiders']}
+2023-04-02 18:11:58.193 | INFO     | scrapy.extensions.telnet:__init__:55 - Telnet Password: 53b497dea90d347c
+2023-04-02 18:11:58.227 | INFO     | scrapy.middleware:from_settings:51 - Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2023-04-02 18:11:58.525 | INFO     | scrapy.middleware:from_settings:51 - Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'spider_ly.middlewares.ProxyMiddleWare',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-04-02 18:11:58.534 | INFO     | scrapy.middleware:from_settings:51 - Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-04-02 18:11:58.576 | INFO     | scrapy.middleware:from_settings:51 - Enabled item pipelines:
+['spider_ly.pipelines.saveCsvScrapyPipeline',
+ 'spider_ly.pipelines.saveMysqlScrapyPipeline',
+ 'scrapy_redis.pipelines.RedisPipeline']
+2023-04-02 18:11:58.576 | INFO     | scrapy.core.engine:open_spider:316 - Spider opened
+2023-04-02 18:11:58.596 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-04-02 18:11:58.598 | INFO     | scrapy.extensions.telnet:start_listening:67 - Telnet console listening on 127.0.0.1:6023
+2023-04-02 18:11:59.097 | WARNING  | warnings:_showwarnmsg:109 - C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\core\scraper.py:157: UserWarning: The "CrawlScenicSpider.parse" method is a generator and includes a "return" statement with a value different than None. This could lead to unexpected behaviour. Please see https://docs.python.org/3/reference/simple_stmts.html#the-return-statement for details about the semantics of the "return" statement within generators
+  warn_on_generator_with_return_value(spider, callback)
+
+2023-04-02 18:12:58.599 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 153 pages (at 153 pages/min), scraped 79 items (at 79 items/min)
+2023-04-02 18:13:58.604 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 336 pages (at 183 pages/min), scraped 190 items (at 111 items/min)
+2023-04-02 18:14:58.610 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 405 pages (at 69 pages/min), scraped 214 items (at 24 items/min)
+2023-04-02 18:15:58.609 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 473 pages (at 68 pages/min), scraped 235 items (at 21 items/min)
+2023-04-02 18:16:58.598 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 542 pages (at 69 pages/min), scraped 256 items (at 21 items/min)
+2023-04-02 18:17:58.596 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 616 pages (at 74 pages/min), scraped 282 items (at 26 items/min)
+2023-04-02 18:18:58.605 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 701 pages (at 85 pages/min), scraped 319 items (at 37 items/min)
+2023-04-02 18:19:58.611 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 776 pages (at 75 pages/min), scraped 346 items (at 27 items/min)
+2023-04-02 18:20:58.599 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 849 pages (at 73 pages/min), scraped 371 items (at 25 items/min)
+2023-04-02 18:21:58.602 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 939 pages (at 90 pages/min), scraped 409 items (at 38 items/min)
+2023-04-02 18:22:58.608 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 1004 pages (at 65 pages/min), scraped 431 items (at 22 items/min)
+2023-04-02 18:23:58.600 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 1085 pages (at 81 pages/min), scraped 464 items (at 33 items/min)
+2023-04-02 18:24:58.603 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 1164 pages (at 79 pages/min), scraped 491 items (at 27 items/min)
+2023-04-02 18:25:58.599 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 1247 pages (at 83 pages/min), scraped 520 items (at 29 items/min)
+2023-04-02 18:26:58.604 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 1319 pages (at 72 pages/min), scraped 546 items (at 26 items/min)
+2023-04-02 18:27:58.600 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 1388 pages (at 69 pages/min), scraped 567 items (at 21 items/min)
+2023-04-02 18:28:58.602 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 1443 pages (at 55 pages/min), scraped 581 items (at 14 items/min)
+2023-04-02 18:29:58.607 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 1536 pages (at 93 pages/min), scraped 622 items (at 41 items/min)
+2023-04-02 18:30:58.606 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 1605 pages (at 69 pages/min), scraped 648 items (at 26 items/min)
+2023-04-02 18:31:58.596 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 1677 pages (at 72 pages/min), scraped 672 items (at 24 items/min)
+2023-04-02 18:32:58.598 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 1740 pages (at 63 pages/min), scraped 692 items (at 20 items/min)
+2023-04-02 18:33:58.610 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 1821 pages (at 81 pages/min), scraped 721 items (at 29 items/min)
+2023-04-02 18:34:58.596 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 1881 pages (at 60 pages/min), scraped 738 items (at 17 items/min)
+2023-04-02 18:35:58.610 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 1945 pages (at 64 pages/min), scraped 759 items (at 21 items/min)
+2023-04-02 18:36:58.606 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 2030 pages (at 85 pages/min), scraped 791 items (at 32 items/min)
+2023-04-02 18:37:58.599 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 2119 pages (at 89 pages/min), scraped 828 items (at 37 items/min)
+2023-04-02 18:38:58.602 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 2201 pages (at 82 pages/min), scraped 855 items (at 27 items/min)
+2023-04-02 18:39:58.610 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 2303 pages (at 102 pages/min), scraped 900 items (at 45 items/min)
+2023-04-02 18:40:58.598 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 2367 pages (at 64 pages/min), scraped 922 items (at 22 items/min)
+2023-04-02 18:41:58.608 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 2458 pages (at 91 pages/min), scraped 960 items (at 38 items/min)
+2023-04-02 18:42:58.599 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 2542 pages (at 84 pages/min), scraped 997 items (at 37 items/min)
+2023-04-02 18:43:58.601 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 2619 pages (at 77 pages/min), scraped 1029 items (at 32 items/min)
+2023-04-02 18:44:58.599 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 2698 pages (at 79 pages/min), scraped 1057 items (at 28 items/min)
+2023-04-02 18:45:58.607 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 2771 pages (at 73 pages/min), scraped 1084 items (at 27 items/min)
+2023-04-02 18:46:58.608 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 2856 pages (at 85 pages/min), scraped 1114 items (at 30 items/min)
+2023-04-02 18:47:58.609 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 2921 pages (at 65 pages/min), scraped 1128 items (at 14 items/min)
+2023-04-02 18:48:58.608 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 2995 pages (at 74 pages/min), scraped 1152 items (at 24 items/min)
+2023-04-02 18:49:58.603 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 3065 pages (at 70 pages/min), scraped 1175 items (at 23 items/min)
+2023-04-02 18:50:58.599 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 3157 pages (at 92 pages/min), scraped 1213 items (at 38 items/min)
+2023-04-02 18:51:58.602 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 3227 pages (at 70 pages/min), scraped 1244 items (at 31 items/min)
+2023-04-02 18:52:58.607 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 3294 pages (at 67 pages/min), scraped 1276 items (at 32 items/min)
+2023-04-02 18:53:58.607 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 3380 pages (at 86 pages/min), scraped 1313 items (at 37 items/min)
+2023-04-02 18:54:58.599 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 3453 pages (at 73 pages/min), scraped 1340 items (at 27 items/min)
+2023-04-02 18:55:58.601 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 3526 pages (at 73 pages/min), scraped 1366 items (at 26 items/min)
+2023-04-02 18:56:58.609 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 3598 pages (at 72 pages/min), scraped 1392 items (at 26 items/min)
+2023-04-02 18:57:58.609 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 3682 pages (at 84 pages/min), scraped 1427 items (at 35 items/min)
+2023-04-02 18:58:58.600 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 3753 pages (at 71 pages/min), scraped 1450 items (at 23 items/min)
+2023-04-02 18:59:58.605 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 3824 pages (at 71 pages/min), scraped 1475 items (at 25 items/min)
+2023-04-02 19:00:58.606 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 3911 pages (at 87 pages/min), scraped 1511 items (at 36 items/min)
+2023-04-02 19:01:58.599 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 3973 pages (at 62 pages/min), scraped 1531 items (at 20 items/min)
+2023-04-02 19:02:58.598 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 4043 pages (at 70 pages/min), scraped 1557 items (at 26 items/min)
+2023-04-02 19:03:58.599 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 4110 pages (at 67 pages/min), scraped 1581 items (at 24 items/min)
+2023-04-02 19:04:58.608 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 4188 pages (at 78 pages/min), scraped 1612 items (at 31 items/min)
+2023-04-02 19:05:58.599 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 4263 pages (at 75 pages/min), scraped 1640 items (at 28 items/min)
+2023-04-02 19:06:58.608 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 4330 pages (at 67 pages/min), scraped 1662 items (at 22 items/min)
+2023-04-02 19:07:58.598 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 4386 pages (at 56 pages/min), scraped 1686 items (at 24 items/min)
+2023-04-02 19:08:58.605 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 4472 pages (at 86 pages/min), scraped 1713 items (at 27 items/min)
+2023-04-02 19:09:58.600 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 4535 pages (at 63 pages/min), scraped 1731 items (at 18 items/min)
+2023-04-02 19:10:58.597 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 4622 pages (at 87 pages/min), scraped 1768 items (at 37 items/min)
+2023-04-02 19:11:58.601 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 4692 pages (at 70 pages/min), scraped 1793 items (at 25 items/min)
+2023-04-02 19:12:58.611 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 4758 pages (at 66 pages/min), scraped 1808 items (at 15 items/min)
+2023-04-02 19:13:58.599 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 4819 pages (at 61 pages/min), scraped 1833 items (at 25 items/min)
+2023-04-02 19:14:58.607 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 4901 pages (at 82 pages/min), scraped 1864 items (at 31 items/min)
+2023-04-02 19:15:58.596 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 4974 pages (at 73 pages/min), scraped 1891 items (at 27 items/min)
+2023-04-02 19:16:58.607 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 5059 pages (at 85 pages/min), scraped 1921 items (at 30 items/min)
+2023-04-02 19:17:58.603 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 5148 pages (at 89 pages/min), scraped 1957 items (at 36 items/min)
+2023-04-02 19:18:58.608 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 5229 pages (at 81 pages/min), scraped 1987 items (at 30 items/min)
+2023-04-02 19:19:58.596 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 5296 pages (at 67 pages/min), scraped 2008 items (at 21 items/min)
+2023-04-02 19:20:58.604 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 5379 pages (at 83 pages/min), scraped 2044 items (at 36 items/min)
+2023-04-02 19:21:58.596 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 5446 pages (at 67 pages/min), scraped 2067 items (at 23 items/min)
+2023-04-02 19:22:58.598 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 5516 pages (at 70 pages/min), scraped 2091 items (at 24 items/min)
+2023-04-02 19:23:58.597 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 5599 pages (at 83 pages/min), scraped 2130 items (at 39 items/min)
+2023-04-02 19:24:58.596 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 5670 pages (at 71 pages/min), scraped 2150 items (at 20 items/min)
+2023-04-02 19:25:58.607 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 5746 pages (at 76 pages/min), scraped 2179 items (at 29 items/min)
+2023-04-02 19:26:58.599 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 5814 pages (at 68 pages/min), scraped 2203 items (at 24 items/min)
+2023-04-02 19:27:58.610 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 5900 pages (at 86 pages/min), scraped 2235 items (at 32 items/min)
+2023-04-02 19:28:58.598 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 5980 pages (at 80 pages/min), scraped 2264 items (at 29 items/min)
+2023-04-02 19:29:58.607 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 6066 pages (at 86 pages/min), scraped 2298 items (at 34 items/min)
+2023-04-02 19:30:58.598 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 6137 pages (at 71 pages/min), scraped 2324 items (at 26 items/min)
+2023-04-02 19:31:58.610 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 6200 pages (at 63 pages/min), scraped 2345 items (at 21 items/min)
+2023-04-02 19:32:58.597 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 6280 pages (at 80 pages/min), scraped 2376 items (at 31 items/min)
+2023-04-02 19:33:58.611 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 6338 pages (at 58 pages/min), scraped 2394 items (at 18 items/min)
+2023-04-02 19:34:58.600 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 6407 pages (at 69 pages/min), scraped 2422 items (at 28 items/min)
+2023-04-02 19:35:58.602 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 6409 pages (at 2 pages/min), scraped 2424 items (at 2 items/min)
+2023-04-02 19:36:58.605 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 6456 pages (at 47 pages/min), scraped 2443 items (at 19 items/min)
+2023-04-02 19:37:58.608 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 6537 pages (at 81 pages/min), scraped 2477 items (at 34 items/min)
+2023-04-02 19:38:58.606 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 6609 pages (at 72 pages/min), scraped 2503 items (at 26 items/min)
+2023-04-02 19:39:58.599 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 6684 pages (at 75 pages/min), scraped 2528 items (at 25 items/min)
+2023-04-02 19:40:58.604 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 6750 pages (at 66 pages/min), scraped 2551 items (at 23 items/min)
+2023-04-02 19:41:58.609 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 6812 pages (at 62 pages/min), scraped 2571 items (at 20 items/min)
+2023-04-02 19:42:58.604 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 6891 pages (at 79 pages/min), scraped 2601 items (at 30 items/min)
+2023-04-02 19:43:58.606 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 6955 pages (at 64 pages/min), scraped 2627 items (at 26 items/min)
+2023-04-02 19:44:58.596 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 7033 pages (at 78 pages/min), scraped 2658 items (at 31 items/min)
+2023-04-02 19:45:58.604 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 7096 pages (at 63 pages/min), scraped 2678 items (at 20 items/min)
+2023-04-02 19:46:58.606 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 7180 pages (at 84 pages/min), scraped 2717 items (at 39 items/min)
+2023-04-02 19:47:58.611 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 7259 pages (at 79 pages/min), scraped 2746 items (at 29 items/min)
+2023-04-02 19:48:58.604 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 7343 pages (at 84 pages/min), scraped 2779 items (at 33 items/min)
+2023-04-02 19:49:58.610 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 7408 pages (at 65 pages/min), scraped 2802 items (at 23 items/min)
+2023-04-02 19:50:58.603 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 7514 pages (at 106 pages/min), scraped 2847 items (at 45 items/min)
+2023-04-02 19:51:58.601 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 7598 pages (at 84 pages/min), scraped 2882 items (at 35 items/min)
+2023-04-02 19:52:58.600 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 7670 pages (at 72 pages/min), scraped 2910 items (at 28 items/min)
+2023-04-02 19:53:58.603 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 7725 pages (at 55 pages/min), scraped 2932 items (at 22 items/min)
+2023-04-02 19:54:58.599 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 7801 pages (at 76 pages/min), scraped 2960 items (at 28 items/min)
+2023-04-02 19:55:58.597 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 7871 pages (at 70 pages/min), scraped 2988 items (at 28 items/min)
+2023-04-02 19:56:58.684 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 7931 pages (at 60 pages/min), scraped 3004 items (at 16 items/min)
+2023-04-02 19:57:58.604 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 8012 pages (at 81 pages/min), scraped 3036 items (at 32 items/min)
+2023-04-02 19:58:58.606 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 8086 pages (at 74 pages/min), scraped 3065 items (at 29 items/min)
+2023-04-02 19:59:58.602 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 8150 pages (at 64 pages/min), scraped 3091 items (at 26 items/min)
+2023-04-02 20:00:58.602 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 8224 pages (at 74 pages/min), scraped 3117 items (at 26 items/min)
+2023-04-02 20:01:58.605 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 8298 pages (at 74 pages/min), scraped 3142 items (at 25 items/min)
+2023-04-02 20:02:58.609 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 8367 pages (at 69 pages/min), scraped 3169 items (at 27 items/min)
+2023-04-02 20:03:58.599 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 8441 pages (at 74 pages/min), scraped 3195 items (at 26 items/min)
+2023-04-02 20:04:58.599 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 8506 pages (at 65 pages/min), scraped 3222 items (at 27 items/min)
+2023-04-02 20:05:58.611 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 8590 pages (at 84 pages/min), scraped 3257 items (at 35 items/min)
+2023-04-02 20:06:58.604 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 8674 pages (at 84 pages/min), scraped 3288 items (at 31 items/min)
+2023-04-02 20:07:58.606 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 8748 pages (at 74 pages/min), scraped 3312 items (at 24 items/min)
+2023-04-02 20:08:58.605 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 8832 pages (at 84 pages/min), scraped 3346 items (at 34 items/min)
+2023-04-02 20:09:58.609 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 8914 pages (at 82 pages/min), scraped 3384 items (at 38 items/min)
+2023-04-02 20:10:58.597 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 8973 pages (at 59 pages/min), scraped 3406 items (at 22 items/min)
+2023-04-02 20:11:58.597 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 9042 pages (at 69 pages/min), scraped 3435 items (at 29 items/min)
+2023-04-02 20:12:58.603 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 9108 pages (at 66 pages/min), scraped 3456 items (at 21 items/min)
+2023-04-02 20:13:58.610 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 9179 pages (at 71 pages/min), scraped 3483 items (at 27 items/min)
+2023-04-02 20:14:58.611 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 9259 pages (at 80 pages/min), scraped 3520 items (at 37 items/min)
+2023-04-02 20:15:58.600 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 9326 pages (at 67 pages/min), scraped 3540 items (at 20 items/min)
+2023-04-02 20:16:58.605 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 9390 pages (at 64 pages/min), scraped 3558 items (at 18 items/min)
+2023-04-02 20:17:58.598 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 9466 pages (at 76 pages/min), scraped 3584 items (at 26 items/min)
+2023-04-02 20:18:58.598 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 9517 pages (at 51 pages/min), scraped 3594 items (at 10 items/min)
+2023-04-02 20:19:58.608 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 9580 pages (at 63 pages/min), scraped 3618 items (at 24 items/min)
+2023-04-02 20:20:58.597 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 9661 pages (at 81 pages/min), scraped 3657 items (at 39 items/min)
+2023-04-02 20:21:58.607 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 9737 pages (at 76 pages/min), scraped 3688 items (at 31 items/min)
+2023-04-02 20:22:58.609 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 9826 pages (at 89 pages/min), scraped 3729 items (at 41 items/min)
+2023-04-02 20:23:58.604 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 9907 pages (at 81 pages/min), scraped 3758 items (at 29 items/min)
+2023-04-02 20:24:58.597 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 9994 pages (at 87 pages/min), scraped 3802 items (at 44 items/min)
+2023-04-02 20:25:58.603 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 10060 pages (at 66 pages/min), scraped 3825 items (at 23 items/min)
+2023-04-02 20:26:58.604 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 10131 pages (at 71 pages/min), scraped 3856 items (at 31 items/min)
+2023-04-02 20:27:58.605 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 10206 pages (at 75 pages/min), scraped 3885 items (at 29 items/min)
+2023-04-02 20:28:58.598 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 10284 pages (at 78 pages/min), scraped 3916 items (at 31 items/min)
+2023-04-02 20:29:58.609 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 10389 pages (at 105 pages/min), scraped 3960 items (at 44 items/min)
+2023-04-02 20:30:58.599 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 10481 pages (at 92 pages/min), scraped 4000 items (at 40 items/min)
+2023-04-02 20:31:58.607 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 10553 pages (at 72 pages/min), scraped 4027 items (at 27 items/min)
+2023-04-02 20:32:58.607 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 10631 pages (at 78 pages/min), scraped 4056 items (at 29 items/min)
+2023-04-02 20:33:58.602 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 10677 pages (at 46 pages/min), scraped 4077 items (at 21 items/min)
+2023-04-02 20:34:58.605 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 10747 pages (at 70 pages/min), scraped 4103 items (at 26 items/min)
+2023-04-02 20:35:58.598 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 10823 pages (at 76 pages/min), scraped 4131 items (at 28 items/min)
+2023-04-02 20:36:58.598 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 10892 pages (at 69 pages/min), scraped 4147 items (at 16 items/min)
+2023-04-02 20:37:58.604 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 10954 pages (at 62 pages/min), scraped 4166 items (at 19 items/min)
+2023-04-02 20:38:58.610 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 11020 pages (at 66 pages/min), scraped 4186 items (at 20 items/min)
+2023-04-02 20:39:58.598 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 11087 pages (at 67 pages/min), scraped 4207 items (at 21 items/min)
+2023-04-02 20:40:58.609 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 11136 pages (at 49 pages/min), scraped 4215 items (at 8 items/min)
+2023-04-02 20:41:58.598 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 11220 pages (at 84 pages/min), scraped 4248 items (at 33 items/min)
+2023-04-02 20:42:58.606 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 11279 pages (at 59 pages/min), scraped 4263 items (at 15 items/min)
+2023-04-02 20:43:58.597 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 11381 pages (at 102 pages/min), scraped 4303 items (at 40 items/min)
+2023-04-02 20:44:58.598 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 11465 pages (at 84 pages/min), scraped 4333 items (at 30 items/min)
+2023-04-02 20:45:58.597 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 11547 pages (at 82 pages/min), scraped 4361 items (at 28 items/min)
+2023-04-02 20:46:58.607 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 11625 pages (at 78 pages/min), scraped 4387 items (at 26 items/min)
+2023-04-02 20:47:58.606 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 11706 pages (at 81 pages/min), scraped 4415 items (at 28 items/min)
+2023-04-02 20:48:58.602 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 11785 pages (at 79 pages/min), scraped 4442 items (at 27 items/min)
+2023-04-02 20:49:58.608 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 11862 pages (at 77 pages/min), scraped 4478 items (at 36 items/min)
+2023-04-02 20:50:58.609 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 11944 pages (at 82 pages/min), scraped 4506 items (at 28 items/min)
+2023-04-02 20:51:58.601 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 12024 pages (at 80 pages/min), scraped 4537 items (at 31 items/min)
+2023-04-02 20:52:58.605 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 12090 pages (at 66 pages/min), scraped 4563 items (at 26 items/min)
+2023-04-02 20:53:58.601 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 12166 pages (at 76 pages/min), scraped 4599 items (at 36 items/min)
+2023-04-02 20:54:58.603 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 12249 pages (at 83 pages/min), scraped 4638 items (at 39 items/min)
+2023-04-02 20:55:58.607 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 12332 pages (at 83 pages/min), scraped 4676 items (at 38 items/min)
+2023-04-02 20:56:58.606 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 12410 pages (at 78 pages/min), scraped 4710 items (at 34 items/min)
+2023-04-02 20:57:58.609 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 12499 pages (at 89 pages/min), scraped 4756 items (at 46 items/min)
+2023-04-02 20:58:58.601 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 12593 pages (at 94 pages/min), scraped 4798 items (at 42 items/min)
+2023-04-02 20:59:58.607 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 12687 pages (at 94 pages/min), scraped 4844 items (at 46 items/min)
+2023-04-02 21:00:58.599 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 12772 pages (at 85 pages/min), scraped 4885 items (at 41 items/min)
+2023-04-02 21:01:58.601 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 12828 pages (at 56 pages/min), scraped 4904 items (at 19 items/min)
+2023-04-02 21:02:58.600 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 12918 pages (at 90 pages/min), scraped 4941 items (at 37 items/min)
+2023-04-02 21:03:58.599 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 12993 pages (at 75 pages/min), scraped 4976 items (at 35 items/min)
+2023-04-02 21:04:58.608 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 13082 pages (at 89 pages/min), scraped 5019 items (at 43 items/min)
+2023-04-02 21:05:58.611 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 13174 pages (at 92 pages/min), scraped 5056 items (at 37 items/min)
+2023-04-02 21:06:58.611 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 13256 pages (at 82 pages/min), scraped 5096 items (at 40 items/min)
+2023-04-02 21:07:58.605 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 13383 pages (at 127 pages/min), scraped 5154 items (at 58 items/min)
+2023-04-02 21:08:58.611 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 13477 pages (at 94 pages/min), scraped 5197 items (at 43 items/min)
+2023-04-02 21:09:58.603 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 13579 pages (at 102 pages/min), scraped 5242 items (at 45 items/min)
+2023-04-02 21:10:58.610 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 13654 pages (at 75 pages/min), scraped 5276 items (at 34 items/min)
+2023-04-02 21:11:58.602 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 13733 pages (at 79 pages/min), scraped 5312 items (at 36 items/min)
+2023-04-02 21:12:58.603 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 13825 pages (at 92 pages/min), scraped 5352 items (at 40 items/min)
+2023-04-02 21:13:58.608 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 13896 pages (at 71 pages/min), scraped 5379 items (at 27 items/min)
+2023-04-02 21:14:58.601 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 13987 pages (at 91 pages/min), scraped 5419 items (at 40 items/min)
+2023-04-02 21:15:58.607 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 14069 pages (at 82 pages/min), scraped 5458 items (at 39 items/min)
+2023-04-02 21:16:58.611 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 14177 pages (at 108 pages/min), scraped 5510 items (at 52 items/min)
+2023-04-02 21:17:58.607 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 14244 pages (at 67 pages/min), scraped 5534 items (at 24 items/min)
+2023-04-02 21:18:58.609 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 14331 pages (at 87 pages/min), scraped 5571 items (at 37 items/min)
+2023-04-02 21:19:58.598 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 14434 pages (at 103 pages/min), scraped 5620 items (at 49 items/min)
+2023-04-02 21:20:58.604 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 14535 pages (at 101 pages/min), scraped 5663 items (at 43 items/min)
+2023-04-02 21:21:58.608 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 14616 pages (at 81 pages/min), scraped 5700 items (at 37 items/min)
+2023-04-02 21:22:58.596 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 14684 pages (at 68 pages/min), scraped 5727 items (at 27 items/min)
+2023-04-02 21:23:58.603 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 14778 pages (at 94 pages/min), scraped 5766 items (at 39 items/min)
+2023-04-02 21:24:58.602 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 14882 pages (at 104 pages/min), scraped 5814 items (at 48 items/min)
+2023-04-02 21:25:58.601 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 14949 pages (at 67 pages/min), scraped 5841 items (at 27 items/min)
+2023-04-02 21:26:58.606 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 15038 pages (at 89 pages/min), scraped 5878 items (at 37 items/min)
+2023-04-02 21:27:58.610 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 15102 pages (at 64 pages/min), scraped 5906 items (at 28 items/min)
+2023-04-02 21:28:58.608 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 15198 pages (at 96 pages/min), scraped 5946 items (at 40 items/min)
+2023-04-02 21:29:58.596 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 15300 pages (at 102 pages/min), scraped 5995 items (at 49 items/min)
+2023-04-02 21:30:58.610 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 15375 pages (at 75 pages/min), scraped 6028 items (at 33 items/min)
+2023-04-02 21:31:58.604 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 15443 pages (at 68 pages/min), scraped 6054 items (at 26 items/min)
+2023-04-02 21:32:58.599 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 15504 pages (at 61 pages/min), scraped 6080 items (at 26 items/min)
+2023-04-02 21:33:58.603 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 15605 pages (at 101 pages/min), scraped 6127 items (at 47 items/min)
+2023-04-02 21:34:58.608 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 15698 pages (at 93 pages/min), scraped 6168 items (at 41 items/min)
+2023-04-02 21:35:58.607 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 15778 pages (at 80 pages/min), scraped 6200 items (at 32 items/min)
+2023-04-02 21:36:58.605 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 15853 pages (at 75 pages/min), scraped 6229 items (at 29 items/min)
+2023-04-02 21:37:58.607 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 15940 pages (at 87 pages/min), scraped 6267 items (at 38 items/min)
+2023-04-02 21:38:58.598 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 16023 pages (at 83 pages/min), scraped 6305 items (at 38 items/min)
+2023-04-02 21:39:58.597 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 16118 pages (at 95 pages/min), scraped 6341 items (at 36 items/min)
+2023-04-02 21:40:58.611 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 16197 pages (at 79 pages/min), scraped 6375 items (at 34 items/min)
+2023-04-02 21:41:58.596 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 16271 pages (at 74 pages/min), scraped 6409 items (at 34 items/min)
+2023-04-02 21:42:58.606 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 16351 pages (at 80 pages/min), scraped 6443 items (at 34 items/min)
+2023-04-02 21:43:58.611 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 16430 pages (at 79 pages/min), scraped 6478 items (at 35 items/min)
+2023-04-02 21:44:58.599 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 16498 pages (at 68 pages/min), scraped 6504 items (at 26 items/min)
+2023-04-02 21:45:58.607 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 16586 pages (at 88 pages/min), scraped 6545 items (at 41 items/min)
+2023-04-02 21:46:58.606 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 16671 pages (at 85 pages/min), scraped 6586 items (at 41 items/min)
+2023-04-02 21:47:58.606 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 16755 pages (at 84 pages/min), scraped 6617 items (at 31 items/min)
+2023-04-02 21:48:58.610 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 16840 pages (at 85 pages/min), scraped 6653 items (at 36 items/min)
+2023-04-02 21:49:58.608 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 16933 pages (at 93 pages/min), scraped 6693 items (at 40 items/min)
+2023-04-02 21:50:58.603 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 17025 pages (at 92 pages/min), scraped 6739 items (at 46 items/min)
+2023-04-02 21:51:58.610 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 17096 pages (at 71 pages/min), scraped 6766 items (at 27 items/min)
+2023-04-02 21:52:58.606 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 17191 pages (at 95 pages/min), scraped 6811 items (at 45 items/min)
+2023-04-02 21:53:58.609 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 17257 pages (at 66 pages/min), scraped 6838 items (at 27 items/min)
+2023-04-02 21:54:58.608 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 17343 pages (at 86 pages/min), scraped 6875 items (at 37 items/min)
+2023-04-02 21:55:58.597 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 17426 pages (at 83 pages/min), scraped 6913 items (at 38 items/min)
+2023-04-02 21:56:58.600 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 17495 pages (at 69 pages/min), scraped 6938 items (at 25 items/min)
+2023-04-02 21:57:58.603 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 17577 pages (at 82 pages/min), scraped 6974 items (at 36 items/min)
+2023-04-02 21:58:58.600 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 17649 pages (at 72 pages/min), scraped 7003 items (at 29 items/min)
+2023-04-02 21:59:58.596 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 17734 pages (at 85 pages/min), scraped 7039 items (at 36 items/min)
+2023-04-02 22:00:58.610 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 17808 pages (at 74 pages/min), scraped 7069 items (at 30 items/min)
+2023-04-02 22:01:58.596 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 17888 pages (at 80 pages/min), scraped 7106 items (at 37 items/min)
+2023-04-02 22:02:58.611 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 17948 pages (at 60 pages/min), scraped 7125 items (at 19 items/min)
+2023-04-02 22:03:58.601 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 18032 pages (at 84 pages/min), scraped 7164 items (at 39 items/min)
+2023-04-02 22:04:58.598 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 18114 pages (at 82 pages/min), scraped 7195 items (at 31 items/min)
+2023-04-02 22:05:58.601 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 18187 pages (at 73 pages/min), scraped 7223 items (at 28 items/min)
+2023-04-02 22:06:58.598 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 18291 pages (at 104 pages/min), scraped 7272 items (at 49 items/min)
+2023-04-02 22:07:58.611 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 18363 pages (at 72 pages/min), scraped 7299 items (at 27 items/min)
+2023-04-02 22:08:58.605 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 18442 pages (at 79 pages/min), scraped 7336 items (at 37 items/min)
+2023-04-02 22:09:58.607 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 18501 pages (at 59 pages/min), scraped 7353 items (at 17 items/min)
+2023-04-02 22:10:58.599 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 18579 pages (at 78 pages/min), scraped 7387 items (at 34 items/min)
+2023-04-02 22:11:58.598 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 18672 pages (at 93 pages/min), scraped 7433 items (at 46 items/min)
+2023-04-02 22:12:58.607 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 18751 pages (at 79 pages/min), scraped 7467 items (at 34 items/min)
+2023-04-02 22:13:58.605 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 18812 pages (at 61 pages/min), scraped 7494 items (at 27 items/min)
+2023-04-02 22:14:58.611 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 18894 pages (at 82 pages/min), scraped 7529 items (at 35 items/min)
+2023-04-02 22:15:58.608 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 19236 pages (at 342 pages/min), scraped 7865 items (at 336 items/min)
+2023-04-02 22:16:58.600 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 19679 pages (at 443 pages/min), scraped 8307 items (at 442 items/min)
+2023-04-02 22:17:58.596 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 20071 pages (at 392 pages/min), scraped 8700 items (at 393 items/min)
+2023-04-02 22:18:58.601 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 20480 pages (at 409 pages/min), scraped 9109 items (at 409 items/min)
+2023-04-02 22:19:58.607 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 20896 pages (at 416 pages/min), scraped 9525 items (at 416 items/min)
+2023-04-02 22:20:58.600 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 21354 pages (at 458 pages/min), scraped 9983 items (at 458 items/min)
+2023-04-02 22:21:58.610 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 21810 pages (at 456 pages/min), scraped 10439 items (at 456 items/min)
+2023-04-02 22:22:03.739 | INFO     | scrapy.core.engine:close_spider:361 - Closing spider (finished)
+2023-04-02 22:22:03.741 | INFO     | scrapy.statscollectors:close_spider:46 - Dumping Scrapy stats:
+{'downloader/request_bytes': 49780385,
+ 'downloader/request_count': 21855,
+ 'downloader/request_method_count/GET': 21855,
+ 'downloader/response_bytes': 205462935,
+ 'downloader/response_count': 21855,
+ 'downloader/response_status_count/200': 21835,
+ 'downloader/response_status_count/503': 20,
+ 'elapsed_time_seconds': 15005.144645,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 4, 2, 14, 22, 3, 740957),
+ 'httpcompression/response_bytes': 893899045,
+ 'httpcompression/response_count': 16876,
+ 'item_scraped_count': 10462,
+ 'request_depth_max': 630,
+ 'response_received_count': 21835,
+ 'retry/count': 20,
+ 'retry/reason_count/503 Service Unavailable': 20,
+ 'scheduler/dequeued/redis': 21855,
+ 'scheduler/enqueued/redis': 21641,
+ 'start_time': datetime.datetime(2023, 4, 2, 10, 11, 58, 596312)}
+2023-04-02 22:22:03.741 | INFO     | scrapy.core.engine:<lambda>:388 - Spider closed (finished)
