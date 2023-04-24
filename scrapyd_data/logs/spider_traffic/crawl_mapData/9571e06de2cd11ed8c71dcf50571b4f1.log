@@ -1,0 +1,1420 @@
+2023-04-25 02:26:57 [scrapy.utils.log] INFO: Scrapy 2.6.3 started (bot: spider_traffic)
+2023-04-25 02:26:57 [scrapy.utils.log] INFO: Versions: lxml 4.6.4.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 22.2.0, Python 3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)], pyOpenSSL 22.0.0 (OpenSSL 1.1.1m  14 Dec 2021), cryptography 36.0.1, Platform Windows-10-10.0.19041-SP0
+2023-04-25 02:26:58 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'spider_traffic',
+ 'LOG_FILE': 'logs\\spider_traffic\\crawl_mapData\\9571e06de2cd11ed8c71dcf50571b4f1.log',
+ 'NEWSPIDER_MODULE': 'spider_traffic.spiders',
+ 'SPIDER_MODULES': ['spider_traffic.spiders']}
+2023-04-25 02:26:58 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2023-04-25 02:26:58 [scrapy.extensions.telnet] INFO: Telnet Password: 4d30b96429397131
+2023-04-25 02:26:58 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2023-04-25 02:26:58 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'spider_traffic.middlewares.ProxyMiddleWare',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-04-25 02:26:58 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-04-25 02:26:58 [scrapy.middleware] INFO: Enabled item pipelines:
+['spider_traffic.pipelines.saveMysqlScrapyPipeline']
+2023-04-25 02:26:58 [scrapy.core.engine] INFO: Spider opened
+2023-04-25 02:26:59 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-04-25 02:26:59 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-04-25 02:26:59 [filelock] DEBUG: Attempting to acquire lock 2190170268256 on C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\tldextract\.suffix_cache/publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2023-04-25 02:26:59 [filelock] DEBUG: Lock 2190170268256 acquired on C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\tldextract\.suffix_cache/publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2023-04-25 02:26:59 [filelock] DEBUG: Attempting to acquire lock 2190170271136 on C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\tldextract\.suffix_cache/urls\62bf135d1c2f3d4db4228b9ecaf507a2.tldextract.json.lock
+2023-04-25 02:26:59 [filelock] DEBUG: Lock 2190170271136 acquired on C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\tldextract\.suffix_cache/urls\62bf135d1c2f3d4db4228b9ecaf507a2.tldextract.json.lock
+2023-04-25 02:26:59 [filelock] DEBUG: Attempting to release lock 2190170271136 on C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\tldextract\.suffix_cache/urls\62bf135d1c2f3d4db4228b9ecaf507a2.tldextract.json.lock
+2023-04-25 02:26:59 [filelock] DEBUG: Lock 2190170271136 released on C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\tldextract\.suffix_cache/urls\62bf135d1c2f3d4db4228b9ecaf507a2.tldextract.json.lock
+2023-04-25 02:26:59 [filelock] DEBUG: Attempting to release lock 2190170268256 on C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\tldextract\.suffix_cache/publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2023-04-25 02:26:59 [filelock] DEBUG: Lock 2190170268256 released on C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\tldextract\.suffix_cache/publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=654000&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=330800&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=370300&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=130200&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=330600&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=330400&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=640100&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=310000&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=130600&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=110000&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=321300&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=370700&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=360700&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=430400&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=321200&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=330200&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=654000&linksType=1>
+None
+2023-04-25 02:27:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=330800&linksType=1>
+None
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=321100&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=330500&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=370600&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=430100&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=440300&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=510600&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=370300&linksType=1>
+None
+2023-04-25 02:27:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=130200&linksType=1>
+None
+2023-04-25 02:27:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=330600&linksType=1>
+None
+2023-04-25 02:27:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=330400&linksType=1>
+None
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=370900&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=530100&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=640100&linksType=1>
+None
+2023-04-25 02:27:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=310000&linksType=1>
+None
+2023-04-25 02:27:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=130600&linksType=1>
+None
+2023-04-25 02:27:00 [scrapy.core.scraper] ERROR: Error processing {'center': '[116.534934, 39.824825]',
+ 'cityCode': 110000,
+ 'data': '[{"lat": 39.824825, "lng": 116.534934, "count": 1.18}, {"lat": '
+         '39.828211, "lng": 116.538153, "count": 1.18}, {"lat": 39.832734, '
+         '"lng": 116.533196, "count": 1.18}, {"lat": 39.829549, "lng": '
+         '116.541052, "count": 1.18}, {"lat": 39.836042, "lng": 116.545051, '
+         '"count": 1.18}, {"lat": 39.835043, "lng": 116.572332, "count": '
+         '1.18}, {"lat": 39.827545, "lng": 116.57748, "count": 1.18}, {"lat": '
+         '39.828182, "lng": 116.587053, "count": 1.18}, {"lat": 39.824777, '
+         '"lng": 116.585008, "count": 1.18}, {"lat": 39.825591, "lng": '
+         '116.59922, "count": 1.18}, {"lat": 39.831659, "lng": 116.598969, '
+         '"count": 1.18}, {"lat": 39.83168, "lng": 116.60225, "count": 1.18}, '
+         '{"lat": 39.84073, "lng": 116.601904, "count": 1.18}, {"lat": '
+         '39.846534, "lng": 116.608357, "count": 1.18}, {"lat": 39.846134, '
+         '"lng": 116.604675, "count": 1.18}, {"lat": 39.850071, "lng": '
+         '116.604189, "count": 1.18}, {"lat": 39.850178, "lng": 116.613456, '
+         '"count": 1.18}, {"lat": 39.861919, "lng": 116.626389, "count": '
+         '1.18}, {"lat": 39.868954, "lng": 116.619993, "count": 1.18}, {"lat": '
+         '39.877253, "lng": 116.62494, "count": 1.18}, {"lat": 39.881159, '
+         '"lng": 116.624314, "count": 1.18}, {"lat": 39.8827, "lng": '
+         '116.628957, "count": 1.18}, {"lat": 39.890473, "lng": 116.627584, '
+         '"count": 1.18}, {"lat": 39.889791, "lng": 116.615607, "count": '
+         '1.18}, {"lat": 39.896813, "lng": 116.614001, "count": 1.18}, {"lat": '
+         '39.898861, "lng": 116.621014, "count": 1.18}, {"lat": 39.904276, '
+         '"lng": 116.623361, "count": 1.18}, {"lat": 39.908369, "lng": '
+         '116.620135, "count": 1.18}, {"lat": 39.915491, "lng": 116.622737, '
+         '"count": 1.18}, {"lat": 39.918518, "lng": 116.619851, "count": '
+         '1.18}, {"lat": 39.923099, "lng": 116.620964, "count": 1.18}, {"lat": '
+         '39.921675, "lng": 116.630571, "count": 1.18}, {"lat": 39.929976, '
+         '"lng": 116.624147, "count": 1.18}, {"lat": 39.931587, "lng": '
+         '116.629459, "count": 1.18}, {"lat": 39.934582, "lng": 116.629817, '
+         '"count": 1.18}, {"lat": 39.933852, "lng": 116.632767, "count": '
+         '1.18}, {"lat": 39.933997, "lng": 116.634753, "count": 1.18}, {"lat": '
+         '39.936887, "lng": 116.639125, "count": 1.18}, {"lat": 39.938792, '
+         '"lng": 116.644686, "count": 1.18}, {"lat": 39.944615, "lng": '
+         '116.649628, "count": 1.18}, {"lat": 39.95157, "lng": 116.651947, '
+         '"count": 1.18}, {"lat": 39.953949, "lng": 116.654344, "count": '
+         '1.18}, {"lat": 39.95536, "lng": 116.659195, "count": 1.18}, {"lat": '
+         '39.955364, "lng": 116.663801, "count": 1.18}, {"lat": 39.958404, '
+         '"lng": 116.669262, "count": 1.18}, {"lat": 39.959106, "lng": '
+         '116.696286, "count": 1.18}, {"lat": 39.961532, "lng": 116.699278, '
+         '"count": 1.18}, {"lat": 39.967529, "lng": 116.701608, "count": '
+         '1.18}, {"lat": 39.969026, "lng": 116.703455, "count": 1.18}, {"lat": '
+         '39.969688, "lng": 116.705739, "count": 1.18}, {"lat": 39.967928, '
+         '"lng": 116.71142, "count": 1.18}, {"lat": 39.968355, "lng": '
+         '116.716184, "count": 1.18}, {"lat": 39.967697, "lng": 116.71851, '
+         '"count": 1.18}, {"lat": 39.960371, "lng": 116.726041, "count": '
+         '1.18}, {"lat": 39.959579, "lng": 116.727871, "count": 1.18}, {"lat": '
+         '39.95934, "lng": 116.73219, "count": 1.18}, {"lat": 39.958262, '
+         '"lng": 116.734226, "count": 1.18}, {"lat": 39.951828, "lng": '
+         '116.738517, "count": 1.18}, {"lat": 39.950143, "lng": 116.740991, '
+         '"count": 1.18}, {"lat": 39.949016, "lng": 116.756309, "count": '
+         '1.18}, {"lat": 39.948009, "lng": 116.761666, "count": 1.18}, {"lat": '
+         '39.947946, "lng": 116.771625, "count": 1.18}, {"lat": 39.94594, '
+         '"lng": 116.779805, "count": 1.18}, {"lat": 39.944358, "lng": '
+         '116.781539, "count": 1.18}, {"lat": 39.941571, "lng": 116.782523, '
+         '"count": 1.18}, {"lat": 39.940333, "lng": 116.782513, "count": '
+         '1.18}, {"lat": 39.937682, "lng": 116.781832, "count": 1.18}, {"lat": '
+         '39.935954, "lng": 116.780243, "count": 1.18}, {"lat": 39.930437, '
+         '"lng": 116.766812, "count": 1.18}, {"lat": 39.924998, "lng": '
+         '116.744879, "count": 1.18}, {"lat": 39.922819, "lng": 116.741545, '
+         '"count": 1.18}, {"lat": 39.920544, "lng": 116.740707, "count": '
+         '1.18}, {"lat": 39.917141, "lng": 116.740737, "count": 1.18}, {"lat": '
+         '39.910482, "lng": 116.742503, "count": 1.18}, {"lat": 39.907735, '
+         '"lng": 116.742583, "count": 1.18}, {"lat": 39.90185, "lng": '
+         '116.740569, "count": 1.18}, {"lat": 39.888296, "lng": 116.738404, '
+         '"count": 1.18}, {"lat": 39.885002, "lng": 116.739754, "count": '
+         '1.18}, {"lat": 39.882016, "lng": 116.743895, "count": 1.18}, {"lat": '
+         '39.880081, "lng": 116.745435, "count": 1.18}, {"lat": 39.873454, '
+         '"lng": 116.746323, "count": 1.18}, {"lat": 39.865424, "lng": '
+         '116.749063, "count": 1.18}, {"lat": 39.863002, "lng": 116.751224, '
+         '"count": 1.18}, {"lat": 39.859778, "lng": 116.755705, "count": '
+         '1.18}, {"lat": 39.859269, "lng": 116.757795, "count": 1.18}, {"lat": '
+         '39.858928, "lng": 116.778786, "count": 1.18}, {"lat": 39.855874, '
+         '"lng": 116.782095, "count": 1.18}, {"lat": 39.852499, "lng": '
+         '116.782612, "count": 1.18}, {"lat": 39.850328, "lng": 116.781871, '
+         '"count": 1.18}, {"lat": 39.846371, "lng": 116.778524, "count": '
+         '1.18}, {"lat": 39.8403, "lng": 116.777627, "count": 1.18}, {"lat": '
+         '39.837794, "lng": 116.775261, "count": 1.18}, {"lat": 39.837047, '
+         '"lng": 116.773069, "count": 1.18}, {"lat": 39.837586, "lng": '
+         '116.769665, "count": 1.18}, {"lat": 39.851823, "lng": 116.743784, '
+         '"count": 1.18}, {"lat": 39.854365, "lng": 116.733699, "count": '
+         '1.18}, {"lat": 39.853056, "lng": 116.730239, "count": 1.18}, {"lat": '
+         '39.8475, "lng": 116.727835, "count": 1.18}, {"lat": 39.84517, "lng": '
+         '116.725182, "count": 1.18}, {"lat": 39.844645, "lng": 116.722867, '
+         '"count": 1.18}, {"lat": 39.845059, "lng": 116.72053, "count": 1.18}, '
+         '{"lat": 39.84896, "lng": 116.716076, "count": 1.18}, {"lat": '
+         '39.849565, "lng": 116.712425, "count": 1.18}, {"lat": 39.848212, '
+         '"lng": 116.709967, "count": 1.18}, {"lat": 39.842228, "lng": '
+         '116.706354, "count": 1.18}, {"lat": 39.841182, "lng": 116.704124, '
+         '"count": 1.18}, {"lat": 39.841198, "lng": 116.700248, "count": '
+         '1.18}, {"lat": 39.840147, "lng": 116.697602, "count": 1.18}, {"lat": '
+         '39.834985, "lng": 116.6947, "count": 1.18}, {"lat": 39.833477, '
+         '"lng": 116.692963, "count": 1.18}, {"lat": 39.832734, "lng": '
+         '116.690786, "count": 1.18}, {"lat": 39.832651, "lng": 116.685197, '
+         '"count": 1.18}, {"lat": 39.831251, "lng": 116.68196, "count": 1.18}, '
+         '{"lat": 39.816197, "lng": 116.664079, "count": 1.18}, {"lat": '
+         '39.811726, "lng": 116.662215, "count": 1.18}, {"lat": 39.809953, '
+         '"lng": 116.66055, "count": 1.18}, {"lat": 39.808412, "lng": '
+         '116.65384, "count": 1.18}, {"lat": 39.798434, "lng": 116.640736, '
+         '"count": 1.18}, {"lat": 39.795625, "lng": 116.639116, "count": '
+         '1.18}, {"lat": 39.791613, "lng": 116.638807, "count": 1.18}, {"lat": '
+         '39.788579, "lng": 116.636735, "count": 1.18}, {"lat": 39.787005, '
+         '"lng": 116.631126, "count": 1.18}, {"lat": 39.785779, "lng": '
+         '116.629219, "count": 1.18}, {"lat": 39.769452, "lng": 116.620969, '
+         '"count": 1.18}, {"lat": 39.763744, "lng": 116.617362, "count": '
+         '1.18}, {"lat": 39.758381, "lng": 116.617108, "count": 1.18}, {"lat": '
+         '39.75531, "lng": 116.615485, "count": 1.18}, {"lat": 39.753653, '
+         '"lng": 116.612432, "count": 1.18}, {"lat": 39.75341, "lng": '
+         '116.601979, "count": 1.18}, {"lat": 39.752078, "lng": 116.595782, '
+         '"count": 1.18}, {"lat": 39.750294, "lng": 116.592708, "count": '
+         '1.18}, {"lat": 39.746836, "lng": 116.591573, "count": 1.18}, {"lat": '
+         '39.740405, "lng": 116.594443, "count": 1.18}, {"lat": 39.738076, '
+         '"lng": 116.594531, "count": 1.18}, {"lat": 39.73589, "lng": '
+         '116.593726, "count": 1.18}, {"lat": 39.733579, "lng": 116.591141, '
+         '"count": 1.18}, {"lat": 39.733085, "lng": 116.587709, "count": '
+         '1.18}, {"lat": 39.734969, "lng": 116.582649, "count": 1.18}, {"lat": '
+         '39.734451, "lng": 116.579917, "count": 1.18}, {"lat": 39.732648, '
+         '"lng": 116.577037, "count": 1.18}, {"lat": 39.728418, "lng": '
+         '116.574388, "count": 1.18}, {"lat": 39.727213, "lng": 116.572287, '
+         '"count": 1.18}, {"lat": 39.726937, "lng": 116.56988, "count": 1.18}, '
+         '{"lat": 39.72832, "lng": 116.566554, "count": 1.18}, {"lat": '
+         '39.731945, "lng": 116.564004, "count": 1.18}, {"lat": 39.733392, '
+         '"lng": 116.561646, "count": 1.18}, {"lat": 39.733344, "lng": '
+         '116.554223, "count": 1.18}, {"lat": 39.731633, "lng": 116.549092, '
+         '"count": 1.18}, {"lat": 39.731789, "lng": 116.546861, "count": '
+         '1.18}, {"lat": 39.734151, "lng": 116.540772, "count": 1.18}, {"lat": '
+         '39.738192, "lng": 116.53689, "count": 1.18}, {"lat": 39.738072, '
+         '"lng": 116.537994, "count": 1.18}, {"lat": 39.740989, "lng": '
+         '116.53995, "count": 1.18}, {"lat": 39.74331, "lng": 116.527553, '
+         '"count": 1.18}, {"lat": 39.747553, "lng": 116.531149, "count": '
+         '1.18}, {"lat": 39.749671, "lng": 116.522996, "count": 1.18}, {"lat": '
+         '39.762393, "lng": 116.52518, "count": 1.18}, {"lat": 39.765779, '
+         '"lng": 116.520073, "count": 1.18}, {"lat": 39.769926, "lng": '
+         '116.523628, "count": 1.18}, {"lat": 39.761469, "lng": 116.528304, '
+         '"count": 1.18}, {"lat": 39.761067, "lng": 116.540415, "count": '
+         '1.18}, {"lat": 39.766258, "lng": 116.539879, "count": 1.18}, {"lat": '
+         '39.768408, "lng": 116.536499, "count": 1.18}, {"lat": 39.768725, '
+         '"lng": 116.545788, "count": 1.18}, {"lat": 39.772296, "lng": '
+         '116.544647, "count": 1.18}, {"lat": 39.76987, "lng": 116.536126, '
+         '"count": 1.18}, {"lat": 39.77884, "lng": 116.530096, "count": 1.18}, '
+         '{"lat": 39.781277, "lng": 116.538085, "count": 1.18}, {"lat": '
+         '39.791745, "lng": 116.530925, "count": 1.18}, {"lat": 39.796672, '
+         '"lng": 116.537537, "count": 1.18}, {"lat": 39.800142, "lng": '
+         '116.535111, "count": 1.18}, {"lat": 39.803164, "lng": 116.541687, '
+         '"count": 1.18}, {"lat": 39.811864, "lng": 116.540532, "count": '
+         '1.18}, {"lat": 39.819664, "lng": 116.533368, "count": 1.18}, {"lat": '
+         '39.823715, "lng": 116.539736, "count": 1.18}, {"lat": 39.824825, '
+         '"lng": 116.534934, "count": 1.18}, {"lat": 39.951109, "lng": '
+         '116.209299, "count": 1.16}, {"lat": 39.943745, "lng": 116.215468, '
+         '"count": 1.16}, {"lat": 39.943598, "lng": 116.218664, "count": '
+         '1.16}, {"lat": 39.933929, "lng": 116.214132, "count": 1.16}, {"lat": '
+         '39.931391, "lng": 116.216332, "count": 1.16}, {"lat": 39.929329, '
+         '"lng": 116.213768, "count": 1.16}, {"lat": 39.926748, "lng": '
+         '116.215179, "count": 1.16}, {"lat": 39.925904, "lng": 116.207705, '
+         '"count": 1.16}, {"lat": 39.916668, "lng": 116.206796, "count": '
+         '1.16}, {"lat": 39.919531, "lng": 116.230902, "count": 1.16}, {"lat": '
+         '39.916862, "lng": 116.237055, "count": 1.16}, {"lat": 39.920937, '
+         '"lng": 116.251507, "count": 1.16}, {"lat": 39.917686, "lng": '
+         '116.253006, "count": 1.16}, {"lat": 39.916086, "lng": 116.249296, '
+         '"count": 1.16}, {"lat": 39.915543, "lng": 116.252653, "count": '
+         '1.16}, {"lat": 39.897289, "lng": 116.252994, "count": 1.16}, {"lat": '
+         '39.897256, "lng": 116.259716, "count": 1.16}, {"lat": 39.896582, '
+         '"lng": 116.259179, "count": 1.16}, {"lat": 39.892118, "lng": '
+         '116.233544, "count": 1.16}, {"lat": 39.889543, "lng": 116.234639, '
+         '"count": 1.16}, {"lat": 39.889158, "lng": 116.229571, "count": '
+         '1.16}, {"lat": 39.883836, "lng": 116.227728, "count": 1.16}, {"lat": '
+         '39.881341, "lng": 116.219531, "count": 1.16}, {"lat": 39.876714, '
+         '"lng": 116.219097, "count": 1.16}, {"lat": 39.877946, "lng": '
+         '116.213648, "count": 1.16}, {"lat": 39.874671, "lng": 116.212089, '
+         '"count": 1.16}, {"lat": 39.883281, "lng": 116.19943, "count": 1.16}, '
+         '{"lat": 39.882688, "lng": 116.179095, "count": 1.16}, {"lat": '
+         '39.888757, "lng": 116.167029, "count": 1.16}, {"lat": 39.89311, '
+         '"lng": 116.163825, "count": 1.16}, {"lat": 39.895915, "lng": '
+         '116.170126, "count": 1.16}, {"lat": 39.896506, "lng": 116.177506, '
+         '"count": 1.16}, {"lat": 39.897602, "lng": 116.180259, "count": '
+         '1.16}, {"lat": 39.899899, "lng": 116.181865, "count": 1.16}, {"lat": '
+         '39.90364, "lng": 116.181686, "count": 1.16}, {"lat": 39.905801, '
+         '"lng": 116.180211, "count": 1.16}, {"lat": 39.908927, "lng": '
+         '116.176266, "count": 1.16}, {"lat": 39.916006, "lng": 116.174227, '
+         '"count": 1.16}, {"lat": 39.918531, "lng": 116.171791, "count": '
+         '1.16}, {"lat": 39.919353, "lng": 116.168983, "count": 1.16}, {"lat": '
+         '39.9193, "lng": 116.153432, "count": 1.16}, {"lat": 39.920152, '
+         '"lng": 116.151341, "count": 1.16}, {"lat": 39.923196, "lng": '
+         '116.148062, "count": 1.16}, {"lat": 39.926549, "lng": 116.145078, '
+         '"count": 1.16}, {"lat": 39.930062, "lng": 116.144926, "count": '
+         '1.16}, {"lat": 39.937321, "lng": 116.149574, "count": 1.16}, {"lat": '
+         '39.938974, "lng": 116.151856, "count": 1.16}, {"lat": 39.939604, '
+         '"lng": 116.155544, "count": 1.16}, {"lat": 39.937874, "lng": '
+         '116.160243, "count": 1.16}, {"lat": 39.937832, "lng": 116.164265, '
+         '"count": 1.16}, {"lat": 39.938172, "lng": 116.166204, "count": '
+         '1.16}, {"lat": 39.940689, "lng": 116.17092, "count": 1.16}, {"lat": '
+         '39.940691, "lng": 116.173377, "count": 1.16}, {"lat": 39.939433, '
+         '"lng": 116.177649, "count": 1.16}, {"lat": 39.940799, "lng": '
+         '116.18392, "count": 1.16}, {"lat": 39.940908, "lng": 116.192269, '
+         '"count": 1.16}, {"lat": 39.942541, "lng": 116.195049, "count": '
+         '1.16}, {"lat": 39.946535, "lng": 116.197082, "count": 1.16}, {"lat": '
+         '39.948048, "lng": 116.198675, "count": 1.16}, {"lat": 39.948887, '
+         '"lng": 116.200706, "count": 1.16}, {"lat": 39.949359, "lng": '
+         '116.206782, "count": 1.16}, {"lat": 39.951109, "lng": 116.209299, '
+         '"count": 1.16}, {"lat": 40.085427, "lng": 116.477154, "count": '
+         '1.16}, {"lat": 40.086387, "lng": 116.477424, "count": 1.16}, {"lat": '
+         '40.088117, "lng": 116.479169, "count": 1.16}, {"lat": 40.089371, '
+         '"lng": 116.483698, "count": 1.16}, {"lat": 40.090763, "lng": '
+         '116.485822, "count": 1.16}, {"lat": 40.0968, "lng": 116.487872, '
+         '"count": 1.16}, {"lat": 40.099275, "lng": 116.490507, "count": '
+         '1.16}, {"lat": 40.100772, "lng": 116.512963, "count": 1.16}, {"lat": '
+         '40.10156, "lng": 116.51575, "count": 1.16}, {"lat": 40.102745, '
+         '"lng": 116.517178, "count": 1.16}, {"lat": 40.105169, "lng": '
+         '116.518278, "count": 1.16}, {"lat": 40.11075, "lng": 116.517859, '
+         '"count": 1.16}, {"lat": 40.11276, "lng": 116.51693, "count": 1.16}, '
+         '{"lat": 40.116478, "lng": 116.512611, "count": 1.16}, {"lat": '
+         '40.118741, "lng": 116.511783, "count": 1.16}, {"lat": 40.121147, '
+         '"lng": 116.511911, "count": 1.16}, {"lat": 40.124185, "lng": '
+         '116.51381, "count": 1.16}, {"lat": 40.125355, "lng": 116.515917, '
+         '"count": 1.16}, {"lat": 40.126712, "lng": 116.52429, "count": 1.16}, '
+         '{"lat": 40.12727, "lng": 116.535162, "count": 1.16}, {"lat": '
+         '40.129034, "lng": 116.537692, "count": 1.16}, {"lat": 40.134269, '
+         '"lng": 116.54001, "count": 1.16}, {"lat": 40.136366, "lng": '
+         '116.544004, "count": 1.16}, {"lat": 40.136207, "lng": 116.567758, '
+         '"count": 1.16}, {"lat": 40.135366, "lng": 116.572776, "count": '
+         '1.16}, {"lat": 40.136241, "lng": 116.575601, "count": 1.16}, {"lat": '
+         '40.138673, "lng": 116.577472, "count": 1.16}, {"lat": 40.145383, '
+         '"lng": 116.577952, "count": 1.16}, {"lat": 40.148053, "lng": '
+         '116.580285, "count": 1.16}, {"lat": 40.148941, "lng": 116.583717, '
+         '"count": 1.16}, {"lat": 40.148795, "lng": 116.595947, "count": '
+         '1.16}, {"lat": 40.15837, "lng": 116.610463, "count": 1.16}, {"lat": '
+         '40.161114, "lng": 116.618381, "count": 1.16}, {"lat": 40.167196, '
+         '"lng": 116.630293, "count": 1.16}, {"lat": 40.169081, "lng": '
+         '116.631554, "count": 1.16}, {"lat": 40.173299, "lng": 116.632407, '
+         '"count": 1.16}, {"lat": 40.17894, "lng": 116.636276, "count": 1.16}, '
+         '{"lat": 40.191596, "lng": 116.637134, "count": 1.16}, {"lat": '
+         '40.194274, "lng": 116.639442, "count": 1.16}, {"lat": 40.195187, '
+         '"lng": 116.642858, "count": 1.16}, {"lat": 40.194019, "lng": '
+         '116.646194, "count": 1.16}, {"lat": 40.190442, "lng": 116.649997, '
+         '"count": 1.16}, {"lat": 40.190342, "lng": 116.658716, "count": '
+         '1.16}, {"lat": 40.189277, "lng": 116.661784, "count": 1.16}, {"lat": '
+         '40.187026, "lng": 116.664804, "count": 1.16}, {"lat": 40.185072, '
+         '"lng": 116.666013, "count": 1.16}, {"lat": 40.180245, "lng": '
+         '116.666175, "count": 1.16}, {"lat": 40.177409, "lng": 116.667438, '
+         '"count": 1.16}, {"lat": 40.175952, "lng": 116.669782, "count": '
+         '1.16}, {"lat": 40.175288, "lng": 116.674759, "count": 1.16}, {"lat": '
+         '40.172978, "lng": 116.6775, "count": 1.16}, {"lat": 40.169517, '
+         '"lng": 116.678435, "count": 1.16}, {"lat": 40.167176, "lng": '
+         '116.677857, "count": 1.16}, {"lat": 40.162629, "lng": 116.673995, '
+         '"count": 1.16}, {"lat": 40.156333, "lng": 116.673537, "count": '
+         '1.16}, {"lat": 40.146017, "lng": 116.668284, "count": 1.16}, {"lat": '
+         '40.142377, "lng": 116.665395, "count": 1.16}, {"lat": 40.139421, '
+         '"lng": 116.665139, "count": 1.16}, {"lat": 40.13552, "lng": '
+         '116.667045, "count": 1.16}, {"lat": 40.129943, "lng": 116.671274, '
+         '"count": 1.16}, {"lat": 40.123785, "lng": 116.677683, "count": '
+         '1.16}, {"lat": 40.121751, "lng": 116.681737, "count": 1.16}, {"lat": '
+         '40.120882, "lng": 116.687433, "count": 1.16}, {"lat": 40.119424, '
+         '"lng": 116.689352, "count": 1.16}, {"lat": 40.117329, "lng": '
+         '116.690543, "count": 1.16}, {"lat": 40.113745, "lng": 116.690583, '
+         '"count": 1.16}, {"lat": 40.109086, "lng": 116.688098, "count": '
+         '1.16}, {"lat": 40.103055, "lng": 116.682144, "count": 1.16}, {"lat": '
+         '40.102258, "lng": 116.678531, "count": 1.16}, {"lat": 40.103329, '
+         '"lng": 116.671444, "count": 1.16}, {"lat": 40.102019, "lng": '
+         '116.668343, "count": 1.16}, {"lat": 40.099826, "lng": 116.66646, '
+         '"count": 1.16}, {"lat": 40.087008, "lng": 116.66587, "count": 1.16}, '
+         '{"lat": 40.078022, "lng": 116.667265, "count": 1.16}, {"lat": '
+         '40.071225, "lng": 116.666671, "count": 1.16}, {"lat": 40.068711, '
+         '"lng": 116.667701, "count": 1.16}, {"lat": 40.064677, "lng": '
+         '116.671384, "count": 1.16}, {"lat": 40.061278, "lng": 116.671685, '
+         '"count": 1.16}, {"lat": 40.05916, "lng": 116.670808, "count": 1.16}, '
+         '{"lat": 40.055607, "lng": 116.667281, "count": 1.16}, {"lat": '
+         '40.053553, "lng": 116.661378, "count": 1.16}, {"lat": 40.049427, '
+         '"lng": 116.65768, "count": 1.16}, {"lat": 40.048304, "lng": '
+         '116.654514, "count": 1.16}, {"lat": 40.048456, "lng": 116.649526, '
+         '"count": 1.16}, {"lat": 40.046029, "lng": 116.646672, "count": '
+         '1.16}, {"lat": 40.043238, "lng": 116.646136, "count": 1.16}, {"lat": '
+         '40.03611, "lng": 116.648493, "count": 1.16}, {"lat": 40.02891, '
+         '"lng": 116.649769, "count": 1.16}, {"lat": 40.025272, "lng": '
+         '116.649395, "count": 1.16}, {"lat": 40.024772, "lng": 116.649062, '
+         '"count": 1.16}, {"lat": 40.019921, "lng": 116.637827, "count": '
+         '1.16}, {"lat": 40.023483, "lng": 116.632722, "count": 1.16}, {"lat": '
+         '40.022956, "lng": 116.620034, "count": 1.16}, {"lat": 40.026731, '
+         '"lng": 116.619396, "count": 1.16}, {"lat": 40.028182, "lng": '
+         '116.614131, "count": 1.16}, {"lat": 40.031575, "lng": 116.612897, '
+         '"count": 1.16}, {"lat": 40.028861, "lng": 116.604498, "count": '
+         '1.16}, {"lat": 40.02057, "lng": 116.601641, "count": 1.16}, {"lat": '
+         '40.017516, "lng": 116.595547, "count": 1.16}, {"lat": 40.027508, '
+         '"lng": 116.577809, "count": 1.16}, {"lat": 40.033102, "lng": '
+         '116.578807, "count": 1.16}, {"lat": 40.033107, "lng": 116.574039, '
+         '"count": 1.16}, {"lat": 40.030142, "lng": 116.578165, "count": '
+         '1.16}, {"lat": 40.032431, "lng": 116.570469, "count": 1.16}, {"lat": '
+         '40.038545, "lng": 116.565903, "count": 1.16}, {"lat": 40.048005, '
+         '"lng": 116.547338, "count": 1.16}, {"lat": 40.049744, "lng": '
+         '116.546412, "count": 1.16}, {"lat": 40.054882, "lng": 116.552758, '
+         '"count": 1.16}, {"lat": 40.062988, "lng": 116.549478, "count": '
+         '1.16}, {"lat": 40.059409, "lng": 116.543177, "count": 1.16}, {"lat": '
+         '40.070825, "lng": 116.528228, "count": 1.16}, {"lat": 40.070658, '
+         '"lng": 116.512694, "count": 1.16}, {"lat": 40.080395, "lng": '
+         '116.499335, "count": 1.16}, {"lat": 40.08104, "lng": 116.486666, '
+         '"count": 1.16}, {"lat": 40.085427, "lng": 116.477154, "count": '
+         '1.16}, {"lat": 39.792819, "lng": 116.262366, "count": 1.15}, {"lat": '
+         '39.799108, "lng": 116.287244, "count": 1.15}, {"lat": 39.796098, '
+         '"lng": 116.290116, "count": 1.15}, {"lat": 39.797125, "lng": '
+         '116.294824, "count": 1.15}, {"lat": 39.795564, "lng": 116.296084, '
+         '"count": 1.15}, {"lat": 39.793279, "lng": 116.291155, "count": '
+         '1.15}, {"lat": 39.790953, "lng": 116.295197, "count": 1.15}, {"lat": '
+         '39.774936, "lng": 116.301551, "count": 1.15}, {"lat": 39.769973, '
+         '"lng": 116.310873, "count": 1.15}, {"lat": 39.783441, "lng": '
+         '116.317973, "count": 1.15}, {"lat": 39.783631, "lng": 116.321782, '
+         '"count": 1.15}, {"lat": 39.798391, "lng": 116.322881, "count": '
+         '1.15}, {"lat": 39.803191, "lng": 116.340839, "count": 1.15}, {"lat": '
+         '39.80759, "lng": 116.341753, "count": 1.15}, {"lat": 39.805662, '
+         '"lng": 116.355707, "count": 1.15}, {"lat": 39.800469, "lng": '
+         '116.356828, "count": 1.15}, {"lat": 39.799821, "lng": 116.36703, '
+         '"count": 1.15}, {"lat": 39.784968, "lng": 116.367576, "count": '
+         '1.15}, {"lat": 39.785642, "lng": 116.378488, "count": 1.15}, {"lat": '
+         '39.779397, "lng": 116.379217, "count": 1.15}, {"lat": 39.780458, '
+         '"lng": 116.390654, "count": 1.15}, {"lat": 39.765271, "lng": '
+         '116.391894, "count": 1.15}, {"lat": 39.765856, "lng": 116.398895, '
+         '"count": 1.15}, {"lat": 39.786743, "lng": 116.396023, "count": '
+         '1.15}, {"lat": 39.787915, "lng": 116.420631, "count": 1.15}, {"lat": '
+         '39.794135, "lng": 116.42104, "count": 1.15}, {"lat": 39.79491, '
+         '"lng": 116.429382, "count": 1.15}, {"lat": 39.803587, "lng": '
+         '116.429392, "count": 1.15}, {"lat": 39.803557, "lng": 116.424102, '
+         '"count": 1.15}, {"lat": 39.806659, "lng": 116.425716, "count": '
+         '1.15}, {"lat": 39.810433, "lng": 116.422447, "count": 1.15}, {"lat": '
+         '39.808369, "lng": 116.41843, "count": 1.15}, {"lat": 39.812529, '
+         '"lng": 116.415273, "count": 1.15}, {"lat": 39.811336, "lng": '
+         '116.410005, "count": 1.15}, {"lat": 39.817057, "lng": 116.410162, '
+         '"count": 1.15}, {"lat": 39.81537, "lng": 116.41975, "count": 1.15}, '
+         '{"lat": 39.822911, "lng": 116.418432, "count": 1.15}, {"lat": '
+         '39.824279, "lng": 116.414433, "count": 1.15}, {"lat": 39.828865, '
+         '"lng": 116.416644, "count": 1.15}, {"lat": 39.826968, "lng": '
+         '116.421139, "count": 1.15}, {"lat": 39.829776, "lng": 116.42101, '
+         '"count": 1.15}, {"lat": 39.831896, "lng": 116.425216, "count": '
+         '1.15}, {"lat": 39.830656, "lng": 116.43698, "count": 1.15}, {"lat": '
+         '39.827431, "lng": 116.436676, "count": 1.15}, {"lat": 39.829126, '
+         '"lng": 116.441511, "count": 1.15}, {"lat": 39.826334, "lng": '
+         '116.444994, "count": 1.15}, {"lat": 39.820953, "lng": 116.44391, '
+         '"count": 1.15}, {"lat": 39.822637, "lng": 116.453992, "count": '
+         '1.15}, {"lat": 39.814344, "lng": 116.463322, "count": 1.15}, {"lat": '
+         '39.814244, "lng": 116.469051, "count": 1.15}, {"lat": 39.809768, '
+         '"lng": 116.474251, "count": 1.15}, {"lat": 39.812725, "lng": '
+         '116.485246, "count": 1.15}, {"lat": 39.816882, "lng": 116.485627, '
+         '"count": 1.15}, {"lat": 39.818791, "lng": 116.490367, "count": '
+         '1.15}, {"lat": 39.818799, "lng": 116.495357, "count": 1.15}, {"lat": '
+         '39.816169, "lng": 116.495227, "count": 1.15}, {"lat": 39.815704, '
+         '"lng": 116.49821, "count": 1.15}, {"lat": 39.81829, "lng": '
+         '116.505821, "count": 1.15}, {"lat": 39.818998, "lng": 116.502794, '
+         '"count": 1.15}, {"lat": 39.821878, "lng": 116.509882, "count": '
+         '1.15}, {"lat": 39.827643, "lng": 116.510613, "count": 1.15}, {"lat": '
+         '39.829827, "lng": 116.516156, "count": 1.15}, {"lat": 39.829752, '
+         '"lng": 116.525359, "count": 1.15}, {"lat": 39.826903, "lng": '
+         '116.52586, "count": 1.15}, {"lat": 39.824825, "lng": 116.534934, '
+         '"count": 1.15}, {"lat": 39.823715, "lng": 116.539736, "count": '
+         '1.15}, {"lat": 39.819664, "lng": 116.533368, "count": 1.15}, {"lat": '
+         '39.811864, "lng": 116.540532, "count": 1.15}, {"lat": 39.803164, '
+         '"lng": 116.541687, "count": 1.15}, {"lat": 39.800142, "lng": '
+         '116.535111, "count": 1.15}, {"lat": 39.796672, "lng": 116.537537, '
+         '"count": 1.15}, {"lat": 39.791745, "lng": 116.530925, "count": '
+         '1.15}, {"lat": 39.781277, "lng": 116.538085, "count": 1.15}, {"lat": '
+         '39.77884, "lng": 116.530096, "count": 1.15}, {"lat": 39.76987, '
+         '"lng": 116.536126, "count": 1.15}, {"lat": 39.772296, "lng": '
+         '116.544647, "count": 1.15}, {"lat": 39.768725, "lng": 116.545788, '
+         '"count": 1.15}, {"lat": 39.768408, "lng": 116.536499, "count": '
+         '1.15}, {"lat": 39.766258, "lng": 116.539879, "count": 1.15}, {"lat": '
+         '39.761067, "lng": 116.540415, "count": 1.15}, {"lat": 39.761469, '
+         '"lng": 116.528304, "count": 1.15}, {"lat": 39.769926, "lng": '
+         '116.523628, "count": 1.15}, {"lat": 39.765779, "lng": 116.520073, '
+         '"count": 1.15}, {"lat": 39.762393, "lng": 116.52518, "count": 1.15}, '
+         '{"lat": 39.749671, "lng": 116.522996, "count": 1.15}, {"lat": '
+         '39.747553, "lng": 116.531149, "count": 1.15}, {"lat": 39.74331, '
+         '"lng": 116.527553, "count": 1.15}, {"lat": 39.740989, "lng": '
+         '116.53995, "count": 1.15}, {"lat": 39.738072, "lng": 116.537994, '
+         '"count": 1.15}, {"lat": 39.738192, "lng": 116.53689, "count": 1.15}, '
+         '{"lat": 39.738295, "lng": 116.536791, "count": 1.15}, {"lat": '
+         '39.738861, "lng": 116.533729, "count": 1.15}, {"lat": 39.738615, '
+         '"lng": 116.533011, "count": 1.15}, {"lat": 39.738709, "lng": '
+         '116.532146, "count": 1.15}, {"lat": 39.738314, "lng": 116.532132, '
+         '"count": 1.15}, {"lat": 39.735135, "lng": 116.522855, "count": '
+         '1.15}, {"lat": 39.732507, "lng": 116.503667, "count": 1.15}, {"lat": '
+         '39.725978, "lng": 116.488284, "count": 1.15}, {"lat": 39.722425, '
+         '"lng": 116.47236, "count": 1.15}, {"lat": 39.718562, "lng": '
+         '116.466543, "count": 1.15}, {"lat": 39.71913, "lng": 116.460853, '
+         '"count": 1.15}, {"lat": 39.718715, "lng": 116.458915, "count": '
+         '1.15}, {"lat": 39.716929, "lng": 116.456786, "count": 1.15}, {"lat": '
+         '39.711738, "lng": 116.454627, "count": 1.15}, {"lat": 39.710287, '
+         '"lng": 116.452784, "count": 1.15}, {"lat": 39.709655, "lng": '
+         '116.450526, "count": 1.15}, {"lat": 39.709936, "lng": 116.448197, '
+         '"count": 1.15}, {"lat": 39.711089, "lng": 116.446154, "count": '
+         '1.15}, {"lat": 39.716119, "lng": 116.442629, "count": 1.15}, {"lat": '
+         '39.717584, "lng": 116.43936, "count": 1.15}, {"lat": 39.717666, '
+         '"lng": 116.426587, "count": 1.15}, {"lat": 39.716563, "lng": '
+         '116.417552, "count": 1.15}, {"lat": 39.715324, "lng": 116.415332, '
+         '"count": 1.15}, {"lat": 39.711001, "lng": 116.412334, "count": '
+         '1.15}, {"lat": 39.709642, "lng": 116.409117, "count": 1.15}, {"lat": '
+         '39.709858, "lng": 116.406781, "count": 1.15}, {"lat": 39.710954, '
+         '"lng": 116.404705, "count": 1.15}, {"lat": 39.715318, "lng": '
+         '116.400781, "count": 1.15}, {"lat": 39.715909, "lng": 116.38832, '
+         '"count": 1.15}, {"lat": 39.711261, "lng": 116.383181, "count": '
+         '1.15}, {"lat": 39.703065, "lng": 116.366359, "count": 1.15}, {"lat": '
+         '39.699365, "lng": 116.354743, "count": 1.15}, {"lat": 39.69646, '
+         '"lng": 116.338659, "count": 1.15}, {"lat": 39.695552, "lng": '
+         '116.336649, "count": 1.15}, {"lat": 39.693079, "lng": 116.334859, '
+         '"count": 1.15}, {"lat": 39.684488, "lng": 116.33292, "count": 1.15}, '
+         '{"lat": 39.678402, "lng": 116.329396, "count": 1.15}, {"lat": '
+         '39.674533, "lng": 116.332277, "count": 1.15}, {"lat": 39.67157, '
+         '"lng": 116.335701, "count": 1.15}, {"lat": 39.669435, "lng": '
+         '116.336491, "count": 1.15}, {"lat": 39.666072, "lng": 116.336075, '
+         '"count": 1.15}, {"lat": 39.663471, "lng": 116.333904, "count": '
+         '1.15}, {"lat": 39.661676, "lng": 116.32998, "count": 1.15}, {"lat": '
+         '39.658965, "lng": 116.3273, "count": 1.15}, {"lat": 39.658012, '
+         '"lng": 116.323972, "count": 1.15}, {"lat": 39.658494, "lng": '
+         '116.321695, "count": 1.15}, {"lat": 39.659806, "lng": 116.319774, '
+         '"count": 1.15}, {"lat": 39.663499, "lng": 116.316419, "count": '
+         '1.15}, {"lat": 39.665787, "lng": 116.315672, "count": 1.15}, {"lat": '
+         '39.669301, "lng": 116.316345, "count": 1.15}, {"lat": 39.672051, '
+         '"lng": 116.318675, "count": 1.15}, {"lat": 39.676076, "lng": '
+         '116.3201, "count": 1.15}, {"lat": 39.678414, "lng": 116.321909, '
+         '"count": 1.15}, {"lat": 39.686295, "lng": 116.316623, "count": '
+         '1.15}, {"lat": 39.688648, "lng": 116.313342, "count": 1.15}, {"lat": '
+         '39.690212, "lng": 116.309458, "count": 1.15}, {"lat": 39.69195, '
+         '"lng": 116.307852, "count": 1.15}, {"lat": 39.694173, "lng": '
+         '116.307043, "count": 1.15}, {"lat": 39.696536, "lng": 116.307156, '
+         '"count": 1.15}, {"lat": 39.698672, "lng": 116.308174, "count": '
+         '1.15}, {"lat": 39.703217, "lng": 116.314028, "count": 1.15}, {"lat": '
+         '39.70478, "lng": 116.315119, "count": 1.15}, {"lat": 39.707404, '
+         '"lng": 116.315499, "count": 1.15}, {"lat": 39.712445, "lng": '
+         '116.314749, "count": 1.15}, {"lat": 39.714614, "lng": 116.315663, '
+         '"count": 1.15}, {"lat": 39.718939, "lng": 116.31965, "count": 1.15}, '
+         '{"lat": 39.727826, "lng": 116.320221, "count": 1.15}, {"lat": '
+         '39.732162, "lng": 116.317321, "count": 1.15}, {"lat": 39.738277, '
+         '"lng": 116.316345, "count": 1.15}, {"lat": 39.740061, "lng": '
+         '116.315384, "count": 1.15}, {"lat": 39.743627, "lng": 116.308923, '
+         '"count": 1.15}, {"lat": 39.751151, "lng": 116.303187, "count": '
+         '1.15}, {"lat": 39.757799, "lng": 116.302462, "count": 1.15}, {"lat": '
+         '39.762606, "lng": 116.300248, "count": 1.15}, {"lat": 39.766133, '
+         '"lng": 116.300467, "count": 1.15}, {"lat": 39.768716, "lng": '
+         '116.299637, "count": 1.15}, {"lat": 39.770047, "lng": 116.298323, '
+         '"count": 1.15}, {"lat": 39.770919, "lng": 116.295679, "count": '
+         '1.15}, {"lat": 39.768145, "lng": 116.284005, "count": 1.15}, {"lat": '
+         '39.766113, "lng": 116.281551, "count": 1.15}, {"lat": 39.761135, '
+         '"lng": 116.279011, "count": 1.15}, {"lat": 39.759674, "lng": '
+         '116.275798, "count": 1.15}, {"lat": 39.760272, "lng": 116.27232, '
+         '"count": 1.15}, {"lat": 39.764195, "lng": 116.267601, "count": '
+         '1.15}, {"lat": 39.764707, "lng": 116.262452, "count": 1.15}, {"lat": '
+         '39.766428, "lng": 116.259456, "count": 1.15}, {"lat": 39.769515, '
+         '"lng": 116.257906, "count": 1.15}, {"lat": 39.772946, "lng": '
+         '116.258315, "count": 1.15}, {"lat": 39.779337, "lng": 116.264454, '
+         '"count": 1.15}, {"lat": 39.782767, "lng": 116.265672, "count": '
+         '1.15}, {"lat": 39.792819, "lng": 116.262366, "count": 1.15}, {"lat": '
+         '39.888875, "lng": 116.159652, "count": 1.13}, {"lat": 39.888757, '
+         '"lng": 116.167029, "count": 1.13}, {"lat": 39.882688, "lng": '
+         '116.179095, "count": 1.13}, {"lat": 39.883281, "lng": 116.19943, '
+         '"count": 1.13}, {"lat": 39.874671, "lng": 116.212089, "count": '
+         '1.13}, {"lat": 39.877946, "lng": 116.213648, "count": 1.13}, {"lat": '
+         '39.876714, "lng": 116.219097, "count": 1.13}, {"lat": 39.881341, '
+         '"lng": 116.219531, "count": 1.13}, {"lat": 39.883836, "lng": '
+         '116.227728, "count": 1.13}, {"lat": 39.889158, "lng": 116.229571, '
+         '"count": 1.13}, {"lat": 39.889543, "lng": 116.234639, "count": '
+         '1.13}, {"lat": 39.892118, "lng": 116.233544, "count": 1.13}, {"lat": '
+         '39.896582, "lng": 116.259179, "count": 1.13}, {"lat": 39.89649, '
+         '"lng": 116.294976, "count": 1.13}, {"lat": 39.886829, "lng": '
+         '116.295015, "count": 1.13}, {"lat": 39.889098, "lng": 116.303509, '
+         '"count": 1.13}, {"lat": 39.896779, "lng": 116.314021, "count": '
+         '1.13}, {"lat": 39.896793, "lng": 116.325809, "count": 1.13}, {"lat": '
+         '39.889733, "lng": 116.326686, "count": 1.13}, {"lat": 39.88968, '
+         '"lng": 116.324189, "count": 1.13}, {"lat": 39.881511, "lng": '
+         '116.320757, "count": 1.13}, {"lat": 39.875405, "lng": 116.321667, '
+         '"count": 1.13}, {"lat": 39.876163, "lng": 116.341875, "count": '
+         '1.13}, {"lat": 39.873594, "lng": 116.349479, "count": 1.13}, {"lat": '
+         '39.868964, "lng": 116.350035, "count": 1.13}, {"lat": 39.871146, '
+         '"lng": 116.380586, "count": 1.13}, {"lat": 39.866434, "lng": '
+         '116.378551, "count": 1.13}, {"lat": 39.867377, "lng": 116.387894, '
+         '"count": 1.13}, {"lat": 39.865198, "lng": 116.387679, "count": '
+         '1.13}, {"lat": 39.862733, "lng": 116.394565, "count": 1.13}, {"lat": '
+         '39.858679, "lng": 116.395503, "count": 1.13}, {"lat": 39.858874, '
+         '"lng": 116.410619, "count": 1.13}, {"lat": 39.860141, "lng": '
+         '116.414143, "count": 1.13}, {"lat": 39.86574, "lng": 116.416677, '
+         '"count": 1.13}, {"lat": 39.87114, "lng": 116.413658, "count": 1.13}, '
+         '{"lat": 39.872846, "lng": 116.44364, "count": 1.13}, {"lat": '
+         '39.866088, "lng": 116.442963, "count": 1.13}, {"lat": 39.860861, '
+         '"lng": 116.446358, "count": 1.13}, {"lat": 39.86364, "lng": '
+         '116.448186, "count": 1.13}, {"lat": 39.856008, "lng": 116.467794, '
+         '"count": 1.13}, {"lat": 39.852592, "lng": 116.467715, "count": '
+         '1.13}, {"lat": 39.848616, "lng": 116.460306, "count": 1.13}, {"lat": '
+         '39.852015, "lng": 116.451138, "count": 1.13}, {"lat": 39.848696, '
+         '"lng": 116.450488, "count": 1.13}, {"lat": 39.848337, "lng": '
+         '116.446341, "count": 1.13}, {"lat": 39.844262, "lng": 116.446703, '
+         '"count": 1.13}, {"lat": 39.843679, "lng": 116.442319, "count": '
+         '1.13}, {"lat": 39.839649, "lng": 116.440586, "count": 1.13}, {"lat": '
+         '39.841334, "lng": 116.43673, "count": 1.13}, {"lat": 39.832931, '
+         '"lng": 116.432057, "count": 1.13}, {"lat": 39.831896, "lng": '
+         '116.425216, "count": 1.13}, {"lat": 39.829776, "lng": 116.42101, '
+         '"count": 1.13}, {"lat": 39.826968, "lng": 116.421139, "count": '
+         '1.13}, {"lat": 39.828865, "lng": 116.416644, "count": 1.13}, {"lat": '
+         '39.824279, "lng": 116.414433, "count": 1.13}, {"lat": 39.822911, '
+         '"lng": 116.418432, "count": 1.13}, {"lat": 39.81537, "lng": '
+         '116.41975, "count": 1.13}, {"lat": 39.817057, "lng": 116.410162, '
+         '"count": 1.13}, {"lat": 39.811336, "lng": 116.410005, "count": '
+         '1.13}, {"lat": 39.812529, "lng": 116.415273, "count": 1.13}, {"lat": '
+         '39.808369, "lng": 116.41843, "count": 1.13}, {"lat": 39.810433, '
+         '"lng": 116.422447, "count": 1.13}, {"lat": 39.806659, "lng": '
+         '116.425716, "count": 1.13}, {"lat": 39.803557, "lng": 116.424102, '
+         '"count": 1.13}, {"lat": 39.803587, "lng": 116.429392, "count": '
+         '1.13}, {"lat": 39.79491, "lng": 116.429382, "count": 1.13}, {"lat": '
+         '39.794135, "lng": 116.42104, "count": 1.13}, {"lat": 39.787915, '
+         '"lng": 116.420631, "count": 1.13}, {"lat": 39.786743, "lng": '
+         '116.396023, "count": 1.13}, {"lat": 39.765856, "lng": 116.398895, '
+         '"count": 1.13}, {"lat": 39.765271, "lng": 116.391894, "count": '
+         '1.13}, {"lat": 39.780458, "lng": 116.390654, "count": 1.13}, {"lat": '
+         '39.779397, "lng": 116.379217, "count": 1.13}, {"lat": 39.785642, '
+         '"lng": 116.378488, "count": 1.13}, {"lat": 39.784968, "lng": '
+         '116.367576, "count": 1.13}, {"lat": 39.799821, "lng": 116.36703, '
+         '"count": 1.13}, {"lat": 39.800469, "lng": 116.356828, "count": '
+         '1.13}, {"lat": 39.805662, "lng": 116.355707, "count": 1.13}, {"lat": '
+         '39.80759, "lng": 116.341753, "count": 1.13}, {"lat": 39.803191, '
+         '"lng": 116.340839, "count": 1.13}, {"lat": 39.798391, "lng": '
+         '116.322881, "count": 1.13}, {"lat": 39.783631, "lng": 116.321782, '
+         '"count": 1.13}, {"lat": 39.783441, "lng": 116.317973, "count": '
+         '1.13}, {"lat": 39.769973, "lng": 116.310873, "count": 1.13}, {"lat": '
+         '39.774936, "lng": 116.301551, "count": 1.13}, {"lat": 39.790953, '
+         '"lng": 116.295197, "count": 1.13}, {"lat": 39.793279, "lng": '
+         '116.291155, "count": 1.13}, {"lat": 39.795564, "lng": 116.296084, '
+         '"count": 1.13}, {"lat": 39.797125, "lng": 116.294824, "count": '
+         '1.13}, {"lat": 39.796098, "lng": 116.290116, "count": 1.13}, {"lat": '
+         '39.799108, "lng": 116.287244, "count": 1.13}, {"lat": 39.792819, '
+         '"lng": 116.262366, "count": 1.13}, {"lat": 39.796229, "lng": '
+         '116.261245, "count": 1.13}, {"lat": 39.804706, "lng": 116.260308, '
+         '"count": 1.13}, {"lat": 39.807749, "lng": 116.259348, "count": '
+         '1.13}, {"lat": 39.825324, "lng": 116.244663, "count": 1.13}, {"lat": '
+         '39.829501, "lng": 116.233794, "count": 1.13}, {"lat": 39.83864, '
+         '"lng": 116.22402, "count": 1.13}, {"lat": 39.839335, "lng": '
+         '116.220628, "count": 1.13}, {"lat": 39.838355, "lng": 116.216081, '
+         '"count": 1.13}, {"lat": 39.837319, "lng": 116.214521, "count": '
+         '1.13}, {"lat": 39.834888, "lng": 116.213157, "count": 1.13}, {"lat": '
+         '39.830228, "lng": 116.213604, "count": 1.13}, {"lat": 39.82793, '
+         '"lng": 116.213146, "count": 1.13}, {"lat": 39.825237, "lng": '
+         '116.210934, "count": 1.13}, {"lat": 39.824342, "lng": 116.208769, '
+         '"count": 1.13}, {"lat": 39.824688, "lng": 116.2053, "count": 1.13}, '
+         '{"lat": 39.826158, "lng": 116.2029, "count": 1.13}, {"lat": '
+         '39.827767, "lng": 116.197681, "count": 1.13}, {"lat": 39.82685, '
+         '"lng": 116.192926, "count": 1.13}, {"lat": 39.827111, "lng": '
+         '116.190698, "count": 1.13}, {"lat": 39.830756, "lng": 116.18471, '
+         '"count": 1.13}, {"lat": 39.833541, "lng": 116.182959, "count": '
+         '1.13}, {"lat": 39.839026, "lng": 116.183064, "count": 1.13}, {"lat": '
+         '39.841041, "lng": 116.184152, "count": 1.13}, {"lat": 39.844969, '
+         '"lng": 116.189236, "count": 1.13}, {"lat": 39.846558, "lng": '
+         '116.190279, "count": 1.13}, {"lat": 39.852784, "lng": 116.19071, '
+         '"count": 1.13}, {"lat": 39.857326, "lng": 116.194038, "count": '
+         '1.13}, {"lat": 39.86115, "lng": 116.194146, "count": 1.13}, {"lat": '
+         '39.863346, "lng": 116.192506, "count": 1.13}, {"lat": 39.866559, '
+         '"lng": 116.188033, "count": 1.13}, {"lat": 39.868588, "lng": '
+         '116.187188, "count": 1.13}, {"lat": 39.873267, "lng": 116.187058, '
+         '"count": 1.13}, {"lat": 39.876146, "lng": 116.185042, "count": '
+         '1.13}, {"lat": 39.877769, "lng": 116.181984, "count": 1.13}, {"lat": '
+         '39.878046, "lng": 116.179914, "count": 1.13}, {"lat": 39.876185, '
+         '"lng": 116.172108, "count": 1.13}, {"lat": 39.876633, "lng": '
+         '116.1688, "count": 1.13}, {"lat": 39.883413, "lng": 116.160429, '
+         '"count": 1.13}, {"lat": 39.886691, "lng": 116.159154, "count": '
+         '1.13}, {"lat": 39.888875, "lng": 116.159652, "count": 1.13}, {"lat": '
+         '40.126691, "lng": 116.246145, "count": 1.13}, {"lat": 40.121268, '
+         '"lng": 116.245628, "count": 1.13}, {"lat": 40.118401, "lng": '
+         '116.241829, "count": 1.13}, {"lat": 40.107045, "lng": 116.242079, '
+         '"count": 1.13}, {"lat": 40.104481, "lng": 116.255872, "count": '
+         '1.13}, {"lat": 40.106899, "lng": 116.25957, "count": 1.13}, {"lat": '
+         '40.110875, "lng": 116.257392, "count": 1.13}, {"lat": 40.110581, '
+         '"lng": 116.263337, "count": 1.13}, {"lat": 40.104838, "lng": '
+         '116.264188, "count": 1.13}, {"lat": 40.101882, "lng": 116.258531, '
+         '"count": 1.13}, {"lat": 40.094695, "lng": 116.265237, "count": '
+         '1.13}, {"lat": 40.091821, "lng": 116.273518, "count": 1.13}, {"lat": '
+         '40.079755, "lng": 116.279887, "count": 1.13}, {"lat": 40.082102, '
+         '"lng": 116.290898, "count": 1.13}, {"lat": 40.060811, "lng": '
+         '116.302945, "count": 1.13}, {"lat": 40.063051, "lng": 116.305989, '
+         '"count": 1.13}, {"lat": 40.060613, "lng": 116.30945, "count": 1.13}, '
+         '{"lat": 40.06167, "lng": 116.318297, "count": 1.13}, {"lat": '
+         '40.054796, "lng": 116.325951, "count": 1.13}, {"lat": 40.058927, '
+         '"lng": 116.338829, "count": 1.13}, {"lat": 40.055084, "lng": '
+         '116.340273, "count": 1.13}, {"lat": 40.055454, "lng": 116.343361, '
+         '"count": 1.13}, {"lat": 40.059633, "lng": 116.342683, "count": '
+         '1.13}, {"lat": 40.060431, "lng": 116.346964, "count": 1.13}, {"lat": '
+         '40.063664, "lng": 116.346677, "count": 1.13}, {"lat": 40.065937, '
+         '"lng": 116.363031, "count": 1.13}, {"lat": 40.068967, "lng": '
+         '116.363145, "count": 1.13}, {"lat": 40.068434, "lng": 116.372536, '
+         '"count": 1.13}, {"lat": 40.065622, "lng": 116.373362, "count": '
+         '1.13}, {"lat": 40.065336, "lng": 116.381099, "count": 1.13}, {"lat": '
+         '40.061584, "lng": 116.382845, "count": 1.13}, {"lat": 40.057855, '
+         '"lng": 116.372257, "count": 1.13}, {"lat": 40.05434, "lng": '
+         '116.372995, "count": 1.13}, {"lat": 40.053443, "lng": 116.367386, '
+         '"count": 1.13}, {"lat": 40.046961, "lng": 116.369594, "count": '
+         '1.13}, {"lat": 40.04296, "lng": 116.376776, "count": 1.13}, {"lat": '
+         '40.041272, "lng": 116.390646, "count": 1.13}, {"lat": 40.036146, '
+         '"lng": 116.390593, "count": 1.13}, {"lat": 40.032859, "lng": '
+         '116.395093, "count": 1.13}, {"lat": 40.026708, "lng": 116.350883, '
+         '"count": 1.13}, {"lat": 39.991899, "lng": 116.377125, "count": '
+         '1.13}, {"lat": 39.972718, "lng": 116.380912, "count": 1.13}, {"lat": '
+         '39.969836, "lng": 116.380634, "count": 1.13}, {"lat": 39.967908, '
+         '"lng": 116.370382, "count": 1.13}, {"lat": 39.948377, "lng": '
+         '116.370572, "count": 1.13}, {"lat": 39.944091, "lng": 116.356198, '
+         '"count": 1.13}, {"lat": 39.951325, "lng": 116.354213, "count": '
+         '1.13}, {"lat": 39.942867, "lng": 116.350251, "count": 1.13}, {"lat": '
+         '39.942773, "lng": 116.328686, "count": 1.13}, {"lat": 39.938558, '
+         '"lng": 116.333061, "count": 1.13}, {"lat": 39.898703, "lng": '
+         '116.337058, "count": 1.13}, {"lat": 39.896793, "lng": 116.325809, '
+         '"count": 1.13}, {"lat": 39.896779, "lng": 116.314021, "count": '
+         '1.13}, {"lat": 39.889098, "lng": 116.303509, "count": 1.13}, {"lat": '
+         '39.886829, "lng": 116.295015, "count": 1.13}, {"lat": 39.89649, '
+         '"lng": 116.294976, "count": 1.13}, {"lat": 39.896582, "lng": '
+         '116.259179, "count": 1.13}, {"lat": 39.897256, "lng": 116.259716, '
+         '"count": 1.13}, {"lat": 39.897289, "lng": 116.252994, "count": '
+         '1.13}, {"lat": 39.915543, "lng": 116.252653, "count": 1.13}, {"lat": '
+         '39.916086, "lng": 116.249296, "count": 1.13}, {"lat": 39.917686, '
+         '"lng": 116.253006, "count": 1.13}, {"lat": 39.920937, "lng": '
+         '116.251507, "count": 1.13}, {"lat": 39.916862, "lng": 116.237055, '
+         '"count": 1.13}, {"lat": 39.919531, "lng": 116.230902, "count": '
+         '1.13}, {"lat": 39.916668, "lng": 116.206796, "count": 1.13}, {"lat": '
+         '39.925904, "lng": 116.207705, "count": 1.13}, {"lat": 39.926748, '
+         '"lng": 116.215179, "count": 1.13}, {"lat": 39.929329, "lng": '
+         '116.213768, "count": 1.13}, {"lat": 39.931391, "lng": 116.216332, '
+         '"count": 1.13}, {"lat": 39.933929, "lng": 116.214132, "count": '
+         '1.13}, {"lat": 39.943598, "lng": 116.218664, "count": 1.13}, {"lat": '
+         '39.943745, "lng": 116.215468, "count": 1.13}, {"lat": 39.951109, '
+         '"lng": 116.209299, "count": 1.13}, {"lat": 39.95139, "lng": '
+         '116.209703, "count": 1.13}, {"lat": 39.958798, "lng": 116.211979, '
+         '"count": 1.13}, {"lat": 39.978482, "lng": 116.215612, "count": '
+         '1.13}, {"lat": 39.983557, "lng": 116.215869, "count": 1.13}, {"lat": '
+         '39.985371, "lng": 116.215141, "count": 1.13}, {"lat": 39.987196, '
+         '"lng": 116.213003, "count": 1.13}, {"lat": 39.988662, "lng": '
+         '116.204187, "count": 1.13}, {"lat": 39.989794, "lng": 116.2021, '
+         '"count": 1.13}, {"lat": 39.991647, "lng": 116.200616, "count": '
+         '1.13}, {"lat": 39.99393, "lng": 116.199966, "count": 1.13}, {"lat": '
+         '39.996287, "lng": 116.200253, "count": 1.13}, {"lat": 40.004257, '
+         '"lng": 116.206111, "count": 1.13}, {"lat": 40.005287, "lng": '
+         '116.208258, "count": 1.13}, {"lat": 40.005103, "lng": 116.211794, '
+         '"count": 1.13}, {"lat": 40.003856, "lng": 116.213823, "count": '
+         '1.13}, {"lat": 40.000138, "lng": 116.21669, "count": 1.13}, {"lat": '
+         '39.999209, "lng": 116.219523, "count": 1.13}, {"lat": 40.003452, '
+         '"lng": 116.23774, "count": 1.13}, {"lat": 40.007542, "lng": '
+         '116.247015, "count": 1.13}, {"lat": 40.012121, "lng": 116.250063, '
+         '"count": 1.13}, {"lat": 40.017576, "lng": 116.251928, "count": '
+         '1.13}, {"lat": 40.020331, "lng": 116.251799, "count": 1.13}, {"lat": '
+         '40.022623, "lng": 116.250177, "count": 1.13}, {"lat": 40.02482, '
+         '"lng": 116.24402, "count": 1.13}, {"lat": 40.028449, "lng": '
+         '116.24035, "count": 1.13}, {"lat": 40.031622, "lng": 116.239335, '
+         '"count": 1.13}, {"lat": 40.035123, "lng": 116.239535, "count": '
+         '1.13}, {"lat": 40.037607, "lng": 116.238448, "count": 1.13}, {"lat": '
+         '40.038866, "lng": 116.236887, "count": 1.13}, {"lat": 40.040375, '
+         '"lng": 116.232308, "count": 1.13}, {"lat": 40.043158, "lng": '
+         '116.230033, "count": 1.13}, {"lat": 40.045537, "lng": 116.229604, '
+         '"count": 1.13}, {"lat": 40.047892, "lng": 116.230149, "count": '
+         '1.13}, {"lat": 40.057143, "lng": 116.237742, "count": 1.13}, {"lat": '
+         '40.059893, "lng": 116.238626, "count": 1.13}, {"lat": 40.063433, '
+         '"lng": 116.237225, "count": 1.13}, {"lat": 40.066677, "lng": '
+         '116.232202, "count": 1.13}, {"lat": 40.071047, "lng": 116.23091, '
+         '"count": 1.13}, {"lat": 40.073268, "lng": 116.231589, "count": '
+         '1.13}, {"lat": 40.075716, "lng": 116.234029, "count": 1.13}, {"lat": '
+         '40.082621, "lng": 116.256708, "count": 1.13}, {"lat": 40.084125, '
+         '"lng": 116.259699, "count": 1.13}, {"lat": 40.086746, "lng": '
+         '116.261745, "count": 1.13}, {"lat": 40.090612, "lng": 116.26149, '
+         '"count": 1.13}, {"lat": 40.092548, "lng": 116.259813, "count": '
+         '1.13}, {"lat": 40.106911, "lng": 116.240304, "count": 1.13}, {"lat": '
+         '40.114345, "lng": 116.235912, "count": 1.13}, {"lat": 40.11721, '
+         '"lng": 116.230319, "count": 1.13}, {"lat": 40.112685, "lng": '
+         '116.224426, "count": 1.13}, {"lat": 40.104735, "lng": 116.220181, '
+         '"count": 1.13}, {"lat": 40.103099, "lng": 116.218603, "count": '
+         '1.13}, {"lat": 40.102012, "lng": 116.215399, "count": 1.13}, {"lat": '
+         '40.102831, "lng": 116.212116, "count": 1.13}, {"lat": 40.105951, '
+         '"lng": 116.208761, "count": 1.13}, {"lat": 40.107881, "lng": '
+         '116.207725, "count": 1.13}, {"lat": 40.110055, "lng": 116.207451, '
+         '"count": 1.13}, {"lat": 40.114283, "lng": 116.208298, "count": '
+         '1.13}, {"lat": 40.116172, "lng": 116.207778, "count": 1.13}, {"lat": '
+         '40.119645, "lng": 116.203995, "count": 1.13}, {"lat": 40.121918, '
+         '"lng": 116.202696, "count": 1.13}, {"lat": 40.125266, "lng": '
+         '116.202594, "count": 1.13}, {"lat": 40.128837, "lng": 116.205196, '
+         '"count": 1.13}, {"lat": 40.129662, "lng": 116.207289, "count": '
+         '1.13}, {"lat": 40.130162, "lng": 116.214123, "count": 1.13}, {"lat": '
+         '40.127408, "lng": 116.219006, "count": 1.13}, {"lat": 40.125984, '
+         '"lng": 116.22705, "count": 1.13}, {"lat": 40.124302, "lng": '
+         '116.2296, "count": 1.13}, {"lat": 40.130019, "lng": 116.235249, '
+         '"count": 1.13}, {"lat": 40.13124, "lng": 116.23862, "count": 1.13}, '
+         '{"lat": 40.13032, "lng": 116.242085, "count": 1.13}, {"lat": '
+         '40.126698, "lng": 116.246074, "count": 1.13}, {"lat": 40.126691, '
+         '"lng": 116.246145, "count": 1.13}, {"lat": 40.126691, "lng": '
+         '116.246145, "count": 1.12}, {"lat": 40.126261, "lng": 116.250607, '
+         '"count": 1.12}, {"lat": 40.126863, "lng": 116.252904, "count": '
+         '1.12}, {"lat": 40.128715, "lng": 116.254848, "count": 1.12}, {"lat": '
+         '40.13044, "lng": 116.255481, "count": 1.12}, {"lat": 40.136376, '
+         '"lng": 116.254464, "count": 1.12}, {"lat": 40.141226, "lng": '
+         '116.256052, "count": 1.12}, {"lat": 40.14689, "lng": 116.254694, '
+         '"count": 1.12}, {"lat": 40.149107, "lng": 116.255034, "count": '
+         '1.12}, {"lat": 40.151044, "lng": 116.256166, "count": 1.12}, {"lat": '
+         '40.152743, "lng": 116.258348, "count": 1.12}, {"lat": 40.154798, '
+         '"lng": 116.25898, "count": 1.12}, {"lat": 40.156544, "lng": '
+         '116.261616, "count": 1.12}, {"lat": 40.161647, "lng": 116.260737, '
+         '"count": 1.12}, {"lat": 40.163661, "lng": 116.272159, "count": '
+         '1.12}, {"lat": 40.160707, "lng": 116.275322, "count": 1.12}, {"lat": '
+         '40.157215, "lng": 116.276552, "count": 1.12}, {"lat": 40.157081, '
+         '"lng": 116.280769, "count": 1.12}, {"lat": 40.158289, "lng": '
+         '116.284811, "count": 1.12}, {"lat": 40.160975, "lng": 116.286041, '
+         '"count": 1.12}, {"lat": 40.161781, "lng": 116.29307, "count": 1.12}, '
+         '{"lat": 40.158961, "lng": 116.304316, "count": 1.12}, {"lat": '
+         '40.160438, "lng": 116.311345, "count": 1.12}, {"lat": 40.158021, '
+         '"lng": 116.313278, "count": 1.12}, {"lat": 40.156006, "lng": '
+         '116.31117, "count": 1.12}, {"lat": 40.153857, "lng": 116.310115, '
+         '"count": 1.12}, {"lat": 40.150903, "lng": 116.30871, "count": 1.12}, '
+         '{"lat": 40.147545, "lng": 116.307304, "count": 1.12}, {"lat": '
+         '40.141769, "lng": 116.306777, "count": 1.12}, {"lat": 40.140694, '
+         '"lng": 116.297288, "count": 1.12}, {"lat": 40.140157, "lng": '
+         '116.293773, "count": 1.12}, {"lat": 40.138276, "lng": 116.292192, '
+         '"count": 1.12}, {"lat": 40.140963, "lng": 116.284811, "count": '
+         '1.12}, {"lat": 40.140022, "lng": 116.278309, "count": 1.12}, {"lat": '
+         '40.137492, "lng": 116.276765, "count": 1.12}, {"lat": 40.129001, '
+         '"lng": 116.276462, "count": 1.12}, {"lat": 40.124194, "lng": '
+         '116.279896, "count": 1.12}, {"lat": 40.11937, "lng": 116.281508, '
+         '"count": 1.12}, {"lat": 40.108951, "lng": 116.295161, "count": '
+         '1.12}, {"lat": 40.10411, "lng": 116.299374, "count": 1.12}, {"lat": '
+         '40.102823, "lng": 116.301969, "count": 1.12}, {"lat": 40.103209, '
+         '"lng": 116.305008, "count": 1.12}, {"lat": 40.107923, "lng": '
+         '116.309697, "count": 1.12}, {"lat": 40.108714, "lng": 116.313016, '
+         '"count": 1.12}, {"lat": 40.107567, "lng": 116.316229, "count": '
+         '1.12}, {"lat": 40.104435, "lng": 116.318944, "count": 1.12}, {"lat": '
+         '40.103334, "lng": 116.321332, "count": 1.12}, {"lat": 40.104128, '
+         '"lng": 116.343517, "count": 1.12}, {"lat": 40.105915, "lng": '
+         '116.345844, "count": 1.12}, {"lat": 40.109568, "lng": 116.347891, '
+         '"count": 1.12}, {"lat": 40.116637, "lng": 116.350193, "count": '
+         '1.12}, {"lat": 40.118443, "lng": 116.352728, "count": 1.12}, {"lat": '
+         '40.119852, "lng": 116.357966, "count": 1.12}, {"lat": 40.118308, '
+         '"lng": 116.371901, "count": 1.12}, {"lat": 40.117094, "lng": '
+         '116.373791, "count": 1.12}, {"lat": 40.113744, "lng": 116.37638, '
+         '"count": 1.12}, {"lat": 40.111236, "lng": 116.381339, "count": '
+         '1.12}, {"lat": 40.111759, "lng": 116.384206, "count": 1.12}, {"lat": '
+         '40.115187, "lng": 116.388386, "count": 1.12}, {"lat": 40.115577, '
+         '"lng": 116.391752, "count": 1.12}, {"lat": 40.114082, "lng": '
+         '116.394792, "count": 1.12}, {"lat": 40.115501, "lng": 116.399207, '
+         '"count": 1.12}, {"lat": 40.118861, "lng": 116.399823, "count": '
+         '1.12}, {"lat": 40.125042, "lng": 116.395957, "count": 1.12}, {"lat": '
+         '40.130282, "lng": 116.397977, "count": 1.12}, {"lat": 40.130417, '
+         '"lng": 116.399559, "count": 1.12}, {"lat": 40.133238, "lng": '
+         '116.40114, "count": 1.12}, {"lat": 40.133036, "lng": 116.405621, '
+         '"count": 1.12}, {"lat": 40.131155, "lng": 116.407115, "count": '
+         '1.12}, {"lat": 40.134514, "lng": 116.409927, "count": 1.12}, {"lat": '
+         '40.134984, "lng": 116.417131, "count": 1.12}, {"lat": 40.131693, '
+         '"lng": 116.418537, "count": 1.12}, {"lat": 40.13223, "lng": '
+         '116.422579, "count": 1.12}, {"lat": 40.13223, "lng": 116.424775, '
+         '"count": 1.12}, {"lat": 40.133775, "lng": 116.424775, "count": '
+         '1.12}, {"lat": 40.136328, "lng": 116.428466, "count": 1.12}, {"lat": '
+         '40.139485, "lng": 116.432419, "count": 1.12}, {"lat": 40.136865, '
+         '"lng": 116.438745, "count": 1.12}, {"lat": 40.133439, "lng": '
+         '116.440063, "count": 1.12}, {"lat": 40.130417, "lng": 116.437252, '
+         '"count": 1.12}, {"lat": 40.129342, "lng": 116.432156, "count": '
+         '1.12}, {"lat": 40.12699, "lng": 116.428553, "count": 1.12}, {"lat": '
+         '40.125781, "lng": 116.426357, "count": 1.12}, {"lat": 40.122153, '
+         '"lng": 116.422579, "count": 1.12}, {"lat": 40.120205, "lng": '
+         '116.424687, "count": 1.12}, {"lat": 40.120406, "lng": 116.428905, '
+         '"count": 1.12}, {"lat": 40.121011, "lng": 116.433122, "count": '
+         '1.12}, {"lat": 40.119869, "lng": 116.434879, "count": 1.12}, {"lat": '
+         '40.111873, "lng": 116.435582, "count": 1.12}, {"lat": 40.112007, '
+         '"lng": 116.429608, "count": 1.12}, {"lat": 40.116644, "lng": '
+         '116.426708, "count": 1.12}, {"lat": 40.114158, "lng": 116.424863, '
+         '"count": 1.12}, {"lat": 40.112679, "lng": 116.422667, "count": '
+         '1.12}, {"lat": 40.112343, "lng": 116.418625, "count": 1.12}, {"lat": '
+         '40.110731, "lng": 116.418801, "count": 1.12}, {"lat": 40.110193, '
+         '"lng": 116.417834, "count": 1.12}, {"lat": 40.100224, "lng": '
+         '116.418074, "count": 1.12}, {"lat": 40.097611, "lng": 116.419332, '
+         '"count": 1.12}, {"lat": 40.094783, "lng": 116.42217, "count": 1.12}, '
+         '{"lat": 40.091371, "lng": 116.429776, "count": 1.12}, {"lat": '
+         '40.093044, "lng": 116.437177, "count": 1.12}, {"lat": 40.092918, '
+         '"lng": 116.439656, "count": 1.12}, {"lat": 40.087807, "lng": '
+         '116.448704, "count": 1.12}, {"lat": 40.084985, "lng": 116.450823, '
+         '"count": 1.12}, {"lat": 40.081694, "lng": 116.451446, "count": '
+         '1.12}, {"lat": 40.079535, "lng": 116.450814, "count": 1.12}, {"lat": '
+         '40.076231, "lng": 116.44744, "count": 1.12}, {"lat": 40.073543, '
+         '"lng": 116.446195, "count": 1.12}, {"lat": 40.066481, "lng": '
+         '116.447396, "count": 1.12}, {"lat": 40.062129, "lng": 116.450289, '
+         '"count": 1.12}, {"lat": 40.059805, "lng": 116.450714, "count": '
+         '1.12}, {"lat": 40.059002, "lng": 116.450538, "count": 1.12}, {"lat": '
+         '40.058769, "lng": 116.450266, "count": 1.12}, {"lat": 40.062234, '
+         '"lng": 116.4331, "count": 1.12}, {"lat": 40.055621, "lng": '
+         '116.409587, "count": 1.12}, {"lat": 40.048428, "lng": 116.406262, '
+         '"count": 1.12}, {"lat": 40.043285, "lng": 116.408891, "count": '
+         '1.12}, {"lat": 40.0393, "lng": 116.405748, "count": 1.12}, {"lat": '
+         '40.037075, "lng": 116.396656, "count": 1.12}, {"lat": 40.041272, '
+         '"lng": 116.390646, "count": 1.12}, {"lat": 40.04296, "lng": '
+         '116.376776, "count": 1.12}, {"lat": 40.046961, "lng": 116.369594, '
+         '"count": 1.12}, {"lat": 40.053443, "lng": 116.367386, "count": '
+         '1.12}, {"lat": 40.05434, "lng": 116.372995, "count": 1.12}, {"lat": '
+         '40.057855, "lng": 116.372257, "count": 1.12}, {"lat": 40.061584, '
+         '"lng": 116.382845, "count": 1.12}, {"lat": 40.065336, "lng": '
+         '116.381099, "count": 1.12}, {"lat": 40.065622, "lng": 116.373362, '
+         '"count": 1.12}, {"lat": 40.068434, "lng": 116.372536, "count": '
+         '1.12}, {"lat": 40.068967, "lng": 116.363145, "count": 1.12}, {"lat": '
+         '40.065937, "lng": 116.363031, "count": 1.12}, {"lat": 40.063664, '
+         '"lng": 116.346677, "count": 1.12}, {"lat": 40.060431, "lng": '
+         '116.346964, "count": 1.12}, {"lat": 40.059633, "lng": 116.342683, '
+         '"count": 1.12}, {"lat": 40.055454, "lng": 116.343361, "count": '
+         '1.12}, {"lat": 40.055084, "lng": 116.340273, "count": 1.12}, {"lat": '
+         '40.058927, "lng": 116.338829, "count": 1.12}, {"lat": 40.054796, '
+         '"lng": 116.325951, "count": 1.12}, {"lat": 40.06167, "lng": '
+         '116.318297, "count": 1.12}, {"lat": 40.060613, "lng": 116.30945, '
+         '"count": 1.12}, {"lat": 40.063051, "lng": 116.305989, "count": '
+         '1.12}, {"lat": 40.060811, "lng": 116.302945, "count": 1.12}, {"lat": '
+         '40.082102, "lng": 116.290898, "count": 1.12}, {"lat": 40.079755, '
+         '"lng": 116.279887, "count": 1.12}, {"lat": 40.091821, "lng": '
+         '116.273518, "count": 1.12}, {"lat": 40.094695, "lng": 116.265237, '
+         '"count": 1.12}, {"lat": 40.101882, "lng": 116.258531, "count": '
+         '1.12}, {"lat": 40.104838, "lng": 116.264188, "count": 1.12}, {"lat": '
+         '40.110581, "lng": 116.263337, "count": 1.12}, {"lat": 40.110875, '
+         '"lng": 116.257392, "count": 1.12}, {"lat": 40.106899, "lng": '
+         '116.25957, "count": 1.12}, {"lat": 40.104481, "lng": 116.255872, '
+         '"count": 1.12}, {"lat": 40.107045, "lng": 116.242079, "count": '
+         '1.12}, {"lat": 40.118401, "lng": 116.241829, "count": 1.12}, {"lat": '
+         '40.121268, "lng": 116.245628, "count": 1.12}, {"lat": 40.126691, '
+         '"lng": 116.246145, "count": 1.12}, {"lat": 40.032859, "lng": '
+         '116.395093, "count": 1.12}, {"lat": 40.036146, "lng": 116.390593, '
+         '"count": 1.12}, {"lat": 40.041272, "lng": 116.390646, "count": '
+         '1.12}, {"lat": 40.037075, "lng": 116.396656, "count": 1.12}, {"lat": '
+         '40.0393, "lng": 116.405748, "count": 1.12}, {"lat": 40.043285, '
+         '"lng": 116.408891, "count": 1.12}, {"lat": 40.048428, "lng": '
+         '116.406262, "count": 1.12}, {"lat": 40.055621, "lng": 116.409587, '
+         '"count": 1.12}, {"lat": 40.062234, "lng": 116.4331, "count": 1.12}, '
+         '{"lat": 40.058769, "lng": 116.450266, "count": 1.12}, {"lat": '
+         '40.059002, "lng": 116.450538, "count": 1.12}, {"lat": 40.057497, '
+         '"lng": 116.450209, "count": 1.12}, {"lat": 40.052802, "lng": '
+         '116.447188, "count": 1.12}, {"lat": 40.042572, "lng": 116.446951, '
+         '"count": 1.12}, {"lat": 40.039416, "lng": 116.447868, "count": '
+         '1.12}, {"lat": 40.037637, "lng": 116.450096, "count": 1.12}, {"lat": '
+         '40.037376, "lng": 116.452935, "count": 1.12}, {"lat": 40.040414, '
+         '"lng": 116.457487, "count": 1.12}, {"lat": 40.041079, "lng": '
+         '116.460746, "count": 1.12}, {"lat": 40.038703, "lng": 116.46742, '
+         '"count": 1.12}, {"lat": 40.042043, "lng": 116.474133, "count": '
+         '1.12}, {"lat": 40.044455, "lng": 116.476158, "count": 1.12}, {"lat": '
+         '40.047142, "lng": 116.477252, "count": 1.12}, {"lat": 40.052525, '
+         '"lng": 116.477146, "count": 1.12}, {"lat": 40.056483, "lng": '
+         '116.474659, "count": 1.12}, {"lat": 40.058956, "lng": 116.474258, '
+         '"count": 1.12}, {"lat": 40.06552, "lng": 116.476992, "count": 1.12}, '
+         '{"lat": 40.08287, "lng": 116.476436, "count": 1.12}, {"lat": '
+         '40.085427, "lng": 116.477154, "count": 1.12}, {"lat": 40.08104, '
+         '"lng": 116.486666, "count": 1.12}, {"lat": 40.080395, "lng": '
+         '116.499335, "count": 1.12}, {"lat": 40.070658, "lng": 116.512694, '
+         '"count": 1.12}, {"lat": 40.070825, "lng": 116.528228, "count": '
+         '1.12}, {"lat": 40.059409, "lng": 116.543177, "count": 1.12}, {"lat": '
+         '40.062988, "lng": 116.549478, "count": 1.12}, {"lat": 40.054882, '
+         '"lng": 116.552758, "count": 1.12}, {"lat": 40.049744, "lng": '
+         '116.546412, "count": 1.12}, {"lat": 40.048005, "lng": 116.547338, '
+         '"count": 1.12}, {"lat": 40.038545, "lng": 116.565903, "count": '
+         '1.12}, {"lat": 40.032431, "lng": 116.570469, "count": 1.12}, {"lat": '
+         '40.030142, "lng": 116.578165, "count": 1.12}, {"lat": 40.033107, '
+         '"lng": 116.574039, "count": 1.12}, {"lat": 40.033102, "lng": '
+         '116.578807, "count": 1.12}, {"lat": 40.027508, "lng": 116.577809, '
+         '"count": 1.12}, {"lat": 40.017516, "lng": 116.595547, "count": '
+         '1.12}, {"lat": 40.013322, "lng": 116.603194, "count": 1.12}, {"lat": '
+         '40.013074, "lng": 116.605912, "count": 1.12}, {"lat": 40.011025, '
+         '"lng": 116.605781, "count": 1.12}, {"lat": 40.008589, "lng": '
+         '116.607095, "count": 1.12}, {"lat": 40.005735, "lng": 116.611133, '
+         '"count": 1.12}, {"lat": 40.002798, "lng": 116.613163, "count": '
+         '1.12}, {"lat": 39.999651, "lng": 116.613834, "count": 1.12}, {"lat": '
+         '39.993613, "lng": 116.613605, "count": 1.12}, {"lat": 39.986808, '
+         '"lng": 116.617611, "count": 1.12}, {"lat": 39.98323, "lng": '
+         '116.61803, "count": 1.12}, {"lat": 39.980057, "lng": 116.616324, '
+         '"count": 1.12}, {"lat": 39.97705, "lng": 116.611652, "count": 1.12}, '
+         '{"lat": 39.973425, "lng": 116.592147, "count": 1.12}, {"lat": '
+         '39.9726, "lng": 116.590038, "count": 1.12}, {"lat": 39.971126, '
+         '"lng": 116.588607, "count": 1.12}, {"lat": 39.968013, "lng": '
+         '116.587842, "count": 1.12}, {"lat": 39.954809, "lng": 116.589355, '
+         '"count": 1.12}, {"lat": 39.946809, "lng": 116.591748, "count": '
+         '1.12}, {"lat": 39.939229, "lng": 116.59515, "count": 1.12}, {"lat": '
+         '39.937523, "lng": 116.597632, "count": 1.12}, {"lat": 39.937381, '
+         '"lng": 116.612804, "count": 1.12}, {"lat": 39.932812, "lng": '
+         '116.619726, "count": 1.12}, {"lat": 39.933135, "lng": 116.622662, '
+         '"count": 1.12}, {"lat": 39.935276, "lng": 116.627015, "count": '
+         '1.12}, {"lat": 39.934582, "lng": 116.629817, "count": 1.12}, {"lat": '
+         '39.931587, "lng": 116.629459, "count": 1.12}, {"lat": 39.929976, '
+         '"lng": 116.624147, "count": 1.12}, {"lat": 39.921675, "lng": '
+         '116.630571, "count": 1.12}, {"lat": 39.923099, "lng": 116.620964, '
+         '"count": 1.12}, {"lat": 39.918518, "lng": 116.619851, "count": '
+         '1.12}, {"lat": 39.915491, "lng": 116.622737, "count": 1.12}, {"lat": '
+         '39.908369, "lng": 116.620135, "count": 1.12}, {"lat": 39.904276, '
+         '"lng": 116.623361, "count": 1.12}, {"lat": 39.898861, "lng": '
+         '116.621014, "count": 1.12}, {"lat": 39.896813, "lng": 116.614001, '
+         '"count": 1.12}, {"lat": 39.889791, "lng": 116.615607, "count": '
+         '1.12}, {"lat": 39.890473, "lng": 116.627584, "count": 1.12}, {"lat": '
+         '39.8827, "lng": 116.628957, "count": 1.12}, {"lat": 39.881159, '
+         '"lng": 116.624314, "count": 1.12}, {"lat": 39.877253, "lng": '
+         '116.62494, "count": 1.12}, {"lat": 39.868954, "lng": 116.619993, '
+         '"count": 1.12}, {"lat": 39.861919, "lng": 116.626389, "count": '
+         '1.12}, {"lat": 39.850178, "lng": 116.613456, "count": 1.12}, {"lat": '
+         '39.850071, "lng": 116.604189, "count": 1.12}, {"lat": 39.846134, '
+         '"lng": 116.604675, "count": 1.12}, {"lat": 39.846534, "lng": '
+         '116.608357, "count": 1.12}, {"lat": 39.84073, "lng": 116.601904, '
+         '"count": 1.12}, {"lat": 39.83168, "lng": 116.60225, "count": 1.12}, '
+         '{"lat": 39.831659, "lng": 116.598969, "count": 1.12}, {"lat": '
+         '39.825591, "lng": 116.59922, "count": 1.12}, {"lat": 39.824777, '
+         '"lng": 116.585008, "count": 1.12}, {"lat": 39.828182, "lng": '
+         '116.587053, "count": 1.12}, {"lat": 39.827545, "lng": 116.57748, '
+         '"count": 1.12}, {"lat": 39.835043, "lng": 116.572332, "count": '
+         '1.12}, {"lat": 39.836042, "lng": 116.545051, "count": 1.12}, {"lat": '
+         '39.829549, "lng": 116.541052, "count": 1.12}, {"lat": 39.832734, '
+         '"lng": 116.533196, "count": 1.12}, {"lat": 39.828211, "lng": '
+         '116.538153, "count": 1.12}, {"lat": 39.824825, "lng": 116.534934, '
+         '"count": 1.12}, {"lat": 39.826903, "lng": 116.52586, "count": 1.12}, '
+         '{"lat": 39.829752, "lng": 116.525359, "count": 1.12}, {"lat": '
+         '39.829827, "lng": 116.516156, "count": 1.12}, {"lat": 39.827643, '
+         '"lng": 116.510613, "count": 1.12}, {"lat": 39.821878, "lng": '
+         '116.509882, "count": 1.12}, {"lat": 39.818998, "lng": 116.502794, '
+         '"count": 1.12}, {"lat": 39.81829, "lng": 116.505821, "count": 1.12}, '
+         '{"lat": 39.815704, "lng": 116.49821, "count": 1.12}, {"lat": '
+         '39.816169, "lng": 116.495227, "count": 1.12}, {"lat": 39.818799, '
+         '"lng": 116.495357, "count": 1.12}, {"lat": 39.818791, "lng": '
+         '116.490367, "count": 1.12}, {"lat": 39.816882, "lng": 116.485627, '
+         '"count": 1.12}, {"lat": 39.812725, "lng": 116.485246, "count": '
+         '1.12}, {"lat": 39.809768, "lng": 116.474251, "count": 1.12}, {"lat": '
+         '39.814244, "lng": 116.469051, "count": 1.12}, {"lat": 39.814344, '
+         '"lng": 116.463322, "count": 1.12}, {"lat": 39.822637, "lng": '
+         '116.453992, "count": 1.12}, {"lat": 39.820953, "lng": 116.44391, '
+         '"count": 1.12}, {"lat": 39.826334, "lng": 116.444994, "count": '
+         '1.12}, {"lat": 39.829126, "lng": 116.441511, "count": 1.12}, {"lat": '
+         '39.827431, "lng": 116.436676, "count": 1.12}, {"lat": 39.830656, '
+         '"lng": 116.43698, "count": 1.12}, {"lat": 39.831896, "lng": '
+         '116.425216, "count": 1.12}, {"lat": 39.832931, "lng": 116.432057, '
+         '"count": 1.12}, {"lat": 39.841334, "lng": 116.43673, "count": 1.12}, '
+         '{"lat": 39.839649, "lng": 116.440586, "count": 1.12}, {"lat": '
+         '39.843679, "lng": 116.442319, "count": 1.12}, {"lat": 39.844262, '
+         '"lng": 116.446703, "count": 1.12}, {"lat": 39.848337, "lng": '
+         '116.446341, "count": 1.12}, {"lat": 39.848696, "lng": 116.450488, '
+         '"count": 1.12}, {"lat": 39.852015, "lng": 116.451138, "count": '
+         '1.12}, {"lat": 39.848616, "lng": 116.460306, "count": 1.12}, {"lat": '
+         '39.852592, "lng": 116.467715, "count": 1.12}, {"lat": 39.856008, '
+         '"lng": 116.467794, "count": 1.12}, {"lat": 39.86364, "lng": '
+         '116.448186, "count": 1.12}, {"lat": 39.860861, "lng": 116.446358, '
+         '"count": 1.12}, {"lat": 39.866088, "lng": 116.442963, "count": '
+         '1.12}, {"lat": 39.872846, "lng": 116.44364, "count": 1.12}, {"lat": '
+         '39.878901, "lng": 116.445642, "count": 1.12}, {"lat": 39.890037, '
+         '"lng": 116.444067, "count": 1.12}, {"lat": 39.890243, "lng": '
+         '116.450935, "count": 1.12}, {"lat": 39.892866, "lng": 116.452391, '
+         '"count": 1.12}, {"lat": 39.894186, "lng": 116.44716, "count": 1.12}, '
+         '{"lat": 39.903242, "lng": 116.44872, "count": 1.12}, {"lat": '
+         '39.90363, "lng": 116.436322, "count": 1.12}, {"lat": 39.913358, '
+         '"lng": 116.435084, "count": 1.12}, {"lat": 39.928686, "lng": '
+         '116.434309, "count": 1.12}, {"lat": 39.928673, "lng": 116.443553, '
+         '"count": 1.12}, {"lat": 39.944762, "lng": 116.447158, "count": '
+         '1.12}, {"lat": 39.945228, "lng": 116.440799, "count": 1.12}, {"lat": '
+         '39.949701, "lng": 116.442244, "count": 1.12}, {"lat": 39.952135, '
+         '"lng": 116.439951, "count": 1.12}, {"lat": 39.952121, "lng": '
+         '116.435971, "count": 1.12}, {"lat": 39.949068, "lng": 116.434361, '
+         '"count": 1.12}, {"lat": 39.950163, "lng": 116.429481, "count": '
+         '1.12}, {"lat": 39.959247, "lng": 116.430514, "count": 1.12}, {"lat": '
+         '39.959164, "lng": 116.425433, "count": 1.12}, {"lat": 39.962085, '
+         '"lng": 116.425338, "count": 1.12}, {"lat": 39.962177, "lng": '
+         '116.4142, "count": 1.12}, {"lat": 39.974036, "lng": 116.409359, '
+         '"count": 1.12}, {"lat": 39.974002, "lng": 116.40751, "count": 1.12}, '
+         '{"lat": 39.962178, "lng": 116.407873, "count": 1.12}, {"lat": '
+         '39.963147, "lng": 116.389506, "count": 1.12}, {"lat": 39.960923, '
+         '"lng": 116.387663, "count": 1.12}, {"lat": 39.972864, "lng": '
+         '116.394094, "count": 1.12}, {"lat": 39.972718, "lng": 116.380912, '
+         '"count": 1.12}, {"lat": 39.991899, "lng": 116.377125, "count": '
+         '1.12}, {"lat": 40.026708, "lng": 116.350883, "count": 1.12}, {"lat": '
+         '40.032859, "lng": 116.395093, "count": 1.12}, {"lat": 39.896793, '
+         '"lng": 116.325809, "count": 1.12}, {"lat": 39.898703, "lng": '
+         '116.337058, "count": 1.12}, {"lat": 39.938558, "lng": 116.333061, '
+         '"count": 1.12}, {"lat": 39.942773, "lng": 116.328686, "count": '
+         '1.12}, {"lat": 39.942867, "lng": 116.350251, "count": 1.12}, {"lat": '
+         '39.951325, "lng": 116.354213, "count": 1.12}, {"lat": 39.944091, '
+         '"lng": 116.356198, "count": 1.12}, {"lat": 39.948377, "lng": '
+         '116.370572, "count": 1.12}, {"lat": 39.967908, "lng": 116.370382, '
+         '"count": 1.12}, {"lat": 39.969836, "lng": 116.380634, "count": '
+         '1.12}, {"lat": 39.972718, "lng": 116.380912, "count": 1.12}, {"lat": '
+         '39.972864, "lng": 116.394094, "count": 1.12}, {"lat": 39.960923, '
+         '"lng": 116.387663, "count": 1.12}, {"lat": 39.957016, "lng": '
+         '116.386776, "count": 1.12}, {"lat": 39.957349, "lng": 116.393342, '
+         '"count": 1.12}, {"lat": 39.940632, "lng": 116.394272, "count": '
+         '1.12}, {"lat": 39.923568, "lng": 116.399464, "count": 1.12}, {"lat": '
+         '39.922427, "lng": 116.392185, "count": 1.12}, {"lat": 39.911232, '
+         '"lng": 116.391836, "count": 1.12}, {"lat": 39.907992, "lng": '
+         '116.395562, "count": 1.12}, {"lat": 39.898722, "lng": 116.397419, '
+         '"count": 1.12}, {"lat": 39.872202, "lng": 116.3991, "count": 1.12}, '
+         '{"lat": 39.871146, "lng": 116.380586, "count": 1.12}, {"lat": '
+         '39.868964, "lng": 116.350035, "count": 1.12}, {"lat": 39.873594, '
+         '"lng": 116.349479, "count": 1.12}, {"lat": 39.876163, "lng": '
+         '116.341875, "count": 1.12}, {"lat": 39.875405, "lng": 116.321667, '
+         '"count": 1.12}, {"lat": 39.881511, "lng": 116.320757, "count": '
+         '1.12}, {"lat": 39.88968, "lng": 116.324189, "count": 1.12}, {"lat": '
+         '39.889733, "lng": 116.326686, "count": 1.12}, {"lat": 39.896793, '
+         '"lng": 116.325809, "count": 1.12}, {"lat": 39.871146, "lng": '
+         '116.380586, "count": 1.1}, {"lat": 39.872202, "lng": 116.3991, '
+         '"count": 1.1}, {"lat": 39.898722, "lng": 116.397419, "count": 1.1}, '
+         '{"lat": 39.907992, "lng": 116.395562, "count": 1.1}, {"lat": '
+         '39.911232, "lng": 116.391836, "count": 1.1}, {"lat": 39.922427, '
+         '"lng": 116.392185, "count": 1.1}, {"lat": 39.923568, "lng": '
+         '116.399464, "count": 1.1}, {"lat": 39.940632, "lng": 116.394272, '
+         '"count": 1.1}, {"lat": 39.957349, "lng": 116.393342, "count": 1.1}, '
+         '{"lat": 39.957016, "lng": 116.386776, "count": 1.1}, {"lat": '
+         '39.960923, "lng": 116.387663, "count": 1.1}, {"lat": 39.963147, '
+         '"lng": 116.389506, "count": 1.1}, {"lat": 39.962178, "lng": '
+         '116.407873, "count": 1.1}, {"lat": 39.974002, "lng": 116.40751, '
+         '"count": 1.1}, {"lat": 39.974036, "lng": 116.409359, "count": 1.1}, '
+         '{"lat": 39.962177, "lng": 116.4142, "count": 1.1}, {"lat": '
+         '39.962085, "lng": 116.425338, "count": 1.1}, {"lat": 39.959164, '
+         '"lng": 116.425433, "count": 1.1}, {"lat": 39.959247, "lng": '
+         '116.430514, "count": 1.1}, {"lat": 39.950163, "lng": 116.429481, '
+         '"count": 1.1}, {"lat": 39.949068, "lng": 116.434361, "count": 1.1}, '
+         '{"lat": 39.952121, "lng": 116.435971, "count": 1.1}, {"lat": '
+         '39.952135, "lng": 116.439951, "count": 1.1}, {"lat": 39.949701, '
+         '"lng": 116.442244, "count": 1.1}, {"lat": 39.945228, "lng": '
+         '116.440799, "count": 1.1}, {"lat": 39.944762, "lng": 116.447158, '
+         '"count": 1.1}, {"lat": 39.928673, "lng": 116.443553, "count": 1.1}, '
+         '{"lat": 39.928686, "lng": 116.434309, "count": 1.1}, {"lat": '
+         '39.913358, "lng": 116.435084, "count": 1.1}, {"lat": 39.90363, '
+         '"lng": 116.436322, "count": 1.1}, {"lat": 39.903242, "lng": '
+         '116.44872, "count": 1.1}, {"lat": 39.894186, "lng": 116.44716, '
+         '"count": 1.1}, {"lat": 39.892866, "lng": 116.452391, "count": 1.1}, '
+         '{"lat": 39.890243, "lng": 116.450935, "count": 1.1}, {"lat": '
+         '39.890037, "lng": 116.444067, "count": 1.1}, {"lat": 39.878901, '
+         '"lng": 116.445642, "count": 1.1}, {"lat": 39.872846, "lng": '
+         '116.44364, "count": 1.1}, {"lat": 39.87114, "lng": 116.413658, '
+         '"count": 1.1}, {"lat": 39.86574, "lng": 116.416677, "count": 1.1}, '
+         '{"lat": 39.860141, "lng": 116.414143, "count": 1.1}, {"lat": '
+         '39.858874, "lng": 116.410619, "count": 1.1}, {"lat": 39.858679, '
+         '"lng": 116.395503, "count": 1.1}, {"lat": 39.862733, "lng": '
+         '116.394565, "count": 1.1}, {"lat": 39.865198, "lng": 116.387679, '
+         '"count": 1.1}, {"lat": 39.867377, "lng": 116.387894, "count": 1.1}, '
+         '{"lat": 39.866434, "lng": 116.378551, "count": 1.1}, {"lat": '
+         '39.871146, "lng": 116.380586, "count": 1.1}]',
+ 'max_data': 1.18,
+ 'name': '北京',
+ 'times': '2023-04-25 02:27'}
+Traceback (most recent call last):
+  File "c:\windows\temp\spider_traffic-1682360775-jcmmb94_.egg\spider_traffic\pipelines.py", line 94, in process_item
+    self.cursor.execute(sql, (
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1406, "Data too long for column 'data' at row 1")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\twisted\internet\defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\utils\defer.py", line 162, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "c:\windows\temp\spider_traffic-1682360775-jcmmb94_.egg\spider_traffic\pipelines.py", line 107, in process_item
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\item.py", line 79, in __getitem__
+    return self._values[key]
+KeyError: 'sid'
+2023-04-25 02:27:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=321300&linksType=1>
+None
+2023-04-25 02:27:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=370700&linksType=1>
+None
+2023-04-25 02:27:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=360700&linksType=1>
+None
+2023-04-25 02:27:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=430400&linksType=1>
+None
+2023-04-25 02:27:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=321200&linksType=1>
+None
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=150600&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=440900&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=131000&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=320800&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=320700&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=330200&linksType=1>
+None
+2023-04-25 02:27:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=321100&linksType=1>
+None
+2023-04-25 02:27:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=330500&linksType=1>
+None
+2023-04-25 02:27:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=370600&linksType=1>
+None
+2023-04-25 02:27:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=430100&linksType=1>
+None
+2023-04-25 02:27:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=440300&linksType=1>
+None
+2023-04-25 02:27:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=510600&linksType=1>
+None
+2023-04-25 02:27:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=370900&linksType=1>
+None
+2023-04-25 02:27:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=530100&linksType=1>
+None
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=330700&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=320300&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=150600&linksType=1>
+None
+2023-04-25 02:27:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=440900&linksType=1>
+None
+2023-04-25 02:27:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=131000&linksType=1>
+None
+2023-04-25 02:27:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=320800&linksType=1>
+None
+2023-04-25 02:27:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=320700&linksType=1>
+None
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=341100&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=810000&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=330700&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=320300&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=441300&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=320400&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=371400&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=441800&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=620100&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=440400&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=370100&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=340200&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=130400&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=460200&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=370800&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=341100&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=810000&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=441300&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=371400&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=320400&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=630100&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=441200&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=210100&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=331000&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=450100&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=410700&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=130500&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=511300&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=441800&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=620100&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=440400&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=370100&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=340200&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=130400&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=460200&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=370800&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=350100&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=220100&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=440100&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=630100&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=441200&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=210100&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=331000&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=450100&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=410700&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=130500&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=511300&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=350200&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=460100&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=350100&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=220100&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=440100&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=500000&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=330100&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=350200&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=460100&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=130700&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=411300&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=510700&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=500000&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=370200&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=360100&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=410100&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=320600&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=130100&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=330100&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=450300&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=350500&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=130700&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=510100&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=411300&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=440200&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=510700&linksType=1>
+None
+2023-04-25 02:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=371300&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=370200&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=360100&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=410100&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=350600&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=320500&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=210200&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=320600&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=130100&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=140200&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=450300&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=350500&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=510100&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=440200&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=371300&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=320200&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=350600&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=320500&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=210200&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=140200&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=650100&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=441900&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=320200&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=130900&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=330300&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=440500&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=440800&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=150100&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=120000&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=450200&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=320100&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=650100&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=441900&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=610400&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=440600&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=440700&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=230100&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=321000&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=320900&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=610100&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=130900&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=330300&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=440500&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=440800&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=150100&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=120000&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=450200&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=140100&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=520100&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=442000&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=340100&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=420100&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://report.amap.com/ajax/districtRank.do?cityCode=410300&linksType=1> (referer: https://report.amap.com/detail.do?city=110000)
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=320100&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=610400&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=440600&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=440700&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=230100&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=320900&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=321000&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=610100&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=140100&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=520100&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=442000&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=340100&linksType=1>
+None
+2023-04-25 02:27:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=420100&linksType=1>
+None
+2023-04-25 02:27:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://report.amap.com/ajax/districtRank.do?cityCode=410300&linksType=1>
+None
+2023-04-25 02:27:03 [scrapy.core.engine] INFO: Closing spider (finished)
+2023-04-25 02:27:03 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 144727,
+ 'downloader/request_count': 100,
+ 'downloader/request_method_count/GET': 100,
+ 'downloader/response_bytes': 305792,
+ 'downloader/response_count': 100,
+ 'downloader/response_status_count/200': 100,
+ 'elapsed_time_seconds': 3.392427,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 4, 24, 18, 27, 3, 16365),
+ 'httpcompression/response_bytes': 1307054,
+ 'httpcompression/response_count': 100,
+ 'item_scraped_count': 99,
+ 'log_count/DEBUG': 208,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 10,
+ 'response_received_count': 100,
+ 'scheduler/dequeued': 100,
+ 'scheduler/dequeued/memory': 100,
+ 'scheduler/enqueued': 100,
+ 'scheduler/enqueued/memory': 100,
+ 'start_time': datetime.datetime(2023, 4, 24, 18, 26, 59, 623938)}
+2023-04-25 02:27:03 [scrapy.core.engine] INFO: Spider closed (finished)

@@ -1,2 +1,0 @@
-2023-04-24 00:31:02.576 | INFO     | scrapy.utils.log:log_scrapy_info:147 - Scrapy 2.6.3 started (bot: spider_ly)
-2023-04-24 00:31:02.588 | INFO     | scrapy.utils.log:log_scrapy_info:154 - Versions: lxml 4.6.4.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 22.2.0, Python 3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)], pyOpenSSL 22.0.0 (OpenSSL 1.1.1m  14 Dec 2021), cryptography 36.0.1, Platform Windows-10-10.0.19041-SP0
