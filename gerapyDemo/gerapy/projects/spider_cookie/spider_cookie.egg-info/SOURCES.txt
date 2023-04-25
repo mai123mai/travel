@@ -1,0 +1,13 @@
+setup.py
+spider_cookie/__init__.py
+spider_cookie/items.py
+spider_cookie/middlewares.py
+spider_cookie/pipelines.py
+spider_cookie/settings.py
+spider_cookie.egg-info/PKG-INFO
+spider_cookie.egg-info/SOURCES.txt
+spider_cookie.egg-info/dependency_links.txt
+spider_cookie.egg-info/entry_points.txt
+spider_cookie.egg-info/top_level.txt
+spider_cookie/spiders/__init__.py
+spider_cookie/spiders/crawl_cookie.py

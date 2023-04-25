@@ -8,6 +8,8 @@
       <sourceFolder url="file://$MODULE_DIR$/spider/spider_ly" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/spider/spider_traffic" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/spider_ly" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/spider/spider_cookie" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/spider/spider_scenic" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.10" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

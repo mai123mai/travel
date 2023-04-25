@@ -1,0 +1,221 @@
+INFO - 2023-04-25 21:02:23,500 - process: 16388 - scheduler.py - gerapy.server.core.scheduler - 105 - scheduler - successfully synced task with jobs with force
+INFO - 2023-04-25 21:05:24,180 - process: 16388 - build.py - gerapy.server.core.build - 24 - build - successfully build project spider_cookie to egg file E:\tuling\tl\travel\gerapyDemo\gerapy\projects\spider_cookie\spider_cookie-1.0-py3.10.egg
+INFO - 2023-04-25 21:05:49,596 - process: 16388 - build.py - gerapy.server.core.build - 24 - build - successfully build project spider_ly to egg file E:\tuling\tl\travel\gerapyDemo\gerapy\projects\spider_ly\spider_ly-1.0-py3.10.egg
+INFO - 2023-04-25 21:06:06,241 - process: 16388 - build.py - gerapy.server.core.build - 24 - build - successfully build project spider_traffic to egg file E:\tuling\tl\travel\gerapyDemo\gerapy\projects\spider_traffic\spider_traffic-1.0-py3.10.egg
+INFO - 2023-04-25 21:11:03,509 - process: 16388 - build.py - gerapy.server.core.build - 24 - build - successfully build project spider_ly to egg file E:\tuling\tl\travel\gerapyDemo\gerapy\projects\spider_ly\spider_ly-1.0-py3.10.egg
+INFO - 2023-04-25 21:11:42,619 - process: 16388 - build.py - gerapy.server.core.build - 24 - build - successfully build project spider_ly to egg file E:\tuling\tl\travel\gerapyDemo\gerapy\projects\spider_ly\spider_ly-1.0-py3.10.egg
+INFO - 2023-04-25 21:13:30,072 - process: 16388 - build.py - gerapy.server.core.build - 24 - build - successfully build project spider_ly to egg file E:\tuling\tl\travel\gerapyDemo\gerapy\projects\spider_ly\spider_ly-1.0-py3.10.egg
+INFO - 2023-04-25 21:14:07,193 - process: 16388 - build.py - gerapy.server.core.build - 24 - build - successfully build project spider_ly to egg file E:\tuling\tl\travel\gerapyDemo\gerapy\projects\spider_ly\spider_ly-1.0-py3.10.egg
+INFO - 2023-04-25 21:16:20,759 - process: 16388 - build.py - gerapy.server.core.build - 24 - build - successfully build project spider_ly to egg file E:\tuling\tl\travel\gerapyDemo\gerapy\projects\spider_ly\spider_ly-1.0-py3.10.egg
+INFO - 2023-04-25 21:19:26,979 - process: 16388 - build.py - gerapy.server.core.build - 24 - build - successfully build project spider_ly to egg file E:\tuling\tl\travel\gerapyDemo\gerapy\projects\spider_ly\spider_ly-1.0-py3.10.egg
+INFO - 2023-04-25 21:40:27,333 - process: 16388 - build.py - gerapy.server.core.build - 24 - build - successfully build project spider_scenic to egg file E:\tuling\tl\travel\gerapyDemo\gerapy\projects\spider_scenic\spider_scenic-1.0-py3.10.egg
+INFO - 2023-04-25 21:43:09,756 - process: 16388 - build.py - gerapy.server.core.build - 24 - build - successfully build project spider_scenic to egg file E:\tuling\tl\travel\gerapyDemo\gerapy\projects\spider_scenic\spider_scenic-1.0-py3.10.egg
+INFO - 2023-04-25 21:44:30,139 - process: 16388 - build.py - gerapy.server.core.build - 24 - build - successfully build project spider_cookie to egg file E:\tuling\tl\travel\gerapyDemo\gerapy\projects\spider_cookie\spider_cookie-1.0-py3.10.egg
+INFO - 2023-04-25 21:44:39,202 - process: 16388 - build.py - gerapy.server.core.build - 24 - build - successfully build project spider_cookie to egg file E:\tuling\tl\travel\gerapyDemo\gerapy\projects\spider_cookie\spider_cookie-1.0-py3.10.egg
+INFO - 2023-04-25 21:46:16,128 - process: 16388 - build.py - gerapy.server.core.build - 24 - build - successfully build project spider_cookie to egg file E:\tuling\tl\travel\gerapyDemo\gerapy\projects\spider_cookie\spider_cookie-1.0-py3.10.egg
+INFO - 2023-04-25 21:47:30,341 - process: 16388 - build.py - gerapy.server.core.build - 24 - build - successfully build project spider_cookie to egg file E:\tuling\tl\travel\gerapyDemo\gerapy\projects\spider_cookie\spider_cookie-1.0-py3.10.egg
+ERROR - 2023-04-25 21:55:49,071 - process: 16388 - utils.py - gerapy.server.core.utils - 564 - utils - 'spider_traffic'
+Traceback (most recent call last):
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\gerapy\server\core\utils.py", line 562, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\gerapy\server\core\views.py", line 690, in job_list
+    result = scrapyd.list_jobs(project_name)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapyd_api\wrapper.py", line 139, in list_jobs
+    jobs = self.client.get(url, params=params, timeout=self.timeout)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 542, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapyd_api\client.py", line 38, in request
+    return self._handle_response(response)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapyd_api\client.py", line 34, in _handle_response
+    raise ScrapydResponseError(json['message'])
+scrapyd_api.exceptions.ScrapydResponseError: 'spider_traffic'
+ERROR - 2023-04-25 21:55:54,066 - process: 16388 - utils.py - gerapy.server.core.utils - 564 - utils - 'spider_traffic'
+Traceback (most recent call last):
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\gerapy\server\core\utils.py", line 562, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\gerapy\server\core\views.py", line 690, in job_list
+    result = scrapyd.list_jobs(project_name)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapyd_api\wrapper.py", line 139, in list_jobs
+    jobs = self.client.get(url, params=params, timeout=self.timeout)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 542, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapyd_api\client.py", line 38, in request
+    return self._handle_response(response)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapyd_api\client.py", line 34, in _handle_response
+    raise ScrapydResponseError(json['message'])
+scrapyd_api.exceptions.ScrapydResponseError: 'spider_traffic'
+ERROR - 2023-04-25 21:55:59,061 - process: 16388 - utils.py - gerapy.server.core.utils - 564 - utils - 'spider_ly'
+Traceback (most recent call last):
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\gerapy\server\core\utils.py", line 562, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\gerapy\server\core\views.py", line 690, in job_list
+    result = scrapyd.list_jobs(project_name)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapyd_api\wrapper.py", line 139, in list_jobs
+    jobs = self.client.get(url, params=params, timeout=self.timeout)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 542, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapyd_api\client.py", line 38, in request
+    return self._handle_response(response)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapyd_api\client.py", line 34, in _handle_response
+    raise ScrapydResponseError(json['message'])
+scrapyd_api.exceptions.ScrapydResponseError: 'spider_ly'
+ERROR - 2023-04-25 21:55:59,064 - process: 16388 - utils.py - gerapy.server.core.utils - 564 - utils - 'spider_traffic'
+Traceback (most recent call last):
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\gerapy\server\core\utils.py", line 562, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\gerapy\server\core\views.py", line 690, in job_list
+    result = scrapyd.list_jobs(project_name)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapyd_api\wrapper.py", line 139, in list_jobs
+    jobs = self.client.get(url, params=params, timeout=self.timeout)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 542, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapyd_api\client.py", line 38, in request
+    return self._handle_response(response)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapyd_api\client.py", line 34, in _handle_response
+    raise ScrapydResponseError(json['message'])
+scrapyd_api.exceptions.ScrapydResponseError: 'spider_traffic'
+ERROR - 2023-04-25 21:56:04,063 - process: 16388 - utils.py - gerapy.server.core.utils - 564 - utils - 'spider_scenic'
+Traceback (most recent call last):
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\gerapy\server\core\utils.py", line 562, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\gerapy\server\core\views.py", line 690, in job_list
+    result = scrapyd.list_jobs(project_name)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapyd_api\wrapper.py", line 139, in list_jobs
+    jobs = self.client.get(url, params=params, timeout=self.timeout)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 542, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapyd_api\client.py", line 38, in request
+    return self._handle_response(response)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapyd_api\client.py", line 34, in _handle_response
+    raise ScrapydResponseError(json['message'])
+scrapyd_api.exceptions.ScrapydResponseError: 'spider_scenic'
+ERROR - 2023-04-25 21:56:04,065 - process: 16388 - utils.py - gerapy.server.core.utils - 564 - utils - 'spider_traffic'
+Traceback (most recent call last):
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\gerapy\server\core\utils.py", line 562, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\gerapy\server\core\views.py", line 690, in job_list
+    result = scrapyd.list_jobs(project_name)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapyd_api\wrapper.py", line 139, in list_jobs
+    jobs = self.client.get(url, params=params, timeout=self.timeout)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 542, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapyd_api\client.py", line 38, in request
+    return self._handle_response(response)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapyd_api\client.py", line 34, in _handle_response
+    raise ScrapydResponseError(json['message'])
+scrapyd_api.exceptions.ScrapydResponseError: 'spider_traffic'
+ERROR - 2023-04-25 21:56:04,065 - process: 16388 - utils.py - gerapy.server.core.utils - 564 - utils - 'spider_ly'
+Traceback (most recent call last):
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\gerapy\server\core\utils.py", line 562, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\gerapy\server\core\views.py", line 690, in job_list
+    result = scrapyd.list_jobs(project_name)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapyd_api\wrapper.py", line 139, in list_jobs
+    jobs = self.client.get(url, params=params, timeout=self.timeout)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 542, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapyd_api\client.py", line 38, in request
+    return self._handle_response(response)
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapyd_api\client.py", line 34, in _handle_response
+    raise ScrapydResponseError(json['message'])
+scrapyd_api.exceptions.ScrapydResponseError: 'spider_ly'
+INFO - 2023-04-25 21:58:20,890 - process: 16388 - build.py - gerapy.server.core.build - 24 - build - successfully build project spider_cookie to egg file E:\tuling\tl\travel\gerapyDemo\gerapy\projects\spider_cookie\spider_cookie-1.0-py3.10.egg
+INFO - 2023-04-25 22:01:22,626 - process: 16388 - build.py - gerapy.server.core.build - 24 - build - successfully build project spider_scenic to egg file E:\tuling\tl\travel\gerapyDemo\gerapy\projects\spider_scenic\spider_scenic-1.0-py3.10.egg

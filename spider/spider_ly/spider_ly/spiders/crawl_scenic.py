@@ -8,8 +8,10 @@ from scrapy import Request
 import sys
 from scrapy import cmdline
 from cookie_pool import get_cookie
+from spider_scenic.items import SpiderScenicItem
+
 sys.path.append("..")
-from spider_ly.items import SpiderLyItem
+
 
 
 class CrawlScenicSpider(scrapy.Spider):
@@ -137,7 +139,7 @@ class CrawlScenicSpider(scrapy.Spider):
                 return ''
         scenery_list = response.xpath('//div[@class="scenery_list"]')
         for i, scenery in enumerate(scenery_list):
-            item = SpiderLyItem()
+            item = SpiderScenicItem()
             sid = scenery.xpath('./div/div[@class="s_info"]/@sid').extract_first()
             if sid.isdigit():
                 sid = int(sid)

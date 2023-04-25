@@ -2,108 +2,123 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f5eaa0a-68a4-4378-9f03-38a73e78e02e" name="默认变更列表" comment="增加LDA模型">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/travel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/travel.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbs/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/dbs/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/logs/20230423233824.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/logs/20230423233847.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/logs/20230423233952.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/logs/20230424001450.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/add_comment_task_url.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/build/lib/spider_ly/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/build/lib/spider_ly/items.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/build/lib/spider_ly/middlewares.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/build/lib/spider_ly/pipelines.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/build/lib/spider_ly/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/build/lib/spider_ly/spiders/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/build/lib/spider_ly/spiders/crawl_comment.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/build/lib/spider_ly/spiders/crawl_scenic.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/city_code.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/cookie_pool.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/dbs/default.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/dbs/spider_ly.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/eggs/spider_ly/1682266339.egg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/eggs/spider_ly/1682267210.egg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/eggs/spider_ly/1682267224.egg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/log/crawl_scenic_2023-04-02_17-05-44_465032.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/project-1.0-py3.10.egg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/project.egg-info/PKG-INFO" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/project.egg-info/SOURCES.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/project.egg-info/dependency_links.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/project.egg-info/entry_points.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/project.egg-info/top_level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/scrapy.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/setup.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/spider_ly/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/spider_ly/ip代理.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/spider_ly/ip代理_1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/spider_ly/items.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/spider_ly/log/crawl_scenic_2023-04-02_17-05-52_761463.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/spider_ly/log/crawl_scenic_2023-04-02_17-13-59_283562.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/spider_ly/log/crawl_scenic_2023-04-02_18-11-57_958957.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/spider_ly/log/erro.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/spider_ly/middlewares.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/spider_ly/pipelines.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/spider_ly/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/spider_ly/spiders/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/spider_ly/spiders/crawl_comment.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/spider_ly/spiders/crawl_scenic.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/spider_ly/xxx.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerapy/projects/spider_ly/spider_traffic/spider_city_traffic.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/crawl_scenic_2023-04-24_00-01-42_647616.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/crawl_scenic_2023-04-24_00-12-26_495155.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/crawl_scenic_2023-04-24_00-16-18_471011.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/crawl_scenic_2023-04-24_00-16-21_856267.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/crawl_scenic_2023-04-24_00-26-53_188021.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/crawl_scenic_2023-04-24_00-27-07_184109.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/crawl_scenic_2023-04-24_00-31-02_188040.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/crawl_scenic_2023-04-24_00-31-18_705802.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/erro.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/20230423233917.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/add_comment_task_url.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/build/lib/spider_ly/123.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/build/lib/spider_ly/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/build/lib/spider_ly/items.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/build/lib/spider_ly/middlewares.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/build/lib/spider_ly/pipelines.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/build/lib/spider_ly/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/build/lib/spider_ly/spiders/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/build/lib/spider_ly/spiders/crawl_comment.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/build/lib/spider_ly/spiders/crawl_scenic.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/city_code.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/cookie_pool.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/dbs/default.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/dbs/spider_ly.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/eggs/spider_ly/1682266339.egg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/eggs/spider_ly/1682267210.egg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/eggs/spider_ly/1682267224.egg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/eggs/spider_ly/1682267459.egg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/log/crawl_scenic_2023-04-02_17-05-44_465032.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/project.egg-info/PKG-INFO" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/project.egg-info/SOURCES.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/project.egg-info/dependency_links.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/project.egg-info/entry_points.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/project.egg-info/top_level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/scrapy.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/setup.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/spider_ly/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/spider_ly/ip代理.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/spider_ly/ip代理_1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/spider_ly/items.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/spider_ly/log/crawl_scenic_2023-04-02_17-05-52_761463.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/spider_ly/log/crawl_scenic_2023-04-02_17-13-59_283562.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/spider_ly/log/crawl_scenic_2023-04-02_18-11-57_958957.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/spider_ly/log/erro.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/spider_ly/middlewares.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/spider_ly/pipelines.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/spider_ly/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/spider_ly/spiders/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/spider_ly/spiders/crawl_comment.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/spider_ly/spiders/crawl_scenic.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/spider_ly/xxx.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_ly/spider_traffic/spider_city_traffic.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookie_pool.py" beforeDir="false" afterPath="$PROJECT_DIR$/cookie_pool.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/dbs/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/dbs/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/gerapyDemo/gerapy/dbs/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/logs/20230424230404.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/logs/20230424230416.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/logs/20230424230456.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/logs/20230424230512.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/logs/20230424230526.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/logs/20230424233202.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/logs/20230424233749.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/logs/20230424234216.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/logs/20230425015714.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/logs/20230425022549.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/logs/20230425022852.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/logs/20230425023407.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/logs/20230425024726.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/logs/20230425024858.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/logs/20230425025411.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/logs/20230425025614.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/logs/20230425030658.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_ly/build/lib/spider_ly/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_ly/build/lib/spider_ly/items.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_ly/build/lib/spider_ly/middlewares.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_ly/build/lib/spider_ly/pipelines.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_ly/build/lib/spider_ly/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_ly/build/lib/spider_ly/spiders/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_ly/build/lib/spider_ly/spiders/crawl_comment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_ly/build/lib/spider_ly/spiders/crawl_scenic.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_ly/project-1.0-py3.10.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_ly/project.egg-info/PKG-INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_ly/project.egg-info/SOURCES.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_ly/project.egg-info/dependency_links.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_ly/project.egg-info/entry_points.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_ly/project.egg-info/top_level.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_ly/scrapy.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_ly/setup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_ly/spider_ly/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_ly/spider_ly/items.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_ly/spider_ly/middlewares.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_ly/spider_ly/pipelines.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_ly/spider_ly/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_ly/spider_ly/spiders/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_ly/spider_ly/spiders/crawl_comment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_ly/spider_ly/spiders/crawl_scenic.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_ly/spider_ly/xxx.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_traffic/build/lib/spider_traffic/spiders/crawl_districtRank.py" beforeDir="false" afterPath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_traffic/build/lib/spider_traffic/spiders/crawl_districtRank.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_traffic/project-1.0-py3.10.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_traffic/project.egg-info/PKG-INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_traffic/project.egg-info/SOURCES.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_traffic/project.egg-info/dependency_links.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_traffic/project.egg-info/entry_points.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_traffic/project.egg-info/top_level.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_traffic/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_traffic/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_traffic/spider_traffic/spiders/crawl_districtRank.py" beforeDir="false" afterPath="$PROJECT_DIR$/gerapyDemo/gerapy/projects/spider_traffic/spider_traffic/spiders/crawl_districtRank.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/logs/20230425015457.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerapyDemo/logs/20230425024607.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/dbs/spider_ly.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/dbs/spider_traffic.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_ly/1682358493.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_ly/1682358582.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_ly/1682358682.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_ly/1682358957.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_ly/1682359108.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_ly/1682360866.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_ly/1682360872.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_ly/1682360878.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_ly/1682360897.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_ly/1682360965.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_ly/1682361107.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_ly/1682361252.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_ly/1682361305.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_ly/1682361379.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_ly/1682361596.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_ly/1682361703.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_ly/1682361753.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_ly/1682361904.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_ly/1682362185.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_ly/1682362498.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_ly/1682362554.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_ly/1682362625.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_ly/1682362633.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_ly/1682362658.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_ly/1682362757.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_ly/1682362995.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_ly/1682363250.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_ly/1682363255.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_ly/1682363362.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_traffic/1682358420.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_traffic/1682359354.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_traffic/1682360691.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_traffic/1682360775.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_traffic/1682362061.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/eggs/spider_traffic/1682363369.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/logs/spider_traffic/crawl_mapData/471bfaa1e2ca11edb31bdcf50571b4f1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/logs/spider_traffic/crawl_mapData/8c08f148e2c911ed85b6dcf50571b4f1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd_data/logs/spider_traffic/crawl_mapData/9571e06de2cd11ed8c71dcf50571b4f1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/spider_ly/scrapy.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/spider/spider_ly/scrapy.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/spider_ly/setup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/spider_ly/spider_ly/spiders/crawl_scenic.py" beforeDir="false" afterPath="$PROJECT_DIR$/spider/spider_ly/spider_ly/spiders/crawl_scenic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/spider_traffic/build/lib/spider_traffic/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/spider_traffic/build/lib/spider_traffic/items.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/spider_traffic/build/lib/spider_traffic/middlewares.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/spider_traffic/build/lib/spider_traffic/pipelines.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/spider_traffic/build/lib/spider_traffic/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/spider_traffic/build/lib/spider_traffic/spiders/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/spider_traffic/build/lib/spider_traffic/spiders/crawl_districtRank.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/spider_traffic/build/lib/spider_traffic/spiders/crawl_mapData.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/spider_traffic/build/lib/spider_traffic/spiders/crawl_roadRank.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/spider_traffic/build/lib/spider_traffic/spiders/crawl_traffic.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/spider_traffic/project.egg-info/PKG-INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/spider_traffic/project.egg-info/SOURCES.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/spider_traffic/project.egg-info/dependency_links.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/spider_traffic/project.egg-info/entry_points.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/spider_traffic/project.egg-info/top_level.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/spider_traffic/setup.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +165,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/spider/spider_scenic/spider_scenic" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -167,11 +182,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\tuling\tl\travel\spider\spider_scenic\spider_scenic" />
       <recent name="E:\tuling\tl\travel\gerapy\projects" />
       <recent name="E:\tuling\tl\travel\ProxyPool" />
       <recent name="E:\tuling\tl\travel" />
       <recent name="E:\tuling\tl\travel\spider_ly" />
-      <recent name="E:\tuling\tl\travel\sql" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\tuling\tl\travel" />
@@ -181,7 +196,7 @@
       <recent name="E:\tuling\tl\travel\spider\spider_ly\spider_ly\spiders" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.crawl_mapData">
+  <component name="RunManager" selected="Python.crawl_scenic">
     <configuration name="app.py" type="PythonConfigurationType" factoryName="Python">
       <module name="travel" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -204,7 +219,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="crawl_districtRank" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="cookie_pool" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="travel" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -212,12 +227,34 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/spider/spider_traffic/spider_traffic/spiders" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spider/spider_traffic/spider_traffic/spiders/crawl_districtRank.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cookie_pool.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="crawl_cookie" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="travel" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/spider/spider_cookie/spider_cookie/spiders" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spider/spider_cookie/spider_cookie/spiders/crawl_cookie.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -248,7 +285,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="crawl_roadRank" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="crawl_scenic" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="travel" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -256,34 +293,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/spider/spider_traffic/spider_traffic/spiders" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/spider/spider_scenic/spider_scenic/spiders" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spider/spider_traffic/spider_traffic/spiders/crawl_roadRank.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="crawl_traffic" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="travel" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/spider/spider_traffic/spider_traffic/spiders" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spider/spider_traffic/spider_traffic/spiders/crawl_traffic.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spider/spider_scenic/spider_scenic/spiders/crawl_scenic.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -387,19 +402,19 @@
       <item itemvalue="Flask 服务器.Flask (app.py)" />
       <item itemvalue="Python.app.py" />
       <item itemvalue="Python.travel" />
-      <item itemvalue="Python.crawl_traffic" />
-      <item itemvalue="Python.crawl_districtRank" />
-      <item itemvalue="Python.crawl_roadRank" />
       <item itemvalue="Python.crawl_mapData" />
       <item itemvalue="Python.spider_city_traffic" />
+      <item itemvalue="Python.crawl_cookie" />
+      <item itemvalue="Python.crawl_scenic" />
+      <item itemvalue="Python.cookie_pool" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.crawl_scenic" />
+        <item itemvalue="Python.cookie_pool" />
+        <item itemvalue="Python.crawl_cookie" />
         <item itemvalue="Python.crawl_mapData" />
         <item itemvalue="Python.spider_city_traffic" />
-        <item itemvalue="Python.crawl_roadRank" />
-        <item itemvalue="Python.crawl_districtRank" />
-        <item itemvalue="Python.crawl_traffic" />
       </list>
     </recent_temporary>
   </component>
@@ -432,7 +447,8 @@
       <workItem from="1682253659590" duration="586000" />
       <workItem from="1682254456990" duration="24000" />
       <workItem from="1682263809031" duration="5155000" />
-      <workItem from="1682337618475" duration="20843000" />
+      <workItem from="1682337618475" duration="21033000" />
+      <workItem from="1682426059075" duration="8177000" />
     </task>
     <task id="LOCAL-00001" summary="增加LDA模型">
       <created>1681226287409</created>
@@ -455,11 +471,12 @@
     <option name="LAST_COMMIT_MESSAGE" value="增加LDA模型" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/travel$crawl_cookie.coverage" NAME="crawl_cookie 覆盖结果" MODIFIED="1682426497473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider/spider_cookie/spider_cookie/spiders" />
     <SUITE FILE_PATH="coverage/travel$lda_module__1_.coverage" NAME="lda_module (1) 覆盖结果" MODIFIED="1681312169372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/emotion" />
     <SUITE FILE_PATH="coverage/travel$spider_city_traffic.coverage" NAME="spider_city_traffic 覆盖结果" MODIFIED="1682360225973" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/travel$redis_cache.coverage" NAME="redis_cache 覆盖结果" MODIFIED="1682267728285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/travel$Flask__app_py___1_.coverage" NAME="Flask (app.py) (1) 覆盖结果" MODIFIED="1681312400418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/travel$cookie_pool.coverage" NAME="cookie_pool 覆盖结果" MODIFIED="1682352063020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider/spider_ly" />
+    <SUITE FILE_PATH="coverage/travel$cookie_pool.coverage" NAME="cookie_pool 覆盖结果" MODIFIED="1682429832414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/travel$crawl_roadRank.coverage" NAME="crawl_roadRank 覆盖结果" MODIFIED="1682357736245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider/spider_traffic/spider_traffic/spiders" />
     <SUITE FILE_PATH="coverage/travel$spider_city_traffic__1_.coverage" NAME="spider_city_traffic (1) 覆盖结果" MODIFIED="1682178932581" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider_ly" />
     <SUITE FILE_PATH="coverage/travel$getCommentEmotionData.coverage" NAME="getCommentEmotionData 覆盖结果" MODIFIED="1681146330096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/util" />
@@ -473,7 +490,7 @@
     <SUITE FILE_PATH="coverage/travel$crawl_districtRank.coverage" NAME="crawl_districtRank 覆盖结果" MODIFIED="1682357346853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider/spider_traffic/spider_traffic/spiders" />
     <SUITE FILE_PATH="coverage/travel$Flask__app_py_.coverage" NAME="Flask (app.py) 覆盖结果" MODIFIED="1681135659237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/travel$222.coverage" NAME="222 覆盖结果" MODIFIED="1681302678786" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/travel$crawl_scenic.coverage" NAME="crawl_scenic 覆盖结果" MODIFIED="1682352158451" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider/spider_ly/spider_ly/spiders" />
+    <SUITE FILE_PATH="coverage/travel$crawl_scenic.coverage" NAME="crawl_scenic 覆盖结果" MODIFIED="1682431410959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider/spider_scenic/spider_scenic/spiders" />
     <SUITE FILE_PATH="coverage/travel$crawl_map_data.coverage" NAME="crawl_map_data 覆盖结果" MODIFIED="1682173785644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider_ly" />
     <SUITE FILE_PATH="coverage/travel$app_py.coverage" NAME="app.py 覆盖结果" MODIFIED="1682176322635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

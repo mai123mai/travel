@@ -1,0 +1,108 @@
+[INFO  - 2023-04-25T12:41:48.163Z] GhostDriver - Main - running on port 50039
+[INFO  - 2023-04-25T12:41:50.606Z] Session [8cc196a0-e366-11ed-8a67-ffb4c0615b5f] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2023-04-25T12:41:50.606Z] Session [8cc196a0-e366-11ed-8a67-ffb4c0615b5f] - page.customHeaders:  - {}
+[INFO  - 2023-04-25T12:41:50.606Z] Session [8cc196a0-e366-11ed-8a67-ffb4c0615b5f] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-10-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2023-04-25T12:41:50.607Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 8cc196a0-e366-11ed-8a67-ffb4c0615b5f
+[ERROR - 2023-04-25T12:41:50.614Z] RouterReqHand - _handle.error - {"name":"Missing Command Parameter","message":"{\"headers\":{\"Accept\":\"application/json\",\"Accept-Encoding\":\"identity\",\"Content-Length\":\"71\",\"Content-Type\":\"application/json;charset=UTF-8\",\"Host\":\"127.0.0.1:50039\",\"User-Agent\":\"selenium/3.141.0 (python windows)\"},\"httpVersion\":\"1.1\",\"method\":\"POST\",\"post\":\"{\\\"pageLoad\\\": 2000, \\\"sessionId\\\": \\\"8cc196a0-e366-11ed-8a67-ffb4c0615b5f\\\"}\",\"url\":\"/timeouts\",\"urlParsed\":{\"anchor\":\"\",\"query\":\"\",\"file\":\"timeouts\",\"directory\":\"/\",\"path\":\"/timeouts\",\"relative\":\"/timeouts\",\"port\":\"\",\"host\":\"\",\"password\":\"\",\"user\":\"\",\"userInfo\":\"\",\"authority\":\"\",\"protocol\":\"\",\"source\":\"/timeouts\",\"queryKey\":{},\"chunks\":[\"timeouts\"]},\"urlOriginal\":\"/session/8cc196a0-e366-11ed-8a67-ffb4c0615b5f/timeouts\"}","line":546,"sourceURL":"phantomjs://code/session_request_handler.js","stack":"_postTimeout@phantomjs://code/session_request_handler.js:546:73\n_handle@phantomjs://code/session_request_handler.js:148:25\n_reroute@phantomjs://code/request_handler.js:61:20\n_handle@phantomjs://code/router_request_handler.js:78:46"}
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2023-04-25T12:41:52.600Z] Session [8cc196a0-e366-11ed-8a67-ffb4c0615b5f] - page.onError - msg: TypeError: null is not an object (evaluating 'n.ReturnValue.Tabs')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2023-04-25T12:41:52.600Z] Session [8cc196a0-e366-11ed-8a67-ffb4c0615b5f] - page.onError - stack:
+  (anonymous function) (https://file.40017.cn/tcweb/pc/public/js/publicsearch/publicsearch.0.3.7.js?v=2021072803:2)
+  (anonymous function) (https://js.40017.cn/cn/public/jquery/jquery-1.8.3.min.js:2)
+  l (https://js.40017.cn/cn/public/jquery/jquery-1.8.3.min.js:2)
+  fireWith (https://js.40017.cn/cn/public/jquery/jquery-1.8.3.min.js:2)
+  T (https://js.40017.cn/cn/public/jquery/jquery-1.8.3.min.js:2)
+  r (https://js.40017.cn/cn/public/jquery/jquery-1.8.3.min.js:2)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2023-04-25T12:41:53.342Z] Session [8cc196a0-e366-11ed-8a67-ffb4c0615b5f] - page.onError - msg: TypeError: null is not an object (evaluating 'n.ReturnValue.Tabs')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2023-04-25T12:41:53.343Z] Session [8cc196a0-e366-11ed-8a67-ffb4c0615b5f] - page.onError - stack:
+  (anonymous function) (https://file.40017.cn/tcweb/pc/public/js/publicsearch/publicsearch.0.3.7.js?v=2021072803:2)
+  (anonymous function) (https://js.40017.cn/cn/public/jquery/jquery-1.8.3.min.js:2)
+  l (https://js.40017.cn/cn/public/jquery/jquery-1.8.3.min.js:2)
+  fireWith (https://js.40017.cn/cn/public/jquery/jquery-1.8.3.min.js:2)
+  T (https://js.40017.cn/cn/public/jquery/jquery-1.8.3.min.js:2)
+  r (https://js.40017.cn/cn/public/jquery/jquery-1.8.3.min.js:2)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2023-04-25T12:41:54.008Z] Session [8cc196a0-e366-11ed-8a67-ffb4c0615b5f] - page.onError - msg: TypeError: null is not an object (evaluating 'n.ReturnValue.Tabs')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2023-04-25T12:41:54.008Z] Session [8cc196a0-e366-11ed-8a67-ffb4c0615b5f] - page.onError - stack:
+  (anonymous function) (https://file.40017.cn/tcweb/pc/public/js/publicsearch/publicsearch.0.3.7.js?v=2021072803:2)
+  (anonymous function) (https://js.40017.cn/cn/public/jquery/jquery-1.8.3.min.js:2)
+  l (https://js.40017.cn/cn/public/jquery/jquery-1.8.3.min.js:2)
+  fireWith (https://js.40017.cn/cn/public/jquery/jquery-1.8.3.min.js:2)
+  T (https://js.40017.cn/cn/public/jquery/jquery-1.8.3.min.js:2)
+  r (https://js.40017.cn/cn/public/jquery/jquery-1.8.3.min.js:2)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2023-04-25T12:41:54.601Z] Session [8cc196a0-e366-11ed-8a67-ffb4c0615b5f] - page.onError - msg: TypeError: null is not an object (evaluating 'n.ReturnValue.Tabs')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2023-04-25T12:41:54.601Z] Session [8cc196a0-e366-11ed-8a67-ffb4c0615b5f] - page.onError - stack:
+  (anonymous function) (https://file.40017.cn/tcweb/pc/public/js/publicsearch/publicsearch.0.3.7.js?v=2021072803:2)
+  (anonymous function) (https://js.40017.cn/cn/public/jquery/jquery-1.8.3.min.js:2)
+  l (https://js.40017.cn/cn/public/jquery/jquery-1.8.3.min.js:2)
+  fireWith (https://js.40017.cn/cn/public/jquery/jquery-1.8.3.min.js:2)
+  T (https://js.40017.cn/cn/public/jquery/jquery-1.8.3.min.js:2)
+  r (https://js.40017.cn/cn/public/jquery/jquery-1.8.3.min.js:2)
+
+  phantomjs://platform/console++.js:263 in error
+[INFO  - 2023-04-25T12:46:48.460Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T12:51:48.463Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T12:56:48.464Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T13:01:48.464Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T13:06:48.467Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T13:11:48.473Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T13:16:48.473Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T13:21:48.473Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T13:26:48.473Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T13:31:48.473Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T13:36:48.474Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T13:41:48.500Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T13:46:48.504Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T13:51:48.504Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T13:56:48.511Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T14:01:48.533Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T14:06:48.544Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T14:11:48.546Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T14:16:48.546Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T14:21:48.546Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T14:26:48.546Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T14:31:48.547Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T14:36:48.551Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T14:41:48.552Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T14:46:48.568Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T14:51:48.569Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T14:56:48.578Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T15:01:48.578Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T15:06:48.579Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T15:11:48.578Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T15:16:48.578Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T15:21:48.579Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T15:26:48.579Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T15:31:48.579Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T15:36:48.581Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T15:41:48.581Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T15:46:48.581Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T15:51:48.582Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T15:56:48.582Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T16:01:48.583Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T16:06:48.584Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T16:11:48.596Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T16:16:48.597Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T16:21:48.598Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T16:26:48.598Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T16:31:47.101Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T16:36:47.102Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T16:41:47.102Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T16:46:47.104Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T16:51:47.110Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T16:56:47.117Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2023-04-25T17:01:47.129Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW

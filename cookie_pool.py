@@ -27,8 +27,8 @@ def run(n=100):
             with ThreadPoolExecutor(3) as f:
                 for i in range(n - l):
                     f.submit(create_cookie_pool)
-        else:
-            get_cookie()
+        # else:
+        #     get_cookie()
 
 
 def create_cookie_pool():
@@ -52,4 +52,4 @@ def create_cookie_pool():
 
 
 if __name__ == '__main__':
-    print(get_cookie())
+    print(run(n= 5))

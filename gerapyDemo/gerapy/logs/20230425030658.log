@@ -1,2 +1,0 @@
-INFO - 2023-04-25 03:07:02,264 - process: 1332 - scheduler.py - gerapy.server.core.scheduler - 105 - scheduler - successfully synced task with jobs with force
-INFO - 2023-04-25 03:09:21,781 - process: 1332 - build.py - gerapy.server.core.build - 24 - build - successfully build project spider_ly to egg file E:\tuling\tl\travel\gerapyDemo\gerapy\projects\spider_ly\project-1.0-py3.10.egg
