@@ -118,7 +118,8 @@ class ProxyMiddleWare(object):
             'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:15.0) Gecko/20100101 Firefox/15.0.1',
             "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
         ]
-        path = f'{current_path}/ip代理_1.json'
+        # path = f'{current_path}/ip代理_1.json'
+        path = r'E:\tuling\tl\travel\spider\spider_ly\spider_ly\ip代理_1.json'
         f = open(path, 'r')
         datas = json.load(f)
         self.ip_pool = datas.get('obj')

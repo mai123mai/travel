@@ -1,4 +1,6 @@
 from flask import request, render_template, session, redirect, Blueprint, jsonify
+
+from redis_cache import cache
 from util.getHomeData import *
 from util.getChinaData import *
 from util.getDataShow import *
@@ -13,19 +15,21 @@ dataShow = Blueprint('dataShow', __name__)
 
 
 @dataShow.route('/home', methods=['GET', 'POST'])
+@cache.cached(timeout=300)
 def home():  # put application's code here
     email = session.get('email')
     name = session.get('name')
     dataList, years, cnt_pay, towns_pay, village_pay, speed_up = get_data_chart1()
     years_chart2, data_obj = get_data_chart2()
     entry_visitors, entry_visitors_foreign, entry_visitors_hk_macao, entry_visitors_taiwan = get_data_chart3()
+    years_chart3 = years_chart2[::-1]
     table_titles, table_years, table_data = get_data_table()
     return render_template('index.html', name=name, email=email,
                            dataList=dataList, years=years, cnt_pay=cnt_pay, towns_pay=towns_pay,
                            village_pay=village_pay,
                            speed_up=speed_up,
                            years_chart2=years_chart2, data_obj=data_obj,
-                           years_chart3=years_chart2[2:], entry_visitors=entry_visitors,
+                           years_chart3=years_chart3[:-3], entry_visitors=entry_visitors,
                            entry_visitors_foreign=entry_visitors_foreign,
                            entry_visitors_hk_macao=entry_visitors_hk_macao, entry_visitors_taiwan=entry_visitors_taiwan,
                            table_titles=table_titles, table_years=table_years, table_data=table_data,

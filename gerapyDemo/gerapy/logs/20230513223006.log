@@ -1,0 +1,4 @@
+INFO - 2023-05-13 22:30:09,948 - process: 21212 - scheduler.py - gerapy.server.core.scheduler - 105 - scheduler - successfully synced task with jobs with force
+INFO - 2023-05-13 23:05:00,018 - process: 21212 - scheduler.py - gerapy.server.core.scheduler - 34 - scheduler - execute job of client 本地1, project spider_traffic, spider crawl_mapData
+INFO - 2023-05-14 00:05:00,033 - process: 21212 - scheduler.py - gerapy.server.core.scheduler - 34 - scheduler - execute job of client 本地1, project spider_traffic, spider crawl_mapData
+INFO - 2023-05-14 01:05:00,037 - process: 21212 - scheduler.py - gerapy.server.core.scheduler - 34 - scheduler - execute job of client 本地1, project spider_traffic, spider crawl_mapData

@@ -31,3 +31,14 @@ class SpiderScenicItem(scrapy.Item):
     serviceScoreAvgList = scrapy.Field()
     # dpTagList = scrapy.Field()
     contents = scrapy.Field()
+
+
+class SpiderCommentItem(scrapy.Item):
+    sid = scrapy.Field()
+    dpId = scrapy.Field()
+    page = scrapy.Field()
+    comment_time = scrapy.Field()
+    comment_user = scrapy.Field()
+    comment_stat = scrapy.Field()
+    comment_cotent = scrapy.Field()
+    reply_content = scrapy.Field()

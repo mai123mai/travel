@@ -28,19 +28,33 @@ DATA_CONFIG = {
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
 
+# 调度
+SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+# 请求指纹去重
+DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+# redis 下发任务
+REDIS_URL = 'redis://127.0.0.1:6379/1'
+# 任务获取顺序
+SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.PriorityQueue'
+# 如果不想自动清空爬取队列和去重指纹集合，可以增加如下配置
+SCHEDULER_PERSIST = True
+# DOWNLOAD_TIMEOUT = 2000
+RETRY_TIMES = 5
+
+
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-#DOWNLOAD_DELAY = 3
+DOWNLOAD_DELAY = 0
 # The download delay setting will honor only one of:
-#CONCURRENT_REQUESTS_PER_DOMAIN = 16
+CONCURRENT_REQUESTS_PER_DOMAIN = 24
 #CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
-#COOKIES_ENABLED = False
+COOKIES_ENABLED = True
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
@@ -53,26 +67,28 @@ ROBOTSTXT_OBEY = False
 
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
-#SPIDER_MIDDLEWARES = {
-#    'spider_scenic.middlewares.SpiderScenicSpiderMiddleware': 543,
-#}
-
+LOG_LEVEL = 'ERROR'  # 配置日志为警告级别，如果有数据是警告级别那么将记录到文件
+# LOG_FILE = '../log/erro.log'
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
-   'spider_scenic.middlewares.ProxyMiddleWare': 543,
+    # 'spider_ly.middlewares.UAMiddleware': 543,
+    'spider_scenic.middlewares.ProxyMiddleWare': 500,
 }
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
-#EXTENSIONS = {
+# EXTENSIONS = {
 #    'scrapy.extensions.telnet.TelnetConsole': None,
-#}
+# }
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'spider_scenic.pipelines.saveMysqlScrapyPipeline': 300,
+    # 'spider_ly.pipelines.SpiderLyPipeline': 210,
+    # 'spider_ly.pipelines.saveCsvScrapyPipeline': 200,
+    'spider_scenic.pipelines.saveMysqlScrapyPipeline': 300,
+    'scrapy_redis.pipelines.RedisPipeline': 310,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

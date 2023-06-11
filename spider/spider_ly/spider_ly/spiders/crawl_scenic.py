@@ -8,10 +8,9 @@ from scrapy import Request
 import sys
 from scrapy import cmdline
 from cookie_pool import get_cookie
-from spider_scenic.items import SpiderScenicItem
+from spider_ly.items import SpiderScenicItem
 
 sys.path.append("..")
-
 
 
 class CrawlScenicSpider(scrapy.Spider):
@@ -96,12 +95,11 @@ class CrawlScenicSpider(scrapy.Spider):
             "__tctmb": "144323752.3320320891517118.1677737704638.1677737726698.8"
         }
         self.page = 1
-        self.pageCount =1113
-        current_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        path = f'{current_path}/xxx.js'
+        self.pageCount = 1113
+        # current_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        # path = f'{current_path}/xxx.js'
+        path = r'E:\tuling\tl\travel\spider\spider_scenic\spider_scenic\xxx.js'
         self.js_text = open(path, 'r', encoding='UTF-8').read()
-
-
 
     def start_requests(self):
         temp = get_cookie()
@@ -186,7 +184,7 @@ class CrawlScenicSpider(scrapy.Spider):
                 "iid": random.random()
             }
             url = 'https://so.ly.com/scenery/newsearchlist_hot.aspx' + '?' + urlencode(params)
-            yield scrapy.Request(url, callback=self.parse,cookies=cookies)
+            yield scrapy.Request(url, callback=self.parse, cookies=cookies)
 
     def parse_detail(self, response):
         item = response.meta["item"]
@@ -251,7 +249,7 @@ class CrawlScenicSpider(scrapy.Spider):
         item['starNum'] = starNum
         item['serviceScoreAvgList'] = str(serviceScoreAvgList)
         # item['dpTagList'] = str(dpTagList)
-        # print(item)
+        print(item)
         yield item
 
     def get_info(self, infos):
@@ -274,4 +272,3 @@ class CrawlScenicSpider(scrapy.Spider):
 
 if __name__ == '__main__':
     cmdline.execute("scrapy crawl crawl_scenic --nolog".split())
-

@@ -105,5 +105,44 @@ class SpiderScenicDownloaderMiddleware:
     def spider_opened(self, spider):
         spider.logger.info('Spider opened: %s' % spider.name)
 
+class ProxyMiddleWare(object):
+    """docstring for ProxyMiddleWare"""
+
+    def __init__(self):
+        current_path = os.path.dirname(os.path.abspath(__file__))
+        self.user_agents = [
+            'Mozilla/5.0 (Windows; U; MSIE 9.0; Windows NT 9.0; en-US)',
+            'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.2 (KHTML, like Gecko) Chrome/22.0.1216.0 Safari/537.2',
+            'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+        ]
+        # path = f'{current_path}/ip代理_1.json'
+        path = r'E:\tuling\tl\travel\spider\spider_scenic\spider_scenic\ip代理_1.json'
+        f = open(path, 'r')
+        datas = json.load(f)
+        self.ip_pool = datas.get('obj')
+
+    def process_request(self, request, spider):
+        request.headers['User-Agent'] = random.choice(self.user_agents)
+        '''对request对象加上proxy'''
+        proxy = random.choice(self.ip_pool)
+        proxies = 'http://' + proxy.get('ip') + ':' + proxy.get('port')
+        # proxies = 'http://58.209.226.41:19388'
+        print("this is request ip:" + proxies)
+        request.meta['proxies'] = proxies
+
+    def process_response(self, request, response, spider):
+        '''对返回的response处理'''
+        # 如果返回的response状态不是200，重新生成当前request对象
+        if response.status != 200:
+            proxy = random.choice(self.ip_pool)
+            proxies = 'http://' + proxy.get('ip') + ':' + proxy.get('port')
+            # proxies = 'http://58.209.226.41:19388'
+            print("this is request ip:" + proxies)
+            # request.meta['proxies'] = proxies
+            return request
+        return response
+
+
 
 

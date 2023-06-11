@@ -9,11 +9,7 @@ import pymysql
 from itemadapter import ItemAdapter
 
 
-# class SpiderScenicPipeline:
-#     def process_item(self, item, spider):
-#         return item
 from spider_scenic import items
-
 
 class saveMysqlScrapyPipeline:
 
@@ -63,3 +59,25 @@ class saveMysqlScrapyPipeline:
                 except Exception as e:
                     self.conn.rollback()
                     print('信息写入错误%s-%s' % (item['sid'], e))
+        if spider.name == 'crawl_comment':
+            if isinstance(item, items.SpiderCommentItem):
+                try:
+                    sql = '''insert into comments values (%s,%s,%s,%s,%s,%s,%s,%s,%s)'''
+                    self.cursor.execute(sql, (
+                        0,
+                        item["sid"],
+                        item["dpId"],
+                        item["page"],
+                        item["comment_time"],
+                        item["comment_user"],
+                        item["comment_stat"],
+                        item["comment_cotent"],
+                        item["reply_content"]
+                    ))
+                    # 提交
+                    self.conn.commit()
+                    print(f'入库-->{item}')
+                except Exception as e:
+                    self.conn.rollback()
+                    print('信息写入错误%s-%s' % (item['sid'], e))
+

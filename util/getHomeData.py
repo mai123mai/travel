@@ -3,18 +3,18 @@ from util.utils import *
 
 def get_data_chart1():
     columns = list(df.columns)
-    years = columns[3:][::-1]
-    tourist = list(df[df['title'] == '国内游客(百万人次)'].values)[0][3:][::-1]
-    tourist_towns = list(df[df['title'] == '城镇居民国内游客(百万人次)'].values)[0][3:][::-1]
-    tourist_village = list(df[df['title'] == '农村居民国内游客(百万人次)'].values)[0][3:][::-1]
+    years = columns[2:][::-1]
+    tourist = list(df[df['title'] == '国内游客(百万人次)'].values)[0][2:][::-1]
+    tourist_towns = list(df[df['title'] == '城镇居民国内游客(百万人次)'].values)[0][2:][::-1]
+    tourist_village = list(df[df['title'] == '农村居民国内游客(百万人次)'].values)[0][2:][::-1]
     dataList = []
     for y, i, j, k in zip(years, tourist, tourist_towns, tourist_village):
         dataList.append(
             {'name': y, '国内游客': i, '城镇居民游客': j, '农村居民游客': k}
         )
-    cnt_pay = list(list(df.loc[df['title'] == '国内旅游总花费(亿元)'].values)[0][3:][::-1])
-    towns_pay = list(list(df.loc[df['title'] == '城镇居民国内旅游总花费(亿元)'].values)[0][3:][::-1])
-    village_pay = list(list(df.loc[df['title'] == '农村居民国内旅游总花费(亿元)'].values)[0][3:][::-1])
+    cnt_pay = list(list(df.loc[df['title'] == '国内旅游总花费(亿元)'].values)[0][2:][::-1])
+    towns_pay = list(list(df.loc[df['title'] == '城镇居民国内旅游总花费(亿元)'].values)[0][2:][::-1])
+    village_pay = list(list(df.loc[df['title'] == '农村居民国内旅游总花费(亿元)'].values)[0][2:][::-1])
     speed_up = []
     for i in range(len(cnt_pay) - 1):
         speed_up.append(round(((cnt_pay[i + 1] - cnt_pay[i]) / cnt_pay[i]) * 100, 2))
@@ -24,7 +24,7 @@ def get_data_chart1():
 
 def get_data_chart2():
     columns = list(df.columns)
-    years = columns[3:]
+    years = columns[2:]
     # print(years)
     data_obj = []
     for year in years:
@@ -66,7 +66,10 @@ def get_data_table():
 
 
 if __name__ == '__main__':
-    # get_data_chart1()
-    # get_data_chart2()
-    # print(get_data_chart3())
-    get_data_table()
+    # dataList, years, cnt_pay, towns_pay, village_pay, speed_up = get_data_chart1()
+    # print(cnt_pay,towns_pay, village_pay, speed_up)
+    years, data_obj = get_data_chart2()
+    print(years)
+    # print(data_obj)
+    print(get_data_chart3())
+    # get_data_table()

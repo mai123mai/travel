@@ -1,6 +1,7 @@
 import random
 from urllib.parse import urlencode
 
+from loguru import logger
 from redis import Redis
 import pandas as pd
 from sqlalchemy import create_engine
@@ -12,8 +13,7 @@ con = engine.connect()
 url = "https://www.ly.com/scenery/AjaxHelper/DianPingAjax.aspx"
 df = pd.read_sql(text('select distinct(sid) from travel where totalNum != 0;'), con=con)
 sids = list(df['sid'].values)
-# print(sids)
-for sid in sids[3:4]:
+for sid in sids[:1]:
     params = {
         "action": "GetDianPingList",
         "sid": str(sid),
@@ -25,7 +25,7 @@ for sid in sids[3:4]:
     }
     href = url + "?" + urlencode(params)
     result = sr.rpush('comment_url', href)
-
+    logger.info(f'push-->{href}')
 
 
 

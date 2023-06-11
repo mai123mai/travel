@@ -1,0 +1,106 @@
+2023-05-13 01:47:14 [scrapy.core.scraper] ERROR: Error processing {'address': '江苏,无锡',
+ 'badNum': 305,
+ 'contents': "[{'info_title': '', 'info_content': '', 'info_image': ''}]",
+ 'degreeLevel': '99',
+ 'detail_link': 'https://www.ly.com/scenery/BookSceneryTicket_79.html',
+ 'feature': '特色：祈福到灵山，久福又如意',
+ 'full_address': '江苏省无锡市滨湖区灵山路1号',
+ 'goodNum': 56079,
+ 'hasImgNum': 1523,
+ 'images': "['https://pic5.40017.cn/i/ori/1hSs7JoehLG_540x304_00.jpg', "
+           "'https://pic5.40017.cn/i/ori/17IKJ9toVVu_540x304_00.jpg', "
+           "'https://pic5.40017.cn/i/ori/RllCN8Dt1C_540x304_00.jpg', "
+           "'https://pic5.40017.cn/i/ori/RllCyrbyCI_540x304_00.jpg']",
+ 'level': '5A景点',
+ 'main_img': 'https://pic5.40017.cn/i/ori/17IKJ9toVVu_240x135_00.jpg',
+ 'midNum': 2795,
+ 'open_time': '7:00-17:30',
+ 'price': '105',
+ 'serviceScoreAvgList': "[{'score': '10', 'serviceName': '同程服务'}, {'score': "
+                        "'10', 'serviceName': '产品便捷'}, {'score': '10', "
+                        "'serviceName': '性价比'}, {'score': '10', 'serviceName': "
+                        "'景区体验'}]",
+ 'sid': 79,
+ 'starNum': '4.7',
+ 'title': '灵山胜境',
+ 'totalNum': '59179',
+ 'video': 'https://video.40017.cn/uploadtool/dazhoubian/20230427/2304271726246401339405307.mp4'}
+Traceback (most recent call last):
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\twisted\internet\defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\utils\defer.py", line 162, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\tuling\tl\travel\spider\spider_ly\spider_ly\pipelines.py", line 119, in process_item
+    if isinstance(item, items.SpiderLyItem):
+AttributeError: module 'spider_ly.items' has no attribute 'SpiderLyItem'
+2023-05-13 01:47:20 [scrapy.core.scraper] ERROR: Error processing {'address': '江苏,常州',
+ 'badNum': 770,
+ 'contents': "[{'info_title': '', 'info_content': '', 'info_image': ''}]",
+ 'degreeLevel': '98',
+ 'detail_link': 'https://www.ly.com/scenery/BookSceneryTicket_26581.html',
+ 'feature': '特色：实现“与兽同行”的原野梦想',
+ 'full_address': '江苏省常州市武进区武宜中路199号常州淹城野生动物园',
+ 'goodNum': 39952,
+ 'hasImgNum': 5963,
+ 'images': "['https://pic5.40017.cn/i/ori/1bLx351Loe4_540x304_00.jpg', "
+           "'https://pic5.40017.cn/i/ori/1bLx2bL5Sfu_540x304_00.jpg', "
+           "'https://pic5.40017.cn/i/ori/1bLx1M7eDUk_540x304_00.jpg', "
+           "'https://pic5.40017.cn/i/ori/1bLx198vYZy_540x304_00.jpg']",
+ 'level': '5A景点',
+ 'main_img': 'https://pic5.40017.cn/i/ori/1bLo2S92Uog_240x135_00.jpg',
+ 'midNum': 3429,
+ 'open_time': '9:00-17:00',
+ 'price': '38',
+ 'serviceScoreAvgList': "[{'score': '10', 'serviceName': '同程服务'}, {'score': "
+                        "'10', 'serviceName': '产品便捷'}, {'score': '10', "
+                        "'serviceName': '性价比'}, {'score': '10', 'serviceName': "
+                        "'景区体验'}]",
+ 'sid': 26581,
+ 'starNum': '4.5',
+ 'title': '淹城野生动物世界',
+ 'totalNum': '44151',
+ 'video': 'https://video.40017.cn/uploadtool/dazhoubian/20200421/2004211154061131506250259.mp4'}
+Traceback (most recent call last):
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\twisted\internet\defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\utils\defer.py", line 162, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\tuling\tl\travel\spider\spider_ly\spider_ly\pipelines.py", line 119, in process_item
+    if isinstance(item, items.SpiderLyItem):
+AttributeError: module 'spider_ly.items' has no attribute 'SpiderLyItem'
+2023-05-13 01:47:24 [scrapy.core.scraper] ERROR: Error processing {'address': '上海',
+ 'badNum': 365,
+ 'contents': "[{'info_title': '', 'info_content': '', 'info_image': ''}]",
+ 'degreeLevel': '99',
+ 'detail_link': 'https://www.ly.com/scenery/BookSceneryTicket_2188.html',
+ 'feature': '特色：走进动物王国，与野生动物零距离',
+ 'full_address': '上海市浦东新区南六公路178号',
+ 'goodNum': 59701,
+ 'hasImgNum': 6915,
+ 'images': "['https://pic5.40017.cn/i/ori/1ingKgf3t96_540x304_00.jpg', "
+           "'https://pic5.40017.cn/i/ori/1hcbZv0JFbW_540x304_00.jpg', "
+           "'https://pic5.40017.cn/i/ori/1iCyrCyRkly_540x304_00.jpg', "
+           "'https://pic5.40017.cn/i/ori/1jgqdNmnfsQ_540x304_00.jpg']",
+ 'level': '5A景点',
+ 'main_img': 'https://pic5.40017.cn/i/ori/1ikgvOMlCY8_240x135_00.jpg',
+ 'midNum': 3838,
+ 'open_time': '3月-6月、9月-11月 9:00-17:00，16点停止检票入园；7月-8月 '
+              '9:00-20:00，18点停止检票入园；12月-翌年2月 9:00-16:30，15:30停止检票入园。',
+ 'price': '40',
+ 'serviceScoreAvgList': "[{'score': '10', 'serviceName': '同程服务'}, {'score': "
+                        "'10', 'serviceName': '产品便捷'}, {'score': '10', "
+                        "'serviceName': '性价比'}, {'score': '10', 'serviceName': "
+                        "'景区体验'}]",
+ 'sid': 2188,
+ 'starNum': '4.7',
+ 'title': '上海野生动物园',
+ 'totalNum': '63904',
+ 'video': None}
+Traceback (most recent call last):
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\twisted\internet\defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\utils\defer.py", line 162, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\tuling\tl\travel\spider\spider_ly\spider_ly\pipelines.py", line 119, in process_item
+    if isinstance(item, items.SpiderLyItem):
+AttributeError: module 'spider_ly.items' has no attribute 'SpiderLyItem'

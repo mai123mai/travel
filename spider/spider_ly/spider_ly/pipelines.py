@@ -116,7 +116,7 @@ class saveMysqlScrapyPipeline:
     def process_item(self, item, spider):
         # 插入数到数据库
         if spider.name == "crawl_scenic":
-            if isinstance(item, items.SpiderLyItem):
+            if isinstance(item, items.SpiderScenicItem):
                 try:
                     sql = '''insert into travel values (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'''
                     self.cursor.execute(sql, (

@@ -31,7 +31,7 @@ def before_request():
         return
     if request.path == '/forget':
         return
-    if request.path == '/loginOut':
+    if request.path == '/loginOut':      6
         return
     email = session.get('email')
     if email:

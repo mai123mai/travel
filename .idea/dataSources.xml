@@ -15,5 +15,12 @@
       <jdbc-url>jdbc:sqlite:E:\tuling\tl\travel\scrapyd_data\dbs\spider_ly.db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="db" uuid="28cf302c-6dd2-43ad-ae95-c97f8ab134be">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:E:\tuling\tl\travel\gerapyDemo\gerapy\dbs\db.sqlite3</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

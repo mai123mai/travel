@@ -1,0 +1,328 @@
+2023-05-13 01:47:13.176 | INFO     | scrapy.utils.log:log_scrapy_info:147 - Scrapy 2.6.3 started (bot: spider_ly)
+2023-05-13 01:47:13.191 | INFO     | scrapy.utils.log:log_scrapy_info:154 - Versions: lxml 4.6.4.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 22.2.0, Python 3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)], pyOpenSSL 22.0.0 (OpenSSL 1.1.1m  14 Dec 2021), cryptography 36.0.1, Platform Windows-10-10.0.19041-SP0
+2023-05-13 01:47:13.196 | INFO     | scrapy.crawler:__init__:60 - Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'BOT_NAME': 'spider_ly',
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 24,
+ 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter',
+ 'LOG_ENABLED': False,
+ 'LOG_FILE': '../log/erro.log',
+ 'LOG_LEVEL': 'ERROR',
+ 'NEWSPIDER_MODULE': 'spider_ly.spiders',
+ 'RETRY_TIMES': 5,
+ 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler',
+ 'SPIDER_MODULES': ['spider_ly.spiders']}
+2023-05-13 01:47:13.241 | INFO     | scrapy.extensions.telnet:__init__:55 - Telnet Password: 7eec3ebdf0e81fb2
+2023-05-13 01:47:13.270 | INFO     | scrapy.middleware:from_settings:51 - Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2023-05-13 01:47:13.516 | INFO     | scrapy.middleware:from_settings:51 - Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'spider_ly.middlewares.ProxyMiddleWare',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-05-13 01:47:13.525 | INFO     | scrapy.middleware:from_settings:51 - Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-05-13 01:47:13.566 | INFO     | scrapy.middleware:from_settings:51 - Enabled item pipelines:
+['spider_ly.pipelines.saveMysqlScrapyPipeline',
+ 'scrapy_redis.pipelines.RedisPipeline']
+2023-05-13 01:47:13.566 | INFO     | scrapy.core.engine:open_spider:316 - Spider opened
+2023-05-13 01:47:13.596 | INFO     | scrapy.extensions.logstats:log:48 - Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-05-13 01:47:13.598 | INFO     | scrapy.extensions.telnet:start_listening:67 - Telnet console listening on 127.0.0.1:6023
+2023-05-13 01:47:14.037 | ERROR    | scrapy.core.scraper:_itemproc_finished:267 - Error processing {'address': '江苏,无锡',
+ 'badNum': 305,
+ 'contents': "[{'info_title': '', 'info_content': '', 'info_image': ''}]",
+ 'degreeLevel': '99',
+ 'detail_link': 'https://www.ly.com/scenery/BookSceneryTicket_79.html',
+ 'feature': '特色：祈福到灵山，久福又如意',
+ 'full_address': '江苏省无锡市滨湖区灵山路1号',
+ 'goodNum': 56079,
+ 'hasImgNum': 1523,
+ 'images': "['https://pic5.40017.cn/i/ori/1hSs7JoehLG_540x304_00.jpg', "
+           "'https://pic5.40017.cn/i/ori/17IKJ9toVVu_540x304_00.jpg', "
+           "'https://pic5.40017.cn/i/ori/RllCN8Dt1C_540x304_00.jpg', "
+           "'https://pic5.40017.cn/i/ori/RllCyrbyCI_540x304_00.jpg']",
+ 'level': '5A景点',
+ 'main_img': 'https://pic5.40017.cn/i/ori/17IKJ9toVVu_240x135_00.jpg',
+ 'midNum': 2795,
+ 'open_time': '7:00-17:30',
+ 'price': '105',
+ 'serviceScoreAvgList': "[{'score': '10', 'serviceName': '同程服务'}, {'score': "
+                        "'10', 'serviceName': '产品便捷'}, {'score': '10', "
+                        "'serviceName': '性价比'}, {'score': '10', 'serviceName': "
+                        "'景区体验'}]",
+ 'sid': 79,
+ 'starNum': '4.7',
+ 'title': '灵山胜境',
+ 'totalNum': '59179',
+ 'video': 'https://video.40017.cn/uploadtool/dazhoubian/20230427/2304271726246401339405307.mp4'}
+Traceback (most recent call last):
+
+  File "E:\tuling\tl\travel\spider\spider_ly\spider_ly\spiders\crawl_scenic.py", line 274, in <module>
+    cmdline.execute("scrapy crawl crawl_scenic --nolog".split())
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\cmdline.py", line 154, in execute
+    _run_print_help(parser, _run_command, cmd, args, opts)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\cmdline.py", line 109, in _run_print_help
+    func(*a, **kw)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\cmdline.py", line 162, in _run_command
+    cmd.run(args, opts)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\commands\crawl.py", line 27, in run
+    self.crawler_process.start()
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\crawler.py", line 348, in start
+    reactor.run(installSignalHandlers=False)  # blocking call
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\twisted\internet\base.py", line 1315, in run
+    self.mainLoop()
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\twisted\internet\base.py", line 1325, in mainLoop
+    reactorBaseSelf.runUntilCurrent()
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\twisted\internet\base.py", line 991, in runUntilCurrent
+    call.func(*call.args, **call.kw)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\twisted\internet\task.py", line 680, in _tick
+    taskObj._oneWorkUnit()
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\twisted\internet\task.py", line 526, in _oneWorkUnit
+    result = next(self._iterator)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\utils\defer.py", line 86, in <genexpr>
+    work = (callable(elem, *args, **named) for elem in iterable)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\core\scraper.py", line 206, in _process_spidermw_output
+    dfd = self.itemproc.process_item(output, spider)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\pipelines\__init__.py", line 26, in process_item
+    return self._process_chain('process_item', item, spider)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\middleware.py", line 73, in _process_chain
+    return process_chain(methods, obj, *args)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\utils\defer.py", line 95, in process_chain
+    d.callback(input)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\twisted\internet\defer.py", line 661, in callback
+    self._startRunCallbacks(result)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\twisted\internet\defer.py", line 763, in _startRunCallbacks
+    self._runCallbacks()
+
+> File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\twisted\internet\defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\utils\defer.py", line 162, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+
+  File "E:\tuling\tl\travel\spider\spider_ly\spider_ly\pipelines.py", line 119, in process_item
+    if isinstance(item, items.SpiderLyItem):
+
+AttributeError: module 'spider_ly.items' has no attribute 'SpiderLyItem'
+2023-05-13 01:47:14.169 | WARNING  | warnings:_showwarnmsg:109 - C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\core\scraper.py:157: UserWarning: The "CrawlScenicSpider.parse" method is a generator and includes a "return" statement with a value different than None. This could lead to unexpected behaviour. Please see https://docs.python.org/3/reference/simple_stmts.html#the-return-statement for details about the semantics of the "return" statement within generators
+  warn_on_generator_with_return_value(spider, callback)
+
+2023-05-13 01:47:20.400 | ERROR    | scrapy.core.scraper:_itemproc_finished:267 - Error processing {'address': '江苏,常州',
+ 'badNum': 770,
+ 'contents': "[{'info_title': '', 'info_content': '', 'info_image': ''}]",
+ 'degreeLevel': '98',
+ 'detail_link': 'https://www.ly.com/scenery/BookSceneryTicket_26581.html',
+ 'feature': '特色：实现“与兽同行”的原野梦想',
+ 'full_address': '江苏省常州市武进区武宜中路199号常州淹城野生动物园',
+ 'goodNum': 39952,
+ 'hasImgNum': 5963,
+ 'images': "['https://pic5.40017.cn/i/ori/1bLx351Loe4_540x304_00.jpg', "
+           "'https://pic5.40017.cn/i/ori/1bLx2bL5Sfu_540x304_00.jpg', "
+           "'https://pic5.40017.cn/i/ori/1bLx1M7eDUk_540x304_00.jpg', "
+           "'https://pic5.40017.cn/i/ori/1bLx198vYZy_540x304_00.jpg']",
+ 'level': '5A景点',
+ 'main_img': 'https://pic5.40017.cn/i/ori/1bLo2S92Uog_240x135_00.jpg',
+ 'midNum': 3429,
+ 'open_time': '9:00-17:00',
+ 'price': '38',
+ 'serviceScoreAvgList': "[{'score': '10', 'serviceName': '同程服务'}, {'score': "
+                        "'10', 'serviceName': '产品便捷'}, {'score': '10', "
+                        "'serviceName': '性价比'}, {'score': '10', 'serviceName': "
+                        "'景区体验'}]",
+ 'sid': 26581,
+ 'starNum': '4.5',
+ 'title': '淹城野生动物世界',
+ 'totalNum': '44151',
+ 'video': 'https://video.40017.cn/uploadtool/dazhoubian/20200421/2004211154061131506250259.mp4'}
+Traceback (most recent call last):
+
+  File "E:\tuling\tl\travel\spider\spider_ly\spider_ly\spiders\crawl_scenic.py", line 274, in <module>
+    cmdline.execute("scrapy crawl crawl_scenic --nolog".split())
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\cmdline.py", line 154, in execute
+    _run_print_help(parser, _run_command, cmd, args, opts)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\cmdline.py", line 109, in _run_print_help
+    func(*a, **kw)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\cmdline.py", line 162, in _run_command
+    cmd.run(args, opts)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\commands\crawl.py", line 27, in run
+    self.crawler_process.start()
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\crawler.py", line 348, in start
+    reactor.run(installSignalHandlers=False)  # blocking call
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\twisted\internet\base.py", line 1315, in run
+    self.mainLoop()
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\twisted\internet\base.py", line 1325, in mainLoop
+    reactorBaseSelf.runUntilCurrent()
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\twisted\internet\base.py", line 991, in runUntilCurrent
+    call.func(*call.args, **call.kw)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\twisted\internet\task.py", line 680, in _tick
+    taskObj._oneWorkUnit()
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\twisted\internet\task.py", line 526, in _oneWorkUnit
+    result = next(self._iterator)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\utils\defer.py", line 86, in <genexpr>
+    work = (callable(elem, *args, **named) for elem in iterable)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\core\scraper.py", line 206, in _process_spidermw_output
+    dfd = self.itemproc.process_item(output, spider)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\pipelines\__init__.py", line 26, in process_item
+    return self._process_chain('process_item', item, spider)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\middleware.py", line 73, in _process_chain
+    return process_chain(methods, obj, *args)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\utils\defer.py", line 95, in process_chain
+    d.callback(input)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\twisted\internet\defer.py", line 661, in callback
+    self._startRunCallbacks(result)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\twisted\internet\defer.py", line 763, in _startRunCallbacks
+    self._runCallbacks()
+
+> File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\twisted\internet\defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\utils\defer.py", line 162, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+
+  File "E:\tuling\tl\travel\spider\spider_ly\spider_ly\pipelines.py", line 119, in process_item
+    if isinstance(item, items.SpiderLyItem):
+
+AttributeError: module 'spider_ly.items' has no attribute 'SpiderLyItem'
+2023-05-13 01:47:24.073 | ERROR    | scrapy.core.scraper:_itemproc_finished:267 - Error processing {'address': '上海',
+ 'badNum': 365,
+ 'contents': "[{'info_title': '', 'info_content': '', 'info_image': ''}]",
+ 'degreeLevel': '99',
+ 'detail_link': 'https://www.ly.com/scenery/BookSceneryTicket_2188.html',
+ 'feature': '特色：走进动物王国，与野生动物零距离',
+ 'full_address': '上海市浦东新区南六公路178号',
+ 'goodNum': 59701,
+ 'hasImgNum': 6915,
+ 'images': "['https://pic5.40017.cn/i/ori/1ingKgf3t96_540x304_00.jpg', "
+           "'https://pic5.40017.cn/i/ori/1hcbZv0JFbW_540x304_00.jpg', "
+           "'https://pic5.40017.cn/i/ori/1iCyrCyRkly_540x304_00.jpg', "
+           "'https://pic5.40017.cn/i/ori/1jgqdNmnfsQ_540x304_00.jpg']",
+ 'level': '5A景点',
+ 'main_img': 'https://pic5.40017.cn/i/ori/1ikgvOMlCY8_240x135_00.jpg',
+ 'midNum': 3838,
+ 'open_time': '3月-6月、9月-11月 9:00-17:00，16点停止检票入园；7月-8月 '
+              '9:00-20:00，18点停止检票入园；12月-翌年2月 9:00-16:30，15:30停止检票入园。',
+ 'price': '40',
+ 'serviceScoreAvgList': "[{'score': '10', 'serviceName': '同程服务'}, {'score': "
+                        "'10', 'serviceName': '产品便捷'}, {'score': '10', "
+                        "'serviceName': '性价比'}, {'score': '10', 'serviceName': "
+                        "'景区体验'}]",
+ 'sid': 2188,
+ 'starNum': '4.7',
+ 'title': '上海野生动物园',
+ 'totalNum': '63904',
+ 'video': None}
+Traceback (most recent call last):
+
+  File "E:\tuling\tl\travel\spider\spider_ly\spider_ly\spiders\crawl_scenic.py", line 274, in <module>
+    cmdline.execute("scrapy crawl crawl_scenic --nolog".split())
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\cmdline.py", line 154, in execute
+    _run_print_help(parser, _run_command, cmd, args, opts)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\cmdline.py", line 109, in _run_print_help
+    func(*a, **kw)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\cmdline.py", line 162, in _run_command
+    cmd.run(args, opts)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\commands\crawl.py", line 27, in run
+    self.crawler_process.start()
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\crawler.py", line 348, in start
+    reactor.run(installSignalHandlers=False)  # blocking call
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\twisted\internet\base.py", line 1315, in run
+    self.mainLoop()
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\twisted\internet\base.py", line 1325, in mainLoop
+    reactorBaseSelf.runUntilCurrent()
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\twisted\internet\base.py", line 991, in runUntilCurrent
+    call.func(*call.args, **call.kw)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\twisted\internet\task.py", line 680, in _tick
+    taskObj._oneWorkUnit()
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\twisted\internet\task.py", line 526, in _oneWorkUnit
+    result = next(self._iterator)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\utils\defer.py", line 86, in <genexpr>
+    work = (callable(elem, *args, **named) for elem in iterable)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\core\scraper.py", line 206, in _process_spidermw_output
+    dfd = self.itemproc.process_item(output, spider)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\pipelines\__init__.py", line 26, in process_item
+    return self._process_chain('process_item', item, spider)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\middleware.py", line 73, in _process_chain
+    return process_chain(methods, obj, *args)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\utils\defer.py", line 95, in process_chain
+    d.callback(input)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\twisted\internet\defer.py", line 661, in callback
+    self._startRunCallbacks(result)
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\twisted\internet\defer.py", line 763, in _startRunCallbacks
+    self._runCallbacks()
+
+> File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\twisted\internet\defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\utils\defer.py", line 162, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+
+  File "E:\tuling\tl\travel\spider\spider_ly\spider_ly\pipelines.py", line 119, in process_item
+    if isinstance(item, items.SpiderLyItem):
+
+AttributeError: module 'spider_ly.items' has no attribute 'SpiderLyItem'
